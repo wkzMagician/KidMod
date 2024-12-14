@@ -4,7 +4,6 @@ import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -13,10 +12,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 
-public class FansSupport extends KidCard {
-	public static final String ID = makeID(FansSupport.class.getSimpleName());
+public class Ingratiate extends KidCard {
+	public static final String ID = makeID(Ingratiate.class.getSimpleName());
 	private static final CardStats info = new CardStats(
 			Kid.Meta.CARD_COLOR,
 			CardType.ATTACK,
@@ -31,7 +29,7 @@ public class FansSupport extends KidCard {
 	private static final int CHARM = 4;
 	private static final int UPG_CHARM = -CHARM;
 
-	public FansSupport() {
+	public Ingratiate() {
 		super(ID, info);
 
 		setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
@@ -56,6 +54,6 @@ public class FansSupport extends KidCard {
 
 	@Override
 	public AbstractCard makeCopy() { //Optional
-		return new FansSupport();
+		return new Ingratiate();
 	}
 }

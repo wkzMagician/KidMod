@@ -1,5 +1,5 @@
 package Kid.powers;
-import Kid.cards.Status.FakeGem;
+import Kid.cards.status.FakeGem;
 import Kid.cards.rare.BloodTears;
 import Kid.cards.rare.ParisSunshine;
 import Kid.cards.rare.TowerDiamond;
@@ -8,7 +8,6 @@ import Kid.cards.uncommon.DarkStar;
 import Kid.cards.uncommon.ElfLips;
 import Kid.cards.uncommon.MotherOfGems;
 import Kid.cards.uncommon.PupilOfMoon;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;

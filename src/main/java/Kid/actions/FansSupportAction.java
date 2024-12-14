@@ -1,23 +1,18 @@
 package Kid.actions;
 
+import Kid.powers.CharmPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-public class WildShootAction extends AbstractGameAction {
+public class FansSupportAction extends AbstractGameAction {
 	private boolean freeToPlayOnce = false;
-
-	private boolean upgraded = false;
 
 	private AbstractPlayer p;
 
@@ -25,17 +20,16 @@ public class WildShootAction extends AbstractGameAction {
 
 	private int energyOnUse = -1;
 
-	private int damage = 10;
+	private int charm = 0;
 
-	public WildShootAction(AbstractPlayer p, AbstractMonster m, int damage, boolean upgraded, boolean freeToPlayOnce, int energyOnUse) {
+	public FansSupportAction(AbstractPlayer p, AbstractMonster m, int charm, boolean freeToPlayOnce, int energyOnUse) {
 		this.p = p;
 		this.m = m;
 		this.freeToPlayOnce = freeToPlayOnce;
-		this.upgraded = upgraded;
 		this.duration = Settings.ACTION_DUR_XFAST;
 		this.actionType = AbstractGameAction.ActionType.SPECIAL;
 		this.energyOnUse = energyOnUse;
-		this.damage = damage;
+		this.charm = charm;
 	}
 
 	public void update() {
@@ -46,15 +40,11 @@ public class WildShootAction extends AbstractGameAction {
 			effect += 2;
 			this.p.getRelic("Chemical X").flash();
 		}
-		if (this.upgraded)
-			effect++;
+
 		if (effect > 0) {
-			for(int i = 0; i < effect; i++) {
-				// 随机弃牌
-				addToBot(new DiscardAction(p, p, 1, true));
-				// 随机对敌人造成伤害
-				addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-			}
+			// 获得X层魅力
+			int amount = this.charm * effect;
+			addToBot(new ApplyPowerAction(m, p, new CharmPower(m, amount), amount));
 
 			if (!this.freeToPlayOnce)
 				this.p.energy.use(EnergyPanel.totalCount);

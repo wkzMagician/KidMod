@@ -1,14 +1,12 @@
 package Kid.cards.common;
 
-import Kid.actions.FlipCardAction;
 import Kid.cards.KidCard;
-import Kid.cards.Status.FakeGem;
+import Kid.cards.status.FakeGem;
 import Kid.character.Kid;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

@@ -1,37 +1,40 @@
-package Kid.cards.rare;
+package Kid.cards.uncommon;
 
+import Kid.actions.FansSupportAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BufferPower;
 
-public class Disguise extends KidCard {
-	public static final String ID = makeID(Disguise.class.getSimpleName());
+public class FansSupport extends KidCard {
+	public static final String ID = makeID(FansSupport.class.getSimpleName());
 	private static final CardStats info = new CardStats(
 			Kid.Meta.CARD_COLOR,
-			CardType.POWER,
-			CardRarity.RARE,
+			CardType.SKILL,
+			CardRarity.UNCOMMON,
 			CardTarget.SELF,
-			2
+			-1
 	);
 
-	public Disguise() {
+	private static final int CHARM = 5;
+	private static final int UPGRADE_CHARM = 3;
+
+	public FansSupport() {
 		super(ID, info);
 
-		setMagic(1, 1);
+		setMagic(CHARM, UPGRADE_CHARM);
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new ApplyPowerAction(p, p, new BufferPower(p, this.magicNumber)));
+		addToBot(new FansSupportAction(p, m, this.magicNumber, this.freeToPlayOnce, this.energyOnUse));
+
 	}
 
 	@Override
 	public AbstractCard makeCopy() { //Optional
-		return new Disguise();
+		return new FansSupport();
 	}
 }

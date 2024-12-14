@@ -22,7 +22,7 @@ public class Notice extends KidCard {
 	private static final int ENERGY = 1;
 	private static final int UPGRADE_ENERGY = 1;
 
-	private static final int DRAW = 3;
+	private static final int DRAW = 2;
 
 
 	public Notice() {

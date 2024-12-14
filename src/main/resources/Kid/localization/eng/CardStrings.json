@@ -83,7 +83,7 @@
   },
   "${modID}:Notice": {
     "NAME": "Notice",
-    "DESCRIPTION": "Gain !M! Energy. NL Draw 3 cards. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Energy. NL Draw 2 cards. NL Exhaust."
   },
   "${modID}:Cheat": {
     "NAME": "Cheat",
@@ -100,8 +100,7 @@
   },
   "${modID}:GrandPrelude": {
     "NAME": "Grand Prelude",
-    "DESCRIPTION": "Can only be played if there are no cards in your discard pile. NL Deal 12 damage to ALL enemies.",
-    "UPGRADE_DESCRIPTION": "Can only be played if there are no cards in your discard pile. NL Deal 12 damage to ALL enemies. NL Innate."
+    "DESCRIPTION": "Innate. NL Gain !M! charm. NL Exhaust"
   },
   "${modID}:OmnipotentPocket": {
     "NAME": "Omnipotent Pocket",
@@ -301,10 +300,9 @@
     "NAME": "Boast",
     "DESCRIPTION": "Deal !D! damage. NL If this card is flipped, shuffle a FakeGem into your draw pile."
   },
-  "${modID}:WildShoot": {
-    "NAME": "Wild Shoot",
-    "DESCRIPTION": "Discard X random cards. NL Deal !D! damage to a random enemy for each card discarded.",
-    "UPGRADE_DESCRIPTION": "Discard X + 1 random cards. NL Deal !D! damage to a random enemy for each card discarded."
+  "${modID}:FansSupport": {
+    "NAME": "Fans Support",
+    "DESCRIPTION": "Gain !M! charm X times."
   },
   "${modID}:MasterThief": {
     "NAME": "Master Thief",
@@ -331,8 +329,8 @@
     "NAME": "Bow",
     "DESCRIPTION": "Discard !M! cards. NL Gain 6 charm."
   },
-  "${modID}:FansSupport": {
-    "NAME": "Fans Support",
+  "${modID}:Ingratiate": {
+    "NAME": "Ingratiate",
     "DESCRIPTION": "Deal !D! damage. NL If charm greater than !M!, draw 1 card and gain 1 energy."
   },
   "${modID}:Reason": {

@@ -3,8 +3,10 @@ package Kid.cards.uncommon;
 import Kid.actions.SetCardSideAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
+import Kid.powers.CharmPower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,38 +23,21 @@ public class GrandPrelude extends KidCard {
 			0
 	);
 
-	private static final int DAMAGE = 12;
+	private static final int CHARM = 6;
+	private static final int UPG_CHARM = 3;
 
 	public GrandPrelude() {
 		super(ID, info);
 
-		setDamage(DAMAGE);
-	}
+		setInnate(true);
+		setExhaust(true);
 
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			upgradeName();
-			// 固有
-			setInnate(true);
-			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-			initializeDescription();
-		}
+		setMagic(CHARM, UPG_CHARM);
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-			addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-	}
-
-	@Override
-	public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-		// 如果弃牌堆为空
-		if (p.discardPile.isEmpty())
-			return true;
-		// 否则不能使用
-		cantUseMessage = "Discard pile is not empty.";
-		return false;
+			addToBot(new ApplyPowerAction(p, p, new CharmPower(p, this.magicNumber), this.magicNumber));
 	}
 
 	@Override

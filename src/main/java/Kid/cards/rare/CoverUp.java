@@ -1,17 +1,15 @@
 package Kid.cards.rare;
 
 import Kid.cards.KidCard;
-import Kid.cards.Status.FakeGem;
+import Kid.cards.status.FakeGem;
 import Kid.character.Kid;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
-import hermit.powers.Drained;
 
 public class CoverUp extends KidCard {
 	public static final String ID = makeID(CoverUp.class.getSimpleName());
