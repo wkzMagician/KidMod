@@ -21,8 +21,8 @@ public class Skywalk extends KidCard {
 			2
 	);
 
-	private static final int BLOCK = 12;
-	private static final int UPG_BLOCK = 3;
+	private static final int BLOCK = 10;
+	private static final int UPG_BLOCK = 2;
 
 	// 预见
 	private static final int PLATED_ARMOR = 2;
@@ -38,7 +38,9 @@ public class Skywalk extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new GainBlockAction(p, p, this.block));
-		addToBot(new ApplyPowerAction(p, p, new com.megacrit.cardcrawl.powers.PlatedArmorPower(p, this.magicNumber), this.magicNumber));
+		if(this.isReverse()){
+			addToBot(new ApplyPowerAction(p, p, new com.megacrit.cardcrawl.powers.PlatedArmorPower(p, this.magicNumber), this.magicNumber));
+		}
 	}
 
 	@Override

@@ -11,50 +11,32 @@ public class BloodTearsPower extends BasePower {
 		public static final String POWER_ID = "Kid:BloodTearsPower";
 		public static final String NAME = "Blood Tears";
 		public static final String[] DESCRIPTIONS = new String[] {
-						"At the end of your turn, exhaust ",
+				"At the end of your turn, you can choose ",
 				" card ",
 				" cards ",
-				"At the end of your turn, you can choose ",
-				"to exhaust"
 		};
 
-		private boolean upgraded = false;
-
-		public BloodTearsPower(AbstractCreature owner, boolean upgraded, int amount) {
+		public BloodTearsPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
 				this.loadRegion("BloodTears");
 				this.name = NAME;
 				this.amount = amount;
-				this.upgraded = upgraded;
 				this.updateDescription();
 		}
 
 		@Override
 		public void updateDescription() {
-				if(!upgraded) {
-					if(this.amount == 1) {
-						this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-					} else {
-						this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
-					}
+				if(this.amount == 1) {
+					this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 				} else {
-					if(this.amount == 1) {
-						this.description = DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[4];
-					} else {
-						this.description = DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[4];
-					}
+					this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
 				}
 		}
 
 		@Override
 		public void atEndOfTurn(boolean isPlayer) {
 			if (isPlayer) {
-				String desc = this.amount == -1 ? "Exhaust a card." : "Choose a card to exhaust.";
-				if(!upgraded) {
-					addToBot(new ExhaustAction(amount, false));
-				} else{
-					addToBot(new ExhaustAction(amount, true));
-				}
+				addToBot(new ExhaustAction(amount, false, true, true));
 			}
 		}
 }

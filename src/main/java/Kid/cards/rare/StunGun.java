@@ -1,13 +1,11 @@
-package Kid.cards.uncommon;
+package Kid.cards.rare;
 
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,7 +16,7 @@ public class StunGun extends KidCard {
 	private static final CardStats info = new CardStats(
 			Kid.Meta.CARD_COLOR,
 			CardType.ATTACK,
-			CardRarity.UNCOMMON,
+			CardRarity.RARE,
 			CardTarget.ENEMY,
 			2
 	);

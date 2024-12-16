@@ -3,6 +3,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -14,8 +15,6 @@ public class CharmPower extends BasePower {
 		public static final String[] DESCRIPTIONS = new String[] {
 						"At the end of your turn, reduce all enemies' HP by "
 		};
-
-		private AbstractCard markedCard = null;
 
 		public CharmPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
@@ -40,9 +39,14 @@ public class CharmPower extends BasePower {
 
 		@Override
 		public void wasHPLost(DamageInfo info, int damageAmount) {
-			// amount /= 2
+			super.wasHPLost(info, damageAmount);
+
 			this.amount /= 2;
 
-			super.wasHPLost(info, damageAmount);
+			if(this.amount <= 0) {
+				addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+			}
+
+			flash();
 		}
 }

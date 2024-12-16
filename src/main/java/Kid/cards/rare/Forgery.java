@@ -37,6 +37,8 @@ public class Forgery extends KidCard {
 			for (int i = 0; i < this.magicNumber; i++) {
 				AbstractCard copy = c.makeStatEquivalentCopy();
 				copy.isEthereal = true;
+				copy.rawDescription += " NL Ethereal.";
+				copy.initializeDescription();
 				p.hand.addToTop(copy);
 			}
 		}));

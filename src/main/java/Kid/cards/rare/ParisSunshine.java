@@ -3,12 +3,14 @@ package Kid.cards.rare;
 import Kid.cards.GemCard;
 import Kid.character.Kid;
 import Kid.powers.MotherOfGemsPower;
+import Kid.powers.PandoraPower;
 import Kid.powers.ParisSunshinePower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class ParisSunshine extends GemCard {
@@ -21,8 +23,8 @@ public class ParisSunshine extends GemCard {
 			-2
 	);
 
-	private static final int CHARM = 3;
-	private static final int UPG_CHARM = 2;
+	private static final int CHARM = 2;
+	private static final int UPG_CHARM = 1;
 
 	public ParisSunshine() {
 		super(ID, info);
@@ -34,7 +36,21 @@ public class ParisSunshine extends GemCard {
 	public void removePower() {
 		super.removePower();
 
-		addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ParisSunshinePower.POWER_ID));
+		AbstractPower power = AbstractDungeon.player.getPower(ParisSunshinePower.POWER_ID);
+		if(power == null) return;
+
+		int amount = power.amount;
+
+		if(amount > 1) {
+			addToBot(new ApplyPowerAction(
+					AbstractDungeon.player,
+					AbstractDungeon.player,
+					new ParisSunshinePower(AbstractDungeon.player, -magicNumber),
+					-magicNumber
+			));
+		}else{
+			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ParisSunshinePower.POWER_ID));
+		}
 	}
 
 	@Override

@@ -36,7 +36,7 @@ public class WonderFormPower extends BasePower {
 
 	@Override
 	public void onCardDraw(AbstractCard card) {
-		if(card instanceof KidCard && ((KidCard) card).isReverse()) {
+		if(card instanceof KidCard && ((KidCard) card).isReverse() && card.costForTurn > 0) {
 			flash();
 			card.setCostForTurn(card.costForTurn - 1);
 		}

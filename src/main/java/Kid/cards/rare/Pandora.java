@@ -3,6 +3,7 @@ package Kid.cards.rare;
 import Kid.cards.GemCard;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
+import Kid.powers.MotherOfGemsPower;
 import Kid.powers.PandoraPower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class Pandora extends GemCard {
 	public static final String ID = makeID(Pandora.class.getSimpleName());
@@ -64,7 +66,21 @@ public class Pandora extends GemCard {
 	public void removePower() {
 		super.removePower();
 
-		addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, PandoraPower.POWER_ID));
+		AbstractPower power = AbstractDungeon.player.getPower(PandoraPower.POWER_ID);
+		if(power == null) return;
+
+		int amount = power.amount;
+
+		if(amount > 1) {
+			addToBot(new ApplyPowerAction(
+					AbstractDungeon.player,
+					AbstractDungeon.player,
+					new PandoraPower(AbstractDungeon.player, -magicNumber),
+					-magicNumber
+			));
+		}else{
+			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, PandoraPower.POWER_ID));
+		}
 	}
 
 	@Override

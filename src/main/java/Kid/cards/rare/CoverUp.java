@@ -18,18 +18,13 @@ public class CoverUp extends KidCard {
 			CardType.SKILL,
 			CardRarity.RARE,
 			CardTarget.SELF,
-			3
+			2
 	);
-
-	private static final int ENERGY_LOSS = 2;
-	private static final int UPGRADE_ENERGY_LOSS = -1;
 
 	public CoverUp() {
 		super(ID, info);
 
-		setMagic(ENERGY_LOSS, UPGRADE_ENERGY_LOSS);
-
-		setCostUpgrade(2);
+		setEthereal(true);
 
 		this.cardsToPreview = new FakeGem();
 	}
@@ -38,7 +33,12 @@ public class CoverUp extends KidCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractCard fakeGem = new FakeGem();
 		addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1)));
-		addToBot(new MakeTempCardInHandAction(fakeGem, 1));
+		if(this.upgraded){
+			addToBot(new MakeTempCardInHandAction(fakeGem, 1));
+		}else{
+			addToBot(new MakeTempCardInHandAction(fakeGem, 2));
+		}
+
 	}
 
 	@Override

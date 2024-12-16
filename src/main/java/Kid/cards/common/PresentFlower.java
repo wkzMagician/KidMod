@@ -23,10 +23,10 @@ public class PresentFlower extends KidCard {
 			1
 	);
 
-	private static final int DAMAGE = 8;
+	private static final int DAMAGE = 6;
 	private static final int UPG_DAMAGE = 2;
 
-	private static final int CHARM_AMOUNT = 4;
+	private static final int CHARM_AMOUNT = 3;
 	private static final int UPG_CHARM_AMOUNT = 2;
 
 	public PresentFlower() {
@@ -39,7 +39,7 @@ public class PresentFlower extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		addToBot(new ApplyPowerAction(m, p, new CharmPower(m, magicNumber), magicNumber));
+		addToBot(new ApplyPowerAction(p, p, new CharmPower(p, magicNumber), magicNumber));
 	}
 
 	@Override

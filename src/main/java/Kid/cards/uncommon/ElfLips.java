@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class ElfLips extends GemCard {
 	public static final String ID = makeID(ElfLips.class.getSimpleName());
@@ -39,6 +40,22 @@ public class ElfLips extends GemCard {
 	public void addPower() {
 		super.addPower();
 
+		AbstractPower power = AbstractDungeon.player.getPower(ElfLipsPower.POWER_ID);
+		if(power != null){
+			int amount = power.amount;
+
+			if(amount == -1 && upgraded){
+				addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ElfLipsPower.POWER_ID));
+				addToBot(new ApplyPowerAction(
+						AbstractDungeon.player,
+						AbstractDungeon.player,
+						new ElfLipsPower(AbstractDungeon.player, -2)
+				));
+			}
+
+			return;
+		}
+
 		int i = upgraded ? -2 : -1;
 		addToBot(new ApplyPowerAction(
 				AbstractDungeon.player,
@@ -51,7 +68,23 @@ public class ElfLips extends GemCard {
 	public void removePower() {
 		super.removePower();
 
-		addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ElfLipsPower.POWER_ID));
+		AbstractPower power = AbstractDungeon.player.getPower(ElfLipsPower.POWER_ID);
+		if(power == null) return;
+		int amount = power.amount;
+
+		if(amount == -2 && !upgraded) return;
+
+		// 遍历手牌中是否还存在其它ElfLips
+		int card_count = 0;
+		for(AbstractCard c : AbstractDungeon.player.hand.group){
+			if(c.cardID.equals(ElfLips.ID)){
+				card_count++;
+			}
+		}
+
+		if(card_count <= 1){
+			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ElfLipsPower.POWER_ID));
+		}
 	}
 
 	@Override

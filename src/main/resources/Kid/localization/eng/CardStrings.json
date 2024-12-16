@@ -18,7 +18,7 @@
     "DESCRIPTION": "Gain !B! Block."
   },
   "${modID}:MagicStrike": {
-    "NAME": "Magic Attack",
+    "NAME": "Magic Strike",
     "DESCRIPTION": "Deal !D! damage. NL Flip 3 random cards to back side."
   },
   "${modID}:AlertHint": {
@@ -100,7 +100,7 @@
   },
   "${modID}:GrandPrelude": {
     "NAME": "Grand Prelude",
-    "DESCRIPTION": "Innate. NL Gain !M! charm. NL Exhaust"
+    "DESCRIPTION": "Innate. NL Gain !M! charm. NL Exhaust."
   },
   "${modID}:OmnipotentPocket": {
     "NAME": "Omnipotent Pocket",
@@ -169,7 +169,8 @@
   },
   "${modID}:CoverUp": {
     "NAME": "Cover-Up",
-    "DESCRIPTION": "Gain 1 Intangible. NL Add 1 FakeGem to your hand."
+    "DESCRIPTION": "Gain 1 Intangible. NL Add 2 FakeGem to your hand. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Add 1 FakeGem to your hand. NL Ethereal."
   },
   "${modID}:WhiteCloak": {
     "NAME": "White Cloak",
@@ -237,8 +238,8 @@
   },
   "${modID}:SilverBullet": {
     "NAME": "Silver Bullet",
-    "DESCRIPTION": "Exhaust a gem in your hand. Rare deal 30 damage, otherwise deal 20 damage.",
-    "UPGRADE_DESCRIPTION": "Exhaust a gem in your hand. Rare deal 40 damage, otherwise deal 30 damage."
+    "DESCRIPTION": "Exhaust a gem in your hand. Rare deal 30 damage, uncommon deal 20 damage, otherwise deal 10 damage.",
+    "UPGRADE_DESCRIPTION": "Exhaust a gem in your hand. Rare deal 40 damage, otherwise deal 30 damage, uncommon deal 20 damage."
   },
   "${modID}:WonderForm": {
     "NAME": "Wonder Form",
@@ -247,7 +248,7 @@
   },
   "${modID}:DualIdentity": {
     "NAME": "Dual Identity",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is front, apply !M! Vulnerable. NL If this card is back, apply !M! Weak."
+    "DESCRIPTION": "Deal !D! damage. NL Flipped when played."
   },
   "${modID}:Restitution": {
     "NAME": "Restitution",
@@ -269,11 +270,11 @@
   },
   "${modID}:Forgery": {
     "NAME": "Forgery",
-    "DESCRIPTION": "Choose a card in your hand and add !M! copies of it to your hand. Copies are ethereal. Exhaust."
+    "DESCRIPTION": "Choose a card in your hand and add !M! copies of it to your hand. Copies are Ethereal. Exhaust."
   },
   "${modID}:Counterfeit": {
     "NAME": "Counterfeit",
-    "DESCRIPTION": "Deal !D! damage. NL Copy a random card in your hand. Copy is ethereal. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Copy a random card in your hand. Copy is Ethereal."
   },
   "${modID}:SleepGas": {
     "NAME": "Sleep Gas",
@@ -281,7 +282,7 @@
   },
   "${modID}:Skywalk": {
     "NAME": "Skywalk",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Plated Armor."
+    "DESCRIPTION": "Gain !B! Block. NL If this card is flipped, Gain !M! Plated Armor."
   },
   "${modID}:TowerDiamond": {
     "NAME": "Tower Diamond",
@@ -289,7 +290,7 @@
   },
   "${modID}:FakeGem": {
     "NAME": "Fake Gem",
-    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, gain 2 block."
+    "DESCRIPTION": "Unplayable. NL Retain."
   },
   "${modID}:Disguise": {
     "NAME": "Disguise",
@@ -298,7 +299,7 @@
   },
   "${modID}:Boast": {
     "NAME": "Boast",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is flipped, shuffle a FakeGem into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is flipped, shuffle a FakeGem into your draw pile. NL Flip this card."
   },
   "${modID}:FansSupport": {
     "NAME": "Fans Support",
@@ -319,7 +320,7 @@
   "${modID}:Curtsy": {
     "NAME": "Curtsy",
     "DESCRIPTION": "Double your charm. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple your charm."
+    "UPGRADE_DESCRIPTION": "Triple your charm. NL Exhaust."
   },
   "${modID}:ArmsCarry": {
     "NAME": "Arms Carry",
@@ -327,7 +328,7 @@
   },
   "${modID}:Bow": {
     "NAME": "Bow",
-    "DESCRIPTION": "Discard !M! cards. NL Gain 6 charm."
+    "DESCRIPTION": "Discard !M! cards. NL Gain 5 charm."
   },
   "${modID}:Ingratiate": {
     "NAME": "Ingratiate",
@@ -339,6 +340,6 @@
   },
   "${modID}:HatTrick": {
     "NAME": "Hat Trick",
-    "DESCRIPTION": "If you play 3 same cards in a row, deal !D! damage to all enemies."
+    "DESCRIPTION": "If you play 3 same cards in a row, deal !M! damage to all enemies."
   }
 }

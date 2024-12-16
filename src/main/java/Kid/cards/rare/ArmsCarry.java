@@ -3,6 +3,7 @@ package Kid.cards.rare;
 import Kid.actions.RemoveBuffsAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
+import Kid.powers.CharmPower;
 import Kid.util.CardStats;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.DamageCallbackAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -26,8 +27,8 @@ public class ArmsCarry extends KidCard {
 			3
 	);
 
-	private static final int DAMAGE = 24;
-	private static final int UPG_DAMAGE = 8;
+	private static final int DAMAGE = 18;
+	private static final int UPG_DAMAGE = 6;
 
 	public ArmsCarry() {
 		super(ID, info);
@@ -41,7 +42,7 @@ public class ArmsCarry extends KidCard {
 			// 获得造成伤害层数的魅力
 			int charm = damage;
 			if(charm <= 0) return;
-			addToBot(new ApplyPowerAction(p, p, new Kid.powers.CharmPower(p, charm), charm));
+			addToBot(new ApplyPowerAction(p, p, new CharmPower(p, charm), charm));
 		}));
 	}
 

@@ -22,8 +22,8 @@ public class MagicStrike extends KidCard {
 			1
 	);
 
-	private static final int DAMAGE = 12;
-	private static final int UPG_DAMAGE = 4;
+	private static final int DAMAGE = 10;
+	private static final int UPG_DAMAGE = 3;
 
 	public MagicStrike() {
 		super(ID, info);

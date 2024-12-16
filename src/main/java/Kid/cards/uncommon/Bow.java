@@ -2,6 +2,7 @@ package Kid.cards.uncommon;
 
 import Kid.cards.KidCard;
 import Kid.character.Kid;
+import Kid.powers.CharmPower;
 import Kid.util.CardStats;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -25,7 +26,7 @@ public class Bow extends KidCard {
 	private static final int DISCARD = 3;
 	private static final int UPG_DISCARD = -1;
 
-	private static final int CHARM = 6;
+	private static final int CHARM = 5;
 
 	public Bow() {
 		super(ID, info);
@@ -37,7 +38,7 @@ public class Bow extends KidCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new DiscardAction(p, p, this.magicNumber, false));
 		// 获得魅力
-		addToBot(new ApplyPowerAction(p, p, new Kid.powers.CharmPower(p, CHARM), CHARM));
+		addToBot(new ApplyPowerAction(p, p, new CharmPower(p, CHARM), CHARM));
 	}
 
 	@Override

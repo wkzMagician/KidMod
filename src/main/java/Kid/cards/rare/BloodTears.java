@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class BloodTears extends GemCard {
 	public static final String ID = makeID(BloodTears.class.getSimpleName());
@@ -23,6 +24,10 @@ public class BloodTears extends GemCard {
 
 	public BloodTears() {
 		super(ID, info);
+
+		if(upgraded) {
+			setInnate(true);
+		}
 	}
 
 	@Override
@@ -32,7 +37,7 @@ public class BloodTears extends GemCard {
 		addToBot(new ApplyPowerAction(
 				AbstractDungeon.player,
 				AbstractDungeon.player,
-				new BloodTearsPower(AbstractDungeon.player, this.upgraded, 1),
+				new BloodTearsPower(AbstractDungeon.player, 1),
 				1
 		));
 	}
@@ -41,7 +46,22 @@ public class BloodTears extends GemCard {
 	public void removePower() {
 		super.removePower();
 
-		addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BloodTearsPower.POWER_ID));
+		// 获得能力
+		AbstractPower power = AbstractDungeon.player.getPower(BloodTearsPower.POWER_ID);
+		if(power == null) return;
+
+		int amount = power.amount;
+
+		if(amount > 1) {
+			addToBot(new ApplyPowerAction(
+					AbstractDungeon.player,
+					AbstractDungeon.player,
+					new BloodTearsPower(AbstractDungeon.player, -1),
+					-1
+			));
+		}else{
+			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BloodTearsPower.POWER_ID));
+		}
 	}
 
 	@Override

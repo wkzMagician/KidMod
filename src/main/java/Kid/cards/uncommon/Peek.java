@@ -24,7 +24,7 @@ public class Peek extends KidCard {
 	);
 
 	private static final int VULNERABLE = 2;
-	private static final int UPGRADE_PLUS_VULNERABLE = 1;
+	private static final int UPGRADE_PLUS_VULNERABLE = -1;
 
 	public Peek() {
 		super(ID, info);

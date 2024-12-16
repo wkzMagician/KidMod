@@ -2,6 +2,7 @@ package Kid.cards.uncommon;
 
 import Kid.cards.GemCard;
 import Kid.character.Kid;
+import Kid.powers.DarkStarPower;
 import Kid.powers.MotherOfGemsPower;
 import Kid.powers.PupilOfMoonPower;
 import Kid.util.CardStats;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DrawPower;
 
 public class MotherOfGems extends GemCard {
@@ -54,7 +56,21 @@ public class MotherOfGems extends GemCard {
 	public void removePower() {
 		super.removePower();
 
-		addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, MotherOfGemsPower.POWER_ID));
+		AbstractPower power = AbstractDungeon.player.getPower(MotherOfGemsPower.POWER_ID);
+		if(power == null) return;
+
+		int amount = power.amount;
+
+		if(amount > 1) {
+			addToBot(new ApplyPowerAction(
+					AbstractDungeon.player,
+					AbstractDungeon.player,
+					new MotherOfGemsPower(AbstractDungeon.player, -magicNumber),
+					-magicNumber
+			));
+		}else{
+			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, MotherOfGemsPower.POWER_ID));
+		}
 	}
 
 	@Override

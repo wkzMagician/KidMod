@@ -23,7 +23,7 @@ public class GrandPrelude extends KidCard {
 			0
 	);
 
-	private static final int CHARM = 6;
+	private static final int CHARM = 5;
 	private static final int UPG_CHARM = 3;
 
 	public GrandPrelude() {

@@ -12,7 +12,7 @@ public abstract class KidCard extends BaseCard {
 	// 新的属性：翻面
 	protected boolean isFlipped = false;
 
-	protected String actualDescription;
+//	protected String actualDescription;
 	protected String actualName;
 //	protected Integer actualCost;
 
@@ -31,7 +31,7 @@ public abstract class KidCard extends BaseCard {
 	public KidCard(String id, CardStats stats) {
 		super(id, stats);
 
-		actualDescription = rawDescription;
+//		actualDescription = rawDescription;
 		actualName = name;
 	}
 
@@ -62,14 +62,14 @@ public abstract class KidCard extends BaseCard {
 
 				this.isSeen = false;
 
-				// 将卡片名字设为"???"
+//				// 将卡片名字设为"???"
 				actualName = name;
 				name = "???";
-
-				// 设置卡片描述为"???"
-				actualDescription = rawDescription;
-				rawDescription = "???";
-				initializeDescription();
+//
+//				// 设置卡片描述为"???"
+//				actualDescription = rawDescription;
+//				rawDescription = "???";
+//				initializeDescription();
 
 			} else {
 				// 如果翻为正面，将图片设置为正面图片
@@ -80,15 +80,17 @@ public abstract class KidCard extends BaseCard {
 
 				this.isSeen = true;
 
-				// 将卡片名字设为原本的名字
+//				// 将卡片名字设为原本的名字
 				name = actualName;
-
-				// 设置卡片描述为原本的描述
-				rawDescription = actualDescription;
-				initializeDescription();
+//
+//				// 设置卡片描述为原本的描述
+//				rawDescription = actualDescription;
+//				initializeDescription();
 			}
 
 			triggerOnFlip();
+
+			applyPowers();
 	}
 
 	public boolean isReverse() {

@@ -25,6 +25,7 @@ public class HatTrickPower extends BasePower {
 				this.loadRegion("LoopholeDetection");
 				this.name = NAME;
 				this.amount = 0;
+				this.damage = magicNumber;
 				this.updateDescription();
 		}
 

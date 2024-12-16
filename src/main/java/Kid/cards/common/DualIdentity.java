@@ -1,4 +1,6 @@
-package Kid.cards.uncommon;
+package Kid.cards.common;
+
+import static Kid.util.TextureLoader.getCardTextureString;
 
 import Kid.cards.KidCard;
 import Kid.character.Kid;
@@ -6,6 +8,7 @@ import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,33 +21,54 @@ public class DualIdentity extends KidCard {
 	private static final CardStats info = new CardStats(
 			Kid.Meta.CARD_COLOR,
 			CardType.ATTACK,
-			CardRarity.UNCOMMON,
+			CardRarity.COMMON,
 			CardTarget.ENEMY,
 			1
 	);
 
-	private static final int DAMAGE = 8;
-	private static final int UPG_DAMAGE = 2;
+	private static final int DAMAGE = 11;
+	private static final int UPG_DAMAGE = 3;
 
-	private static final int MAGIC = 1;
-	private static final int UPG_MAGIC = 1;
+	private static final int BLOCK = 9;
+	private static final int UPG_BLOCK = 3;
 
 	public DualIdentity() {
 		super(ID, info);
 
 		setDamage(DAMAGE, UPG_DAMAGE);
-		setMagic(MAGIC, UPG_MAGIC);
+		setBlock(BLOCK, UPG_BLOCK);
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		if(this.isReverse()){
+		if(!this.isReverse()){
 			addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-			addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false)));
 		}else{
-			addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-			addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false)));
+			addToBot(new GainBlockAction(p, p, this.block));
 		}
+
+		// 翻面！
+		flip();
+	}
+
+	@Override
+	public void setFlipped(boolean flipped) {
+		super.setFlipped(flipped);
+		this.isSeen = true;
+		this.name = this.actualName;
+
+		if(!isFlipped){
+			this.type = CardType.ATTACK;
+			this.target = CardTarget.ENEMY;
+			this.rawDescription = "Deal !D! damage. NL Flipped when played.";
+		}else{
+			this.type = CardType.SKILL;
+			this.target = CardTarget.SELF;
+			this.rawDescription = "Gain !B! Block. NL Flipped when played.";
+		}
+
+		initializeDescription();
+		loadCardImage(getCardTextureString(cardID, type));
 	}
 
 	@Override

@@ -37,17 +37,23 @@ public abstract class GemCard extends KidCard {
 
 	@Override
 	public void triggerWhenDrawn() {
-		addPower();
+		if(!this.hasPower){
+			this.addPower();
+		}
 	}
 
-	@Override
-	public void triggerOnManualDiscard() {
-		removePower();
-	}
+//	@Override
+//	public void triggerOnManualDiscard() {
+//		if(this.hasPower){
+//			removePower();
+//		}
+//	}
 
 	@Override
 	public void triggerOnExhaust() {
-		removePower();
+		if(this.hasPower){
+			removePower();
+		}
 	}
 
 	@Override
@@ -77,7 +83,10 @@ public abstract class GemCard extends KidCard {
 	@Override
 	public void onMoveToDiscard() {
 		super.onMoveToDiscard();
-		removePower();
+
+		if(this.hasPower){
+			removePower();
+		}
 
 		addToTop(new TriggerRestitutionPowerAction(AbstractDungeon.player, AbstractDungeon.player));
 	}

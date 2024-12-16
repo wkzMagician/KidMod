@@ -4,6 +4,7 @@ import Kid.actions.FlipCardAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -39,7 +40,11 @@ public class Feint extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		addToBot(new FlipCardAction(p, p, magicNumber, Strategy.SELECT));
+		addToBot(new SelectCardsInHandAction(magicNumber, "Flip", true, true, card -> card instanceof KidCard, list -> {
+			for (AbstractCard c : list) {
+				((KidCard) c).flip();
+			}
+		}));
 	}
 
 	@Override

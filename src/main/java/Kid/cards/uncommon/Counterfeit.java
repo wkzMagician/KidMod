@@ -35,8 +35,14 @@ public class Counterfeit extends KidCard {
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AttackEffect.BLUNT_HEAVY));
 		// 随机复制1张手牌
 		AbstractCard c = p.hand.getRandomCard(true);
+		while (c == this) {
+			c = p.hand.getRandomCard(true);
+		}
 		if (c != null) {
 			AbstractCard copy = c.makeStatEquivalentCopy();
+			copy.isEthereal = true;
+			copy.rawDescription += " NL Ethereal.";
+			copy.initializeDescription();
 			p.hand.addToTop(copy);
 		}
 	}

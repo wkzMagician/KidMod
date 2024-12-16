@@ -3,12 +3,14 @@ package Kid.cards.uncommon;
 import Kid.cards.GemCard;
 import Kid.character.Kid;
 import Kid.powers.DarkStarPower;
+import Kid.powers.ParisSunshinePower;
 import Kid.powers.PupilOfMoonPower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class PupilOfMoon extends GemCard {
 	public static final String ID = makeID(PupilOfMoon.class.getSimpleName());
@@ -46,7 +48,21 @@ public class PupilOfMoon extends GemCard {
 	public void removePower() {
 		super.removePower();
 
-		addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, PupilOfMoonPower.POWER_ID));
+		AbstractPower power = AbstractDungeon.player.getPower(PupilOfMoonPower.POWER_ID);
+		if(power == null) return;
+
+		int amount = power.amount;
+
+		if(amount > 1) {
+			addToBot(new ApplyPowerAction(
+					AbstractDungeon.player,
+					AbstractDungeon.player,
+					new PupilOfMoonPower(AbstractDungeon.player, -magicNumber),
+					-magicNumber
+			));
+		}else{
+			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, PupilOfMoonPower.POWER_ID));
+		}
 	}
 
 	@Override

@@ -1,4 +1,6 @@
 package Kid.powers;
+import Kid.cards.GemCard;
+import Kid.cards.KidCard;
 import Kid.cards.status.FakeGem;
 import Kid.cards.rare.BloodTears;
 import Kid.cards.rare.ParisSunshine;
@@ -67,6 +69,7 @@ public class MasterThiefPower extends BasePower {
 				int random_idx = AbstractDungeon.cardRandomRng.random(cards.length - 1);
 				AbstractCard card = cards[random_idx].makeCopy();
 				addToBot(new MakeTempCardInHandAction(card));
+				((GemCard) card).addPower();
 			}
 		}
 }

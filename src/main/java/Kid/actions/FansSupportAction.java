@@ -44,7 +44,7 @@ public class FansSupportAction extends AbstractGameAction {
 		if (effect > 0) {
 			// 获得X层魅力
 			int amount = this.charm * effect;
-			addToBot(new ApplyPowerAction(m, p, new CharmPower(m, amount), amount));
+			addToBot(new ApplyPowerAction(p, p, new CharmPower(p, amount), amount));
 
 			if (!this.freeToPlayOnce)
 				this.p.energy.use(EnergyPanel.totalCount);
