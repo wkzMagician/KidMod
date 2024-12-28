@@ -5,6 +5,7 @@ import Kid.actions.SetCardSideAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,7 +25,7 @@ public class WhiteCloak extends KidCard {
 	private static final int UPG_BLOCK = 2;
 
 	private static final int FLIP = 2;
-	private static final int UPG_FLIP = 3;
+	private static final int UPG_FLIP = 1;
 
 	public WhiteCloak() {
 		super(ID, info);
@@ -38,7 +39,11 @@ public class WhiteCloak extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new GainBlockAction(p, p, this.block));
-		addToBot(new FlipCardAction(p, p, this.magicNumber, Strategy.SELECT));
+		addToBot(new SelectCardsInHandAction(magicNumber, "Flip", true, true, c -> c instanceof KidCard, list -> {
+			for(AbstractCard c : list) {
+				((KidCard) c).flip();
+			}
+		}));
 	}
 
 	@Override

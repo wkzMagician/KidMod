@@ -1,6 +1,5 @@
 package Kid.cards.rare;
 
-import Kid.actions.FlipCardDrawAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
@@ -9,8 +8,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class Forgery extends KidCard {
-	public static final String ID = makeID(Forgery.class.getSimpleName());
+public class Counterfeit extends KidCard {
+	public static final String ID = makeID(Counterfeit.class.getSimpleName());
 	private static final CardStats info = new CardStats(
 			Kid.Meta.CARD_COLOR,
 			CardType.SKILL,
@@ -22,7 +21,7 @@ public class Forgery extends KidCard {
 	private static final int MAGIC = 2;
 	private static final int UPG_MAGIC = 1;
 
-	public Forgery() {
+	public Counterfeit() {
 		super(ID, info);
 
 		setExhaust(true);
@@ -46,6 +45,6 @@ public class Forgery extends KidCard {
 
 	@Override
 	public AbstractCard makeCopy() { //Optional
-		return new Forgery();
+		return new Counterfeit();
 	}
 }

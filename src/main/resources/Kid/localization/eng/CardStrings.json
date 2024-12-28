@@ -23,7 +23,7 @@
   },
   "${modID}:AlertHint": {
     "NAME": "Alert Hint",
-    "DESCRIPTION": "NL Actual. Gain !B! Block. NL Select !M! cards to flip to front side"
+    "DESCRIPTION": "Actual NL . Gain !B! Block. NL Select !M! cards to flip to front side"
   },
   "${modID}:FaceMask": {
     "NAME": "Face Mask",
@@ -35,10 +35,7 @@
   },
   "${modID}:PokerFace": {
     "NAME": "Poker Face",
-    "DESCRIPTION": "Can only be played if every card in your hand is flipped to back side. NL Gain !B! Block.",
-    "EXTENDED_DESCRIPTION": [
-      "You have cards with front side in your hand."
-    ]
+    "DESCRIPTION": "If all cards in your hand are back side, gain !B! Block."
   },
   "${modID}:Shuffle": {
     "NAME": "Shuffle",
@@ -96,7 +93,7 @@
   },
   "${modID}:RepeatTrick": {
     "NAME": "Repeat Trick",
-    "DESCRIPTION": "Play the last card you played again. NL Increase energy cost by 1 each time this card is played."
+    "DESCRIPTION": "Play the card on top of discard pile. NL Increase energy cost by 1 each time this card is played."
   },
   "${modID}:GrandPrelude": {
     "NAME": "Grand Prelude",
@@ -104,13 +101,13 @@
   },
   "${modID}:OmnipotentPocket": {
     "NAME": "Omnipotent Pocket",
-    "DESCRIPTION": "Draw back side cards until your hand is full. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw back side cards until your hand is full."
+    "DESCRIPTION": "Draw until your hand is full or draw a front side card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw until your hand is full or draw a front side card."
   },
   "${modID}:Prepare": {
     "NAME": "Prepare",
-    "DESCRIPTION": "Actual. NL Gain !B! blocks. NL Shuffle a miracle into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! blocks. NL Shuffle a miracle+ into your draw pile."
+    "DESCRIPTION": "Actual. NL Gain !B! blocks. NL Shuffle a *miracle into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! blocks. NL Shuffle a *miracle+ into your draw pile."
   },
   "${modID}:Sneak": {
     "NAME": "Sneak",
@@ -126,12 +123,12 @@
   },
   "${modID}:MysticTechniques": {
     "NAME": "Mystic Techniques",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is flipped, gain 2 energy."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is flipped, gain [E] [E] ."
   },
   "${modID}:Cleanse": {
     "NAME": "Cleanse",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. Clear all buffs from them. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. Clear all debuffs from them."
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. Clear all positive buffs from them."
   },
   "${modID}:StunGun": {
     "NAME": "Stun Gun",
@@ -139,7 +136,7 @@
   },
   "${modID}:Cardistry": {
     "NAME": "Cardistry",
-    "DESCRIPTION": "Costs 1 less Energy for each time this card is flipped. NL Deal !D! damage 3 times."
+    "DESCRIPTION": "Costs 1 less Energy for each time this card is flipped in this turn. NL Deal !D! damage 3 times."
   },
   "${modID}:MindMagic": {
     "NAME": "Mind Magic",
@@ -165,7 +162,7 @@
   },
   "${modID}:Peek": {
     "NAME": "Peek",
-    "DESCRIPTION": "Gain 3 Energy. NL Gain !M! Vulnerable."
+    "DESCRIPTION": "Gain [E] [E] [E] . NL Gain !M! Vulnerable."
   },
   "${modID}:CoverUp": {
     "NAME": "Cover-Up",
@@ -199,7 +196,7 @@
   },
   "${modID}:BlueBirthday": {
     "NAME": "Blue Birthday",
-    "DESCRIPTION": "Unplayable. NL Retain. NL At the start of your turn, gain 1 Energy. NL Discard when you play !M! cards.",
+    "DESCRIPTION": "Unplayable. NL Retain. NL At the start of your turn, gain [E] . NL Discard when you play !M! cards.",
     "EXTENDED_DESCRIPTION": [
       "You have played ",
       " card.",
@@ -212,8 +209,8 @@
   },
   "${modID}:BloodTears": {
     "NAME": "Blood Tears",
-    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, exhaust a card in your hand.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, choose a card in your hand to exhaust."
+    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, choose to exhaust a card in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Unplayable. NL Retain. NL At the end of your turn, choose to exhaust a card in your hand."
   },
   "${modID}:ElfLips": {
     "NAME": "Elf Lips",
@@ -239,7 +236,7 @@
   "${modID}:SilverBullet": {
     "NAME": "Silver Bullet",
     "DESCRIPTION": "Exhaust a gem in your hand. Rare deal 30 damage, uncommon deal 20 damage, otherwise deal 10 damage.",
-    "UPGRADE_DESCRIPTION": "Exhaust a gem in your hand. Rare deal 40 damage, otherwise deal 30 damage, uncommon deal 20 damage."
+    "UPGRADE_DESCRIPTION": "Exhaust a gem in your hand. Rare deal 40 damage, uncommon deal 30 damage, otherwise deal 20 damage."
   },
   "${modID}:WonderForm": {
     "NAME": "Wonder Form",
@@ -248,7 +245,7 @@
   },
   "${modID}:DualIdentity": {
     "NAME": "Dual Identity",
-    "DESCRIPTION": "Deal !D! damage. NL Flipped when played."
+    "DESCRIPTION": "Deal !D! damage. NL Flipped when played and change to skill card."
   },
   "${modID}:Restitution": {
     "NAME": "Restitution",
@@ -257,7 +254,7 @@
   "${modID}:Steal": {
     "NAME": "Steal",
     "DESCRIPTION": "Choose a gem from your draw pile and put it into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a gem from your draw pile and put it into your hand."
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a gem from your draw pile and put it into your hand. NL Exhaust."
   },
   "${modID}:Glider": {
     "NAME": "Glider",
@@ -265,15 +262,14 @@
   },
   "${modID}:Scout": {
     "NAME": "Scout",
-    "DESCRIPTION": "At the end of your turn, choose !M! card from discard pile to retain.",
-    "UPGRADE_DESCRIPTION": "At the end of your turn, choose !M! cards from discard pile to retain."
-  },
-  "${modID}:Forgery": {
-    "NAME": "Forgery",
-    "DESCRIPTION": "Choose a card in your hand and add !M! copies of it to your hand. Copies are Ethereal. Exhaust."
+    "DESCRIPTION": "At the end of your turn, choose !M! card from discard pile to retain."
   },
   "${modID}:Counterfeit": {
     "NAME": "Counterfeit",
+    "DESCRIPTION": "Choose a card in your hand and add !M! copies of it to your hand. Copies are Ethereal. Exhaust."
+  },
+  "${modID}:Forgery": {
+    "NAME": "Forgery",
     "DESCRIPTION": "Deal !D! damage. NL Copy a random card in your hand. Copy is Ethereal."
   },
   "${modID}:SleepGas": {
@@ -307,7 +303,7 @@
   },
   "${modID}:MasterThief": {
     "NAME": "Master Thief",
-    "DESCRIPTION": "At the start of your turn, add 1 random gem to your hand. NL Exhaust."
+    "DESCRIPTION": "At the start of your turn, add 1 random gem to your hand."
   },
   "${modID}:ParisSunshine": {
     "NAME": "Paris Sunshine",
@@ -332,7 +328,7 @@
   },
   "${modID}:Ingratiate": {
     "NAME": "Ingratiate",
-    "DESCRIPTION": "Deal !D! damage. NL If charm greater than !M!, draw 1 card and gain 1 energy."
+    "DESCRIPTION": "Deal !D! damage. NL If charm greater than !M!, draw 1 card and gain [E] ."
   },
   "${modID}:Reason": {
     "NAME": "Reason",

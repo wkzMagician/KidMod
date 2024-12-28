@@ -1,0 +1,45 @@
+{
+  "${modID}:FlipCardAction": {
+    "TEXT": [
+      "Choose card to flip.",
+      "Flip the card. Players cannot see the flipped card's front side."
+    ],
+    "EXTRA_TEXT": [
+      "This is another",
+      "array of Strings."
+    ],
+    "TEXT_DICT": {
+      "This": "Contains pairs of Strings, used to get values based on keys.",
+      "This is a key": "This is a value."
+    }
+  },
+  "${modID}:SetCardSideAction": {
+    "TEXT": [
+      "Choose card to flip to front side.",
+      "Choose card to flip to back side.",
+      "Flip the card. Players cannot see the flipped card's front side."
+    ],
+    "EXTRA_TEXT": [
+      "This is another",
+      "array of Strings."
+    ],
+    "TEXT_DICT": {
+      "This": "Contains pairs of Strings, used to get values based on keys.",
+      "This is a key": "This is a value."
+    }
+  },
+  "${modID}:SwapCardEnergyAction": {
+    "TEXT": [
+      "Choose two card to swap energy.",
+      "."
+    ],
+    "EXTRA_TEXT": [
+      "This is another",
+      "array of Strings."
+    ],
+    "TEXT_DICT": {
+      "This": "Contains pairs of Strings, used to get values based on keys.",
+      "This is a key": "This is a value."
+    }
+  }
+}

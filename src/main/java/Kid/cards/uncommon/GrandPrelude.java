@@ -17,9 +17,9 @@ public class GrandPrelude extends KidCard {
 	public static final String ID = makeID(GrandPrelude.class.getSimpleName());
 	private static final CardStats info = new CardStats(
 			Kid.Meta.CARD_COLOR,
-			CardType.ATTACK,
+			CardType.SKILL,
 			CardRarity.UNCOMMON,
-			CardTarget.ALL_ENEMY,
+			CardTarget.SELF,
 			0
 	);
 

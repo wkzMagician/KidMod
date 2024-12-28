@@ -50,6 +50,7 @@ public class Recapture extends KidCard {
 
 				p.hand.addToTop(c);
 				p.discardPile.removeCard(c);
+				c.applyPowers();
 			}
 		}));
 	}
