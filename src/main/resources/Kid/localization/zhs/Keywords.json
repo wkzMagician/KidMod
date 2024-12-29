@@ -1,23 +1,72 @@
 [
   {
-    "PROPER_NAME": "This is displayed in the tooltip.",
+    "PROPER_NAME": "这显示在工具提示中。",
     "NAMES": [
-      "these",
-      "are",
-      "detected",
-      "in",
-      "the",
-      "text"
+      "这些",
+      "被",
+      "检测",
+      "在",
+      "文本",
+      "中"
     ],
-    "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
+    "DESCRIPTION": "这显示在工具提示中。NAMES中应避免使用空格，但多词关键词（见下一条目）除外。"
   },
   {
-    "PROPER_NAME": "Multiword Keyword",
+    "PROPER_NAME": "多词关键词",
     "NAMES": [
-      "multiword keyword",
+      "多词关键词",
       "multiword_keyword",
       "multiword_keywords"
     ],
-    "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+    "DESCRIPTION": "确保NAMES中的第一个元素不使用下划线。其余元素应使用_代替空格。在卡牌文本中，您将使用带下划线的版本。"
+  },
+  {
+    "PROPER_NAME": "魅力",
+    "NAMES": [
+      "魅力"
+    ],
+    "DESCRIPTION": "在你的回合结束时，对所有敌人造成等于魅力数量的伤害。当受到伤害时，移除一半的魅力。"
+  },
+  {
+    "PROPER_NAME": "翻转",
+    "NAMES": [
+      "翻转"
+    ],
+    "DESCRIPTION": "翻转一张卡牌，你将卡牌的状态从 正面 变为 反面 ，或反之。"
+  },
+  {
+    "PROPER_NAME": "标记",
+    "NAMES": [
+      "标记"
+    ],
+    "DESCRIPTION": "被标记的卡牌会被高亮，在面朝下时也能被识别。"
+  },
+  {
+    "PROPER_NAME": "真相",
+    "NAMES": [
+      "真相"
+    ],
+    "DESCRIPTION": "真相卡牌不能被翻转。"
+  },
+  {
+    "PROPER_NAME": "反面",
+    "NAMES": [
+      "反面"
+    ],
+    "DESCRIPTION": "反面的卡牌是隐藏的，无法被识别。其费用、名称、图片和文本均不可见。"
+  },
+  {
+    "PROPER_NAME": "宝石",
+    "NAMES": [
+      "宝石"
+    ],
+    "DESCRIPTION": "宝石牌不可以打出，类似能力牌，但是违反规则时会被丢弃。"
+  },
+  {
+    "PROPER_NAME": "正面",
+    "NAMES": [
+      "正面"
+    ],
+    "DESCRIPTION": "正面的卡牌和常规的卡牌一样，可以被识别。"
   }
 ]

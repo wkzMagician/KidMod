@@ -19,36 +19,36 @@
   },
   "${modID}:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Flip 3 random cards to back side."
+    "DESCRIPTION": "Deal !D! damage. NL Kid:Flip 3 random cards to Kid:Face-down."
   },
   "${modID}:AlertHint": {
     "NAME": "Alert Hint",
-    "DESCRIPTION": "Actual NL . Gain !B! Block. NL Select !M! cards to flip to front side"
+    "DESCRIPTION": "Kid:Actual. NL Gain !B! Block. NL Select !M! cards to Kid:Flip to Kid:Face-up ."
   },
   "${modID}:FaceMask": {
     "NAME": "Face Mask",
-    "DESCRIPTION": "Gain !B! Block. NL Flip 3 random cards to back side."
+    "DESCRIPTION": "Gain !B! Block. NL Kid:Flip 3 random cards to Kid:Face-down ."
   },
   "${modID}:Feint": {
     "NAME": "Feint",
-    "DESCRIPTION": "Actual. Deal !D! damage. NL Select !M! cards to flip."
+    "DESCRIPTION": "Kid:Actual. Deal !D! damage. NL Select !M! cards to Kid:Flip."
   },
   "${modID}:PokerFace": {
     "NAME": "Poker Face",
-    "DESCRIPTION": "If all cards in your hand are back side, gain !B! Block."
+    "DESCRIPTION": "If all cards in your hand are Kid:Face-down , gain !B! Block."
   },
   "${modID}:Shuffle": {
     "NAME": "Shuffle",
-    "DESCRIPTION": "Flip all cards in your hand."
+    "DESCRIPTION": "Kid:Flip all cards in your hand."
   },
   "${modID}:DeckInsight": {
     "NAME": "Deck Insight",
     "DESCRIPTION": "Gain !B! Block. NL Scry !M! cards.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Scry !M! cards. Flip all scryed cards to front side."
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Scry !M! cards. Kid:Flip all scryed cards to Kid:Face-up."
   },
   "${modID}:FancyAct": {
     "NAME": "Fancy Act",
-    "DESCRIPTION": "Apply slow. NL Exhaust."
+    "DESCRIPTION": "Apply Slow. NL Exhaust."
   },
   "${modID}:Smoke": {
     "NAME": "Smoke",
@@ -60,7 +60,7 @@
   },
   "${modID}:Teleport": {
     "NAME": "Teleport",
-    "DESCRIPTION": "Draw !M! cards and flip them to back side."
+    "DESCRIPTION": "Draw !M! cards and Kid:Flip them to Kid:Face-down."
   },
   "${modID}:AirKiss": {
     "NAME": "Air Kiss",
@@ -68,15 +68,15 @@
   },
   "${modID}:KnockOut": {
     "NAME": "Knock Out",
-    "DESCRIPTION": "Deal !D! damage. NL Flip all cards in your hand to back side."
+    "DESCRIPTION": "Deal !D! damage. NL Kid:Flip all cards in your hand to Kid:Face-down."
   },
   "${modID}:PokerGun": {
     "NAME": "Poker Gun",
-    "DESCRIPTION": "Discard any number of reversed cards. NL Deal !D! damage for each card discarded."
+    "DESCRIPTION": "Discard any number of Kid:Face-down cards. NL Deal !D! damage for each card discarded."
   },
   "${modID}:Recapture": {
     "NAME": "Recapture",
-    "DESCRIPTION": "Deal !D! damage. NL Put !M! cards from your discard pile to your hand. Flip them to back side."
+    "DESCRIPTION": "Deal !D! damage. NL Put !M! cards from your discard pile to your hand. Kid:Flip them to Kid:Face-down."
   },
   "${modID}:Notice": {
     "NAME": "Notice",
@@ -84,7 +84,7 @@
   },
   "${modID}:Cheat": {
     "NAME": "Cheat",
-    "DESCRIPTION": "Select a back side card in your hand. NL Play it without energy cost."
+    "DESCRIPTION": "Select a Kid:Face-down card in your hand. NL Play it without energy cost."
   },
   "${modID}:PhantomSteal": {
     "NAME": "Phantom Steal",
@@ -97,33 +97,33 @@
   },
   "${modID}:GrandPrelude": {
     "NAME": "Grand Prelude",
-    "DESCRIPTION": "Innate. NL Gain !M! charm. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Gain !M! Kid:Charm. NL Exhaust."
   },
   "${modID}:OmnipotentPocket": {
     "NAME": "Omnipotent Pocket",
-    "DESCRIPTION": "Draw until your hand is full or draw a front side card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw until your hand is full or draw a front side card."
+    "DESCRIPTION": "Draw until your hand is full or draw a Kid:Face-up card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw until your hand is full or draw a Kid:Face-up card."
   },
   "${modID}:Prepare": {
     "NAME": "Prepare",
-    "DESCRIPTION": "Actual. NL Gain !B! blocks. NL Shuffle a *miracle into your draw pile.",
+    "DESCRIPTION": "Kid:Actual. NL Gain !B! blocks. NL Shuffle a *miracle into your draw pile.",
     "UPGRADE_DESCRIPTION": "Gain !B! blocks. NL Shuffle a *miracle+ into your draw pile."
   },
   "${modID}:Sneak": {
     "NAME": "Sneak",
-    "DESCRIPTION": "Gain !B! blocks. NL Retain all back side cards in your hand."
+    "DESCRIPTION": "Gain !B! blocks. NL Retain all Kid:Face-down cards in your hand."
   },
   "${modID}:Raid": {
     "NAME": "Raid",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is flipped, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Kid:Flipped, deal !D! damage again."
   },
   "${modID}:MagicGlove": {
     "NAME": "Magic Glove",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Select a card to flip."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Select a card to Kid:Flip."
   },
   "${modID}:MysticTechniques": {
     "NAME": "Mystic Techniques",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is flipped, gain [E] [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Kid:Flipped, gain [E] [E] ."
   },
   "${modID}:Cleanse": {
     "NAME": "Cleanse",
@@ -136,29 +136,32 @@
   },
   "${modID}:Cardistry": {
     "NAME": "Cardistry",
-    "DESCRIPTION": "Costs 1 less Energy for each time this card is flipped in this turn. NL Deal !D! damage 3 times."
+    "DESCRIPTION": "Costs 1 less [E] for each time this card is Kid:Flipped in this turn. NL Deal !D! damage 3 times."
   },
   "${modID}:MindMagic": {
     "NAME": "Mind Magic",
-    "DESCRIPTION": "Whenever you flip a card, gain !M! Block."
+    "DESCRIPTION": "Whenever you Kid:Flip a card, gain !M! Block."
   },
   "${modID}:Flashbang": {
     "NAME": "Flashbang",
-    "DESCRIPTION": "Set all hand cards to front side. ",
-    "UPGRADE_DESCRIPTION": "Actual. NL Set all hand cards to front side."
+    "DESCRIPTION": "Set all hand cards to Kid:Face-up. ",
+    "UPGRADE_DESCRIPTION": "Kid:Actual. NL Set all hand cards to Kid:Face-up."
   },
   "${modID}:HeartfeltApologies": {
     "NAME": "Heartfelt Apologies",
-    "DESCRIPTION": "Can only be played if you have no back side cards in hand. NL Deal !D! damage."
+    "DESCRIPTION": "Can only be played if you have no Kid:Face-down cards in hand. NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "You have Kid:Face-down cards in hand."
+    ]
   },
   "${modID}:TrickExposure": {
     "NAME": "Trick Exposure",
-    "DESCRIPTION": "Whenever you play a reversed card, flip it to front side.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a reversed card, flip it to front side."
+    "DESCRIPTION": "Whenever you play a Kid:Face-down card, Kid:Flip it to Kid:Face-up.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play a Kid:Face-down card, Kid:Flip it to Kid:Face-up."
   },
   "${modID}:UnparalleledSkill": {
     "NAME": "Unparalleled Skill",
-    "DESCRIPTION": "Whenever you draw a card, flip it to back side."
+    "DESCRIPTION": "Whenever you draw a card, Kid:Flip it to Kid:Face-down."
   },
   "${modID}:Peek": {
     "NAME": "Peek",
@@ -166,20 +169,20 @@
   },
   "${modID}:CoverUp": {
     "NAME": "Cover-Up",
-    "DESCRIPTION": "Gain 1 Intangible. NL Add 2 FakeGem to your hand. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Add 1 FakeGem to your hand. NL Ethereal."
+    "DESCRIPTION": "Gain 1 Intangible. NL Add 2 *FakeGem to your hand. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Add 1 *FakeGem to your hand. NL Ethereal."
   },
   "${modID}:WhiteCloak": {
     "NAME": "White Cloak",
-    "DESCRIPTION": "Actual. NL Gain !B! block. NL Choose to flip !M! cards in your hand."
+    "DESCRIPTION": "Kid:Actual. NL Gain !B! block. NL Choose to Kid:Flip !M! cards in your hand."
   },
   "${modID}:Transmitter": {
     "NAME": "Transmitter",
-    "DESCRIPTION": "Actual. NL Mark a card in your hand. NL Exhaust."
+    "DESCRIPTION": "Kid:Actual. NL Kid:Mark a card in your hand. NL Exhaust."
   },
   "${modID}:LoopholeDetection": {
     "NAME": "Loophole Detection",
-    "DESCRIPTION": "Mark the card with the highest energy cost in your hand."
+    "DESCRIPTION": "Kid:Mark the card with the highest energy cost in your hand."
   },
   "${modID}:PupilOfMoon": {
     "NAME": "Pupil of Moon",
@@ -205,64 +208,64 @@
   },
   "${modID}:Pandora": {
     "NAME": "Pandora",
-    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, heal !M! HP. NL Discard when other gems in your hand."
+    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, heal !M! HP. NL Discard when other Kid:Gems in your hand."
   },
   "${modID}:BloodTears": {
     "NAME": "Blood Tears",
-    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, choose to exhaust a card in your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Unplayable. NL Retain. NL At the end of your turn, choose to exhaust a card in your hand."
+    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, choose to Exhaust a card in your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Unplayable. NL Retain. NL At the end of your turn, choose to Exhaust a card in your hand."
   },
   "${modID}:ElfLips": {
     "NAME": "Elf Lips",
-    "DESCRIPTION": "Unplayable. NL Retain. NL Mark cards with 0 energy cost in your hand. NL Discard when you play a front side card.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL Mark cards with 0, 2, 3 energy costs in your hand. NL Discard when you play a front side card."
+    "DESCRIPTION": "Unplayable. NL Retain. NL Kid:Mark cards with 0 energy cost in your hand. NL Discard when you play a Kid:Face-up card.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL Kid:Mark cards with 0, 2, 3 energy costs in your hand. NL Discard when you play a Kid:Face-up card."
   },
   "${modID}:Vanish": {
     "NAME": "Vanish",
-    "DESCRIPTION": "Gain !B! Block. NL Draw 2 cards and flip them to back side."
+    "DESCRIPTION": "Gain !B! Block. NL Draw 2 cards and Kid:Flip them to Kid:Face-down."
   },
   "${modID}:CardTrick": {
     "NAME": "Card Trick",
-    "DESCRIPTION": "Draw !M! card and flip to back. NL Discard !M! card and flip to front."
+    "DESCRIPTION": "Draw !M! card and Kid:Flip to Kid:Face-down. NL Discard !M! card and Kid:Flip to Kid:Face-up."
   },
   "${modID}:Fish": {
     "NAME": "Fish",
-    "DESCRIPTION": "Unplayable. At the end of your turn, discard all gems in your hand. NL Ethereal."
+    "DESCRIPTION": "Unplayable. NL At the end of your turn, discard all Kid:Gems in your hand. NL Ethereal."
   },
   "${modID}:Flee": {
     "NAME": "Flee",
-    "DESCRIPTION": "Gain !B! Block. NL Shuffle a Fish into your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Shuffle a *Fish into your draw pile."
   },
   "${modID}:SilverBullet": {
     "NAME": "Silver Bullet",
-    "DESCRIPTION": "Exhaust a gem in your hand. Rare deal 30 damage, uncommon deal 20 damage, otherwise deal 10 damage.",
-    "UPGRADE_DESCRIPTION": "Exhaust a gem in your hand. Rare deal 40 damage, uncommon deal 30 damage, otherwise deal 20 damage."
+    "DESCRIPTION": "Exhaust a Kid:Gem in your hand. Rare deal 30 damage, Uncommon deal 20 damage, otherwise deal 10 damage.",
+    "UPGRADE_DESCRIPTION": "Exhaust a Kid:Gem in your hand. Rare deal 40 damage, Uncommon deal 30 damage, otherwise deal 20 damage."
   },
   "${modID}:WonderForm": {
     "NAME": "Wonder Form",
-    "DESCRIPTION": "When you draw a reversed card, reduce its energy cost by 1. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "When you draw a reversed card, reduce its energy cost by 1."
+    "DESCRIPTION": "When you draw a Kid:Face-down card, reduce its [E] by 1. NL Ethereal.",
+    "UPGRADE_DESCRIPTION": "When you draw a Kid:Face-down card, reduce its [E] by 1."
   },
   "${modID}:DualIdentity": {
     "NAME": "Dual Identity",
-    "DESCRIPTION": "Deal !D! damage. NL Flipped when played and change to skill card."
+    "DESCRIPTION": "Deal !D! damage. NL Kid:Flipped when played and change to Skill card."
   },
   "${modID}:Restitution": {
     "NAME": "Restitution",
-    "DESCRIPTION": "Whenever you discard a gem, deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you discard a Kid:Gem, deal !M! damage to a random enemy."
   },
   "${modID}:Steal": {
     "NAME": "Steal",
-    "DESCRIPTION": "Choose a gem from your draw pile and put it into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a gem from your draw pile and put it into your hand. NL Exhaust."
+    "DESCRIPTION": "Choose a Kid:Gem from your draw pile and put it into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a Kid:Gem from your draw pile and put it into your hand. NL Exhaust."
   },
   "${modID}:Glider": {
     "NAME": "Glider",
-    "DESCRIPTION": "Gain !M! plated armor."
+    "DESCRIPTION": "Gain !M! *Plated *Armor."
   },
   "${modID}:Scout": {
     "NAME": "Scout",
-    "DESCRIPTION": "At the end of your turn, choose !M! card from discard pile to retain."
+    "DESCRIPTION": "At the end of your turn, choose !M! card from discard pile to Retain."
   },
   "${modID}:Counterfeit": {
     "NAME": "Counterfeit",
@@ -278,11 +281,11 @@
   },
   "${modID}:Skywalk": {
     "NAME": "Skywalk",
-    "DESCRIPTION": "Gain !B! Block. NL If this card is flipped, Gain !M! Plated Armor."
+    "DESCRIPTION": "Gain !B! Block. NL If this card is Kid:Flipped, Gain !M! *Plated *Armor."
   },
   "${modID}:TowerDiamond": {
     "NAME": "Tower Diamond",
-    "DESCRIPTION": "Unplayable. NL If retained, gain !M! Strength."
+    "DESCRIPTION": "Unplayable. NL If Retained, gain !M! Strength."
   },
   "${modID}:FakeGem": {
     "NAME": "Fake Gem",
@@ -295,44 +298,44 @@
   },
   "${modID}:Boast": {
     "NAME": "Boast",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is flipped, shuffle a FakeGem into your draw pile. NL Flip this card."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Kid:Flipped, shuffle a *FakeGem into your draw pile. NL Kid:Flip this card."
   },
   "${modID}:FansSupport": {
     "NAME": "Fans Support",
-    "DESCRIPTION": "Gain !M! charm X times."
+    "DESCRIPTION": "Gain !M! Kid:Charm X times."
   },
   "${modID}:MasterThief": {
     "NAME": "Master Thief",
-    "DESCRIPTION": "At the start of your turn, add 1 random gem to your hand."
+    "DESCRIPTION": "At the start of your turn, add 1 random Kid:Gem to your hand."
   },
   "${modID}:ParisSunshine": {
     "NAME": "Paris Sunshine",
-    "DESCRIPTION": "Unplayable. NL Retain. NL At the start of your turn, gain !M! charm."
+    "DESCRIPTION": "Unplayable. NL Retain. NL At the start of your turn, gain !M! Kid:Charm."
   },
   "${modID}:PresentFlower": {
     "NAME": "Present Flower",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! charm."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Kid:Charm."
   },
   "${modID}:Curtsy": {
     "NAME": "Curtsy",
-    "DESCRIPTION": "Double your charm. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple your charm. NL Exhaust."
+    "DESCRIPTION": "Double your Kid:Charm. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple your Kid:Charm. NL Exhaust."
   },
   "${modID}:ArmsCarry": {
     "NAME": "Arms Carry",
-    "DESCRIPTION": "Deal !D! damage. NL Gain charm equal to the damage dealt."
+    "DESCRIPTION": "Deal !D! damage. NL Gain Kid:Charm equal to the damage dealt."
   },
   "${modID}:Bow": {
     "NAME": "Bow",
-    "DESCRIPTION": "Discard !M! cards. NL Gain 5 charm."
+    "DESCRIPTION": "Discard !M! cards. NL Gain 5 Kid:Charm."
   },
   "${modID}:Ingratiate": {
     "NAME": "Ingratiate",
-    "DESCRIPTION": "Deal !D! damage. NL If charm greater than !M!, draw 1 card and gain [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL If Kid:Charm greater than !M!, draw 1 card and gain [E] ."
   },
   "${modID}:Reason": {
     "NAME": "Reason",
-    "DESCRIPTION": "Choose 1 card in your deck. NL Flip all the same cards in all piles to front side."
+    "DESCRIPTION": "Choose 1 card in your deck. NL Kid:Flip all the same cards in all piles to Kid:Face-up."
   },
   "${modID}:HatTrick": {
     "NAME": "Hat Trick",

@@ -19,5 +19,60 @@
       "multiword_keywords"
     ],
     "DESCRIPTION": "Make sure the first element in NAMES has no underscores. The rest should use _ in the place of spaces. In card text, you'll use the underscore versions."
+  },
+  {
+    "PROPER_NAME": "Charm",
+    "NAMES": [
+      "Charm",
+      "Charms"
+    ],
+    "DESCRIPTION": "At the end of your turn, deal damage equal to the number of Charms to all enemies. When received damage, remove half of the Charms."
+  },
+  {
+    "PROPER_NAME": "Flip",
+    "NAMES": [
+      "Flip",
+      "Flips",
+      "Flipped"
+    ],
+    "DESCRIPTION": "Flip a card, you change the card's state from face-down to face-up or vice versa."
+  },
+  {
+    "PROPER_NAME": "Mark",
+    "NAMES": [
+      "Mark",
+      "Marks",
+      "Marked"
+    ],
+    "DESCRIPTION": "A Marked card is highlighted and can be recognized when face-down."
+  },
+  {
+    "PROPER_NAME": "Actual",
+    "NAMES": [
+      "Actual"
+    ],
+    "DESCRIPTION": "An actual card cannot be Flipped."
+  },
+  {
+    "PROPER_NAME": "Face-down",
+    "NAMES": [
+      "Face-down"
+    ],
+    "DESCRIPTION": "A Face-down card is hidden and cannot be recognized. Its cost, name, picture, and text are not visible."
+  },
+  {
+    "PROPER_NAME": "Gem",
+    "NAMES": [
+      "Gem",
+      "Gems"
+    ],
+    "DESCRIPTION": "Gems are Unplayable cards that are like Power cards, but they are discarded when disobey some rules."
+  },
+  {
+    "PROPER_NAME": "Face-up",
+    "NAMES": [
+      "Face-up"
+    ],
+    "DESCRIPTION": "A Face-up card is the same as usual cards, which can be recognized."
   }
 ]

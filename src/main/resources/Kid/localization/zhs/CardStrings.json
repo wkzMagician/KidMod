@@ -19,32 +19,32 @@
   },
   "${modID}:MagicStrike": {
     "NAME": "魔法打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 翻转 3 张随机卡牌至 反面 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL kid:翻转 3 张随机卡牌至 kid:反面 。"
   },
   "${modID}:AlertHint": {
     "NAME": "情报提示",
-    "DESCRIPTION": " 真相 NL 。获得 !B! 点 格挡 。 NL 选择 !M! 张卡牌 翻转 至 正面 。"
+    "DESCRIPTION": " kid:真相 。 NL 获得 !B! 点 格挡 。 NL 选择 !M! 张卡牌 kid:翻转 至 kid:正面 。"
   },
   "${modID}:FaceMask": {
     "NAME": "防护面具",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 翻转 3 张随机卡牌至 反面 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL kid:翻转 3 张随机卡牌至 kid:反面 。"
   },
   "${modID}:Feint": {
     "NAME": "佯攻",
-    "DESCRIPTION": " 真相。造成 !D! 点伤害。 NL 选择 !M! 张卡牌 翻转 。"
+    "DESCRIPTION": " kid:真相 。造成 !D! 点伤害。 NL 选择 !M! 张卡牌 kid:翻转 。"
   },
   "${modID}:PokerFace": {
     "NAME": "扑克脸",
-    "DESCRIPTION": "当所有手牌为 反面 时，获得 !B! 点 格挡 。"
+    "DESCRIPTION": "当所有手牌为 kid:反面 时，获得 !B! 点 格挡 。"
   },
   "${modID}:Shuffle": {
     "NAME": "洗牌",
-    "DESCRIPTION": "将你手中的所有卡牌 翻转 。"
+    "DESCRIPTION": "将你手中的所有卡牌 kid:翻转 。"
   },
   "${modID}:DeckInsight": {
     "NAME": "牌堆洞察",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 预见 !M! 张卡牌。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 预见 !M! 张卡牌。将所有 预见 的卡牌 翻转 至 正面 。"
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 预见 !M! 张卡牌。将所有 预见 的卡牌 kid:翻转 至 kid:正面 。"
   },
   "${modID}:FancyAct": {
     "NAME": "炫目表演",
@@ -60,7 +60,7 @@
   },
   "${modID}:Teleport": {
     "NAME": "瞬间移动",
-    "DESCRIPTION": "抽 !M! 张卡牌并将它们 翻转 至 反面 。"
+    "DESCRIPTION": "抽 !M! 张卡牌并将它们 kid:翻转 至 kid:反面 。"
   },
   "${modID}:AirKiss": {
     "NAME": "飞吻",
@@ -68,15 +68,15 @@
   },
   "${modID}:KnockOut": {
     "NAME": "给你一闷棍",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将你手中的所有卡牌 翻转 至 反面 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将你手中的所有卡牌 kid:翻转 至 kid:反面 。"
   },
   "${modID}:PokerGun": {
     "NAME": "扑克枪",
-    "DESCRIPTION": "丢弃任意数量的 反面 卡牌。 NL 每丢弃一张牌，造成 !D! 点伤害。"
+    "DESCRIPTION": "丢弃任意数量的 kid:反面 卡牌。 NL 每丢弃一张牌，造成 !D! 点伤害。"
   },
   "${modID}:Recapture": {
     "NAME": "夺回",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张卡牌从弃牌堆加入手牌，并将它们 翻转 至 反面 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张卡牌从弃牌堆加入手牌，并将它们 kid:翻转 至 kid:反面 。"
   },
   "${modID}:Notice": {
     "NAME": "预告函",
@@ -84,7 +84,7 @@
   },
   "${modID}:Cheat": {
     "NAME": "出千",
-    "DESCRIPTION": "选择你手中的一张 反面 牌打出。 NL 它的费用为0。"
+    "DESCRIPTION": "选择你手中的一张 kid:反面 牌打出。 NL 它的费用为0。"
   },
   "${modID}:PhantomSteal": {
     "NAME": "偷天换日",
@@ -97,38 +97,38 @@
   },
   "${modID}:GrandPrelude": {
     "NAME": "华丽登场",
-    "DESCRIPTION": "固有。 NL 获得 !M! 点 魅力 。 NL 消耗 。"
+    "DESCRIPTION": "固有。 NL 获得 !M! 点 kid:魅力 。 NL 消耗 。"
   },
   "${modID}:OmnipotentPocket": {
     "NAME": "万能口袋",
-    "DESCRIPTION": "抽牌，直到抽到 正面 牌或手牌满为止。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽牌，直到抽到 正面 牌或手牌满为止。"
+    "DESCRIPTION": "抽牌，直到抽到 kid:正面 牌或手牌满为止。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "抽牌，直到抽到 kid:正面 牌或手牌满为止。"
   },
   "${modID}:Prepare": {
     "NAME": "筹备",
-    "DESCRIPTION": " 真相 。 NL 获得 !B! 点 格挡 。 NL 将一张 *奇迹 洗入你的抽牌堆。",
+    "DESCRIPTION": " kid:真相 。 NL 获得 !B! 点 格挡 。 NL 将一张 *奇迹 洗入你的抽牌堆。",
     "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *奇迹+ 洗入你的抽牌堆。"
   },
   "${modID}:Sneak": {
     "NAME": "潜行",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 保留你手中的所有 反面 卡牌。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 保留你手中的所有 kid:反面 卡牌。"
   },
   "${modID}:Raid": {
     "NAME": "突袭",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡牌位于 反面 ，造成 !D! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡牌位于 kid:反面 ，造成 !D! 点伤害。"
   },
   "${modID}:MagicGlove": {
     "NAME": "魔术手套",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 选择一张手牌 翻转 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 选择一张手牌 kid:翻转 。"
   },
   "${modID}:MysticTechniques": {
     "NAME": "秘术之牌",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡牌被翻转，获得 2 点能量。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡牌被 kid:翻转 ，获得 [E] [E] 。"
   },
   "${modID}:Cleanse": {
     "NAME": "洗涤",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们的所有 增益 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们的所有正面 增益 。"
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们的所有kid:正面 增益 。"
   },
   "${modID}:StunGun": {
     "NAME": "电击枪",
@@ -136,29 +136,32 @@
   },
   "${modID}:Cardistry": {
     "NAME": "花切",
-    "DESCRIPTION": "本回合每 翻转 这张卡牌，减少 1 点能量消耗。 NL 造成 !D! 点伤害 3 次。"
+    "DESCRIPTION": "本回合每 kid:翻转 这张卡牌，减少 1 点 [E] 。 NL 造成 !D! 点伤害 3 次。"
   },
   "${modID}:MindMagic": {
     "NAME": "心灵魔术",
-    "DESCRIPTION": "每当你 翻转 一张卡牌时，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "每当你 kid:翻转 一张卡牌时，获得 !M! 点 格挡 。"
   },
   "${modID}:Flashbang": {
     "NAME": "闪光弹",
-    "DESCRIPTION": "将所有手牌 翻转 至 正面 。",
-    "UPGRADE_DESCRIPTION": " 真相 。 NL 将所有手牌 翻转 至 正面 。"
+    "DESCRIPTION": "将所有手牌 kid:翻转 至 kid:正面 。",
+    "UPGRADE_DESCRIPTION": " kid:真相 。 NL 将所有手牌 kid:翻转 至 kid:正面 。"
   },
   "${modID}:HeartfeltApologies": {
     "NAME": "真诚歉意",
-    "DESCRIPTION": "只有当你手中没有 反面 卡牌时才能打出。 NL 造成 !D! 点伤害。"
+    "DESCRIPTION": "只有当你手中没有 kid:反面 卡牌时才能打出。 NL 造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "你手中有 kid:反面 卡牌。"
+    ]
   },
   "${modID}:TrickExposure": {
     "NAME": "戏法破解",
-    "DESCRIPTION": "每当你打出一张 反面 卡牌时，将其 翻转 至 正面 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 每当你使用一张 反面 卡牌时，将其 翻转 至 正面 。"
+    "DESCRIPTION": "每当你打出一张 kid:反面 卡牌时，将其 kid:翻转 至 kid:正面 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每当你使用一张 kid:反面 卡牌时，将其 kid:翻转 至 kid:正面 。"
   },
   "${modID}:UnparalleledSkill": {
     "NAME": "魔高一丈",
-    "DESCRIPTION": "每当你抽一张牌时，将其 翻转 至 反面 。"
+    "DESCRIPTION": "每当你抽一张牌时，将其 kid:翻转 至 kid:反面 。"
   },
   "${modID}:Peek": {
     "NAME": "偷窥",
@@ -171,15 +174,15 @@
   },
   "${modID}:WhiteCloak": {
     "NAME": "白色披风",
-    "DESCRIPTION": "真相。 NL 获得 !B! 点 格挡 。 NL 选择 翻转 你手中的 !M! 张卡牌。"
+    "DESCRIPTION": "kid:真相 。 NL 获得 !B! 点 格挡 。 NL 选择 kid:翻转 你手中的 !M! 张卡牌。"
   },
   "${modID}:Transmitter": {
     "NAME": "发信器",
-    "DESCRIPTION": "真相。 NL 标记 你手中的一张卡牌。 NL 消耗 。"
+    "DESCRIPTION": "kid:真相 。 NL kid:标记 你手中的一张卡牌。 NL 消耗 。"
   },
   "${modID}:LoopholeDetection": {
     "NAME": "破绽觉察",
-    "DESCRIPTION": " 标记 你手中能量消耗最高的卡牌。"
+    "DESCRIPTION": " kid:标记 你手中能量消耗最高的卡牌。"
   },
   "${modID}:PupilOfMoon": {
     "NAME": "月之瞳",
@@ -204,7 +207,7 @@
   },
   "${modID}:Pandora": {
     "NAME": "潘多拉",
-    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 在回合结束时，恢复 !M! 点生命。 NL 当你手中有其他宝石时丢弃。"
+    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 在回合结束时，恢复 !M! 点生命。 NL 当你手中有其他 kid:宝石 时丢弃。"
   },
   "${modID}:BloodTears": {
     "NAME": "红色眼泪",
@@ -213,20 +216,20 @@
   },
   "${modID}:ElfLips": {
     "NAME": "妖精之唇",
-    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 标记 你手中能量消耗为 0 的卡牌。 NL 当你使用一张正面卡牌时丢弃。",
-    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 标记 你手中能量消耗为 0、2、3 的卡牌。 NL 当你使用一张正面卡牌时丢弃。"
+    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL kid:标记 你手中能量消耗为 0 的卡牌。 NL 当你使用一张 kid:正面 卡牌时丢弃。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 保留 。 NL kid:标记 你手中能量消耗为 0、2、3 的卡牌。 NL 当你使用一张 kid:正面 卡牌时丢弃。"
   },
   "${modID}:Vanish": {
     "NAME": "金蝉脱壳",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 2 张卡牌并将它们 翻转 至 反面 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 2 张卡牌并将它们 kid:翻转 至 kid:反面 。"
   },
   "${modID}:CardTrick": {
     "NAME": "卡牌戏法",
-    "DESCRIPTION": "抽 !M! 张牌并将其 翻转 至 反面 。 NL 丢弃 !M! 张牌并将其 翻转 至 正面 。"
+    "DESCRIPTION": "抽 !M! 张牌并将其 kid:翻转 至 kid:反面 。 NL 丢弃 !M! 张牌并将其 kid:翻转 至 kid:正面 。"
   },
   "${modID}:Fish": {
     "NAME": "鱼",
-    "DESCRIPTION": " 不能被打出 。 在回合结束时，丢弃你手中的所有 宝石 。 NL 虚无 。"
+    "DESCRIPTION": " 不能被打出 。 NL 在回合结束时，丢弃你手中的所有 kid:宝石 。 NL 虚无 。"
   },
   "${modID}:Flee": {
     "NAME": "仓皇逃窜",
@@ -234,30 +237,30 @@
   },
   "${modID}:SilverBullet": {
     "NAME": "银色子弹",
-    "DESCRIPTION": " 消耗 你手中的一张宝石。 稀有 牌造成 30 点伤害，罕见 牌造成 20 点伤害，其他牌造成 10 点伤害。",
-    "UPGRADE_DESCRIPTION": "消耗你手中的一张宝石。 稀有 牌造成 40 点伤害，罕见 牌造成 30 点伤害，其他牌造成 20 点伤害。"
+    "DESCRIPTION": " 消耗 你手中的一张 kid:宝石 。 稀有 牌造成 30 点伤害，罕见 牌造成 20 点伤害，其他牌造成 10 点伤害。",
+    "UPGRADE_DESCRIPTION": "消耗你手中的一张 kid:宝石 。 稀有 牌造成 40 点伤害，罕见 牌造成 30 点伤害，其他牌造成 20 点伤害。"
   },
   "${modID}:WonderForm": {
     "NAME": "奇迹形态",
-    "DESCRIPTION": "当你抽到 反面 牌时，其能量消耗减 1。 NL 虚无 。",
-    "UPGRADE_DESCRIPTION": "当你抽到 反面 牌时，其能量消耗减 1。"
+    "DESCRIPTION": "当你抽到 kid:反面 牌时，其 [E] 减 1。 NL 虚无 。",
+    "UPGRADE_DESCRIPTION": "当你抽到 kid:反面 牌时，其 [E] 减 1。"
   },
   "${modID}:DualIdentity": {
     "NAME": "双重身份",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出后 翻转 并变为 技能 牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出后 kid:翻转 并变为 技能 牌。"
   },
   "${modID}:Restitution": {
     "NAME": "归还赃物",
-    "DESCRIPTION": "每当你丢弃一张宝石时，对一个随机敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "每当你丢弃一张 kid:宝石 时，对一个随机敌人造成 !M! 点伤害。"
   },
   "${modID}:Steal": {
     "NAME": "窃取",
-    "DESCRIPTION": "从你的抽牌堆中选择一张宝石卡加入你的手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 从你的抽牌堆中选择一张宝石卡加入你的手牌。 NL 消耗 。"
+    "DESCRIPTION": "从你的抽牌堆中选择一张 kid:宝石 卡加入你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 从你的抽牌堆中选择一张 kid:宝石 卡加入你的手牌。 NL 消耗 。"
   },
   "${modID}:Glider": {
     "NAME": "滑翔翼",
-    "DESCRIPTION": "获得 !M! 层 多层护甲 。"
+    "DESCRIPTION": "获得 !M! 层 *多层护甲 。"
   },
   "${modID}:Scout": {
     "NAME": "踩点布置",
@@ -277,7 +280,7 @@
   },
   "${modID}:Skywalk": {
     "NAME": "空中步行",
-    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果这张卡牌位于 反面 ，获得 !M! 层 多层护甲 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 如果这张卡牌位于 kid:反面 ，获得 !M! 层 *多层护甲 。"
   },
   "${modID}:TowerDiamond": {
     "NAME": "钟塔钻石",
@@ -294,44 +297,44 @@
   },
   "${modID}:Boast": {
     "NAME": "吹嘘",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌位于 反面 ，将一张 *假宝石 洗入你的抽牌堆。 NL 翻转 此卡牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌位于 kid:反面 ，将一张 *假宝石 洗入你的抽牌堆。 NL kid:翻转 此卡牌。"
   },
   "${modID}:FansSupport": {
     "NAME": "粉丝声援",
-    "DESCRIPTION": "获得 !M! 点 魅力 X 次。"
+    "DESCRIPTION": "获得 !M! 点 kid:魅力 X 次。"
   },
   "${modID}:MasterThief": {
     "NAME": "神偷",
-    "DESCRIPTION": "在你的回合开始时，将 1 张随机 宝石 加入手牌。"
+    "DESCRIPTION": "在你的回合开始时，将 1 张随机 kid:宝石 加入手牌。"
   },
   "${modID}:ParisSunshine": {
     "NAME": "巴黎艳阳",
-    "DESCRIPTION": " 无法打 出。 NL 保留 。 NL 在你的回合开始时，获得 !M! 点 魅力 。"
+    "DESCRIPTION": " 无法打 出。 NL 保留 。 NL 在你的回合开始时，获得 !M! 点 kid:魅力 。"
   },
   "${modID}:PresentFlower": {
     "NAME": "献花",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 魅力 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 kid:魅力 。"
   },
   "${modID}:Curtsy": {
     "NAME": "屈膝礼",
-    "DESCRIPTION": "将你的 魅力 翻倍。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将你的 魅力 变为3倍。 NL 消耗 。"
+    "DESCRIPTION": "将你的 kid:魅力 翻倍。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "将你的 kid:魅力 变为3倍。 NL 消耗 。"
   },
   "${modID}:ArmsCarry": {
     "NAME": "公主抱",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得造成伤害的 魅力 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得造成伤害的 kid:魅力 。"
   },
   "${modID}:Bow": {
     "NAME": "鞠躬",
-    "DESCRIPTION": "丢弃 !M! 张卡牌。 NL 获得 5 点 魅力 。"
+    "DESCRIPTION": "丢弃 !M! 张卡牌。 NL 获得 5 点 kid:魅力 。"
   },
   "${modID}:Ingratiate": {
     "NAME": "献殷勤",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果 魅力 大于 !M!，抽 1 张牌并获得 [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果 kid:魅力 大于 !M!，抽 1 张牌并获得 [E] 。"
   },
   "${modID}:Reason": {
     "NAME": "推理",
-    "DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 将所有相同的卡牌 翻转 至 正面 。"
+    "DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 将所有相同的卡牌 kid:翻转 至 kid:正面 。"
   },
   "${modID}:HatTrick": {
     "NAME": "帽子戏法",
