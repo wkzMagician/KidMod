@@ -14,7 +14,9 @@ import com.megacrit.cardcrawl.actions.unique.RemoveAllPowersAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class SilverBullet extends KidCard {
@@ -27,13 +29,16 @@ public class SilverBullet extends KidCard {
 			1
 	);
 
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:SilverBullet");
+
 	public SilverBullet() {
 		super(ID, info);
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new SelectCardsInHandAction(1, "Exhaust", false, false, c -> c instanceof GemCard, list -> {
+		addToBot(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0],
+				false, false, c -> c instanceof GemCard, list -> {
 			for(AbstractCard c : list) {
 				int damage = 0;
 				if(this.upgraded){

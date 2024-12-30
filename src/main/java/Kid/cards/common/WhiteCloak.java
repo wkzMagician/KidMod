@@ -9,6 +9,8 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandActio
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class WhiteCloak extends KidCard {
@@ -20,6 +22,8 @@ public class WhiteCloak extends KidCard {
 			CardTarget.SELF,
 			1
 	);
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:WhiteCloak");
 
 	private static final int BLOCK = 8;
 	private static final int UPG_BLOCK = 2;
@@ -39,7 +43,8 @@ public class WhiteCloak extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new GainBlockAction(p, p, this.block));
-		addToBot(new SelectCardsInHandAction(magicNumber, "Flip", true, true, c -> c instanceof KidCard, list -> {
+		addToBot(new SelectCardsInHandAction(magicNumber, cardStrings.EXTENDED_DESCRIPTION[0],
+				true, true, c -> c instanceof KidCard, list -> {
 			for(AbstractCard c : list) {
 				((KidCard) c).flip();
 			}

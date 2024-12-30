@@ -8,6 +8,8 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Transmitter extends KidCard {
@@ -19,6 +21,8 @@ public class Transmitter extends KidCard {
 			CardTarget.SELF,
 			1
 	);
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Transmitter");
 
 	public Transmitter() {
 		super(ID, info);
@@ -32,7 +36,7 @@ public class Transmitter extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		String text = "选择一张手牌进行标记";
+		String text = cardStrings.EXTENDED_DESCRIPTION[0];
 		// 选择一张手牌
 		addToBot(new SelectCardsInHandAction(1, text, list -> {
 			for (AbstractCard c : list) {

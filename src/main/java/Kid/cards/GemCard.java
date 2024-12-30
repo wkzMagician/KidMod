@@ -5,7 +5,9 @@ import Kid.actions.TriggerRestitutionPowerAction;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.lwjgl.Sys;
 
@@ -14,6 +16,8 @@ public abstract class GemCard extends KidCard {
 	// 需要重写其onDiscard以及onDraw方法,onExhaust方法
 
 	protected boolean hasPower = false;
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Gem");
 
 	// 构造方法
 	public GemCard(String id, CardStats stats) {
@@ -31,7 +35,7 @@ public abstract class GemCard extends KidCard {
 
 	@Override
 	public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-		this.cantUseMessage = "无法打出宝石牌";
+		this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
 		return false;
 	}
 

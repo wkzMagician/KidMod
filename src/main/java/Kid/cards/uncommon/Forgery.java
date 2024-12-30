@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Forgery extends KidCard {
@@ -19,6 +21,8 @@ public class Forgery extends KidCard {
 			CardTarget.ENEMY,
 			1
 	);
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Forgery");
 
 	private static final int DAMAGE = 9;
 	private static final int UPG_DAMAGE = 3;
@@ -40,7 +44,11 @@ public class Forgery extends KidCard {
 		if (c != null) {
 			AbstractCard copy = c.makeStatEquivalentCopy();
 			copy.isEthereal = true;
-			copy.rawDescription += " NL Ethereal.";
+
+			String text = cardStrings.EXTENDED_DESCRIPTION[0];
+
+			if (!copy.rawDescription.contains(text))
+				copy.rawDescription += text;
 			copy.initializeDescription();
 			p.hand.addToTop(copy);
 		}

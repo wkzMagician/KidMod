@@ -7,7 +7,9 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandActio
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Cheat extends KidCard {
@@ -20,6 +22,8 @@ public class Cheat extends KidCard {
 			1
 	);
 
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Cheat");
+
 	public Cheat() {
 		super(ID, info);
 
@@ -28,7 +32,8 @@ public class Cheat extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new SelectCardsInHandAction(1, "选择一张翻面牌打出", c -> c instanceof KidCard && ((KidCard) c).isReverse(), list -> {
+		addToBot(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0],
+				c -> c instanceof KidCard && ((KidCard) c).isReverse(), list -> {
 			if (!list.isEmpty()) {
 				KidCard c = (KidCard) list.get(0);
 

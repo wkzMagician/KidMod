@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -25,6 +27,8 @@ public class DualIdentity extends KidCard {
 			CardTarget.ENEMY,
 			1
 	);
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:DualIdentity");
 
 	private static final int DAMAGE = 11;
 	private static final int UPG_DAMAGE = 3;
@@ -60,11 +64,11 @@ public class DualIdentity extends KidCard {
 		if(!isFlipped){
 			this.type = CardType.ATTACK;
 			this.target = CardTarget.ENEMY;
-			this.rawDescription = "Deal !D! damage. NL Flipped when played.";
+			this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
 		}else{
 			this.type = CardType.SKILL;
 			this.target = CardTarget.SELF;
-			this.rawDescription = "Gain !B! Block. NL Flipped when played.";
+			this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[1];
 		}
 
 		initializeDescription();

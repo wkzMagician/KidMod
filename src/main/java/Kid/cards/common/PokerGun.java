@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class PokerGun extends KidCard {
@@ -23,6 +25,8 @@ public class PokerGun extends KidCard {
 			1
 	);
 
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:PokerGun");
+
 	private static final int DAMAGE_PER_CARD = 4;
 	private static final int UPGRADE_DAMAGE = 2;
 
@@ -34,7 +38,8 @@ public class PokerGun extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new SelectCardsInHandAction(10, "弃置任意张卡牌", true, true,
+		addToBot(new SelectCardsInHandAction(10, cardStrings.EXTENDED_DESCRIPTION[0],
+				true, true,
 				c -> c instanceof KidCard && ((KidCard) c).isReverse(), list -> {
 			final int DAMAGE = damage;
 

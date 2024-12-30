@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Feint extends KidCard {
@@ -21,6 +23,8 @@ public class Feint extends KidCard {
 			CardTarget.ENEMY,
 			1
 	);
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Feint");
 
 	private static final int DAMAGE = 9;
 	private static final int UPG_DAMAGE = 1;
@@ -40,7 +44,8 @@ public class Feint extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		addToBot(new SelectCardsInHandAction(magicNumber, "Flip", true, true, card -> card instanceof KidCard, list -> {
+		addToBot(new SelectCardsInHandAction(magicNumber, cardStrings.EXTENDED_DESCRIPTION[0],
+				true, true, card -> card instanceof KidCard, list -> {
 			for (AbstractCard c : list) {
 				((KidCard) c).flip();
 			}

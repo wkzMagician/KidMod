@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Recapture extends KidCard {
@@ -21,6 +23,8 @@ public class Recapture extends KidCard {
 			CardTarget.ENEMY,
 			1
 	);
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Recapture");
 
 	private static final int DAMAGE = 9;
 	private static final int UPG_DAMAGE = 1;
@@ -39,7 +43,7 @@ public class Recapture extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		// 是否升级？
-		String text = this.upgraded ? "选择一张卡牌放回手牌" : "选择两张卡牌放回手牌";
+		String text = cardStrings.EXTENDED_DESCRIPTION[0];
 
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 		addToBot(new SelectCardsAction(p.discardPile.group, magicNumber, text, false, c -> true, list -> {

@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class HeartfeltApologies extends KidCard {
@@ -20,6 +22,8 @@ public class HeartfeltApologies extends KidCard {
 			CardTarget.ENEMY,
 			1
 	);
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:HeartfeltApologies");
 
 	private static final int DAMAGE = 15;
 	private static final int UPG_DAMAGE = 5;
@@ -40,7 +44,7 @@ public class HeartfeltApologies extends KidCard {
 		// 如果手牌都是正面
 		for(AbstractCard c : p.hand.group) {
 			if(c instanceof KidCard && ((KidCard) c).isReverse()) {
-				this.cantUseMessage = "I have reverse cards in my hand!";
+				this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
 				return false;
 			}
 		}

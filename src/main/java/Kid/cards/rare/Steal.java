@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Steal extends KidCard {
@@ -20,6 +22,8 @@ public class Steal extends KidCard {
 			CardTarget.SELF,
 			0
 	);
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Steal");
 
 	public Steal() {
 		super(ID, info);
@@ -37,7 +41,8 @@ public class Steal extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		// 选择抽牌堆中的1张宝石牌加入手牌
-		addToBot(new SelectCardsAction(p.drawPile.group, 1,"选择一张宝石牌加入手牌", false,  c -> c instanceof GemCard, list -> {
+		addToBot(new SelectCardsAction(p.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0],
+				false,  c -> c instanceof GemCard, list -> {
 			for (AbstractCard c : list) {
 				// 将选择的宝石牌加入手牌
 				p.drawPile.moveToHand(c, p.drawPile);

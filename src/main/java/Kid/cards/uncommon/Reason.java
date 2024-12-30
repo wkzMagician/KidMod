@@ -8,7 +8,9 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandActio
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class Reason extends KidCard {
@@ -21,6 +23,8 @@ public class Reason extends KidCard {
 			1
 	);
 
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Reason");
+
 	public Reason() {
 		super(ID, info);
 
@@ -32,7 +36,8 @@ public class Reason extends KidCard {
 		// * 1.从牌组中选择1张牌
 		// * 2. 遍历3个牌堆，将所有同名的牌翻到正面
 
-		addToBot(new SelectCardsAction(p.masterDeck.group, 1, "选择一张牌", false, c -> true, list -> {
+		addToBot(new SelectCardsAction(p.masterDeck.group, 1, cardStrings.EXTENDED_DESCRIPTION[0],
+				false, c -> true, list -> {
 			AbstractCard card = list.get(0);
 			for (AbstractCard c : p.drawPile.group) {
 				if (c.cardID.equals(card.cardID)) {

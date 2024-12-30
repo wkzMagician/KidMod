@@ -31,7 +31,10 @@
   },
   "${modID}:Feint": {
     "NAME": "佯攻",
-    "DESCRIPTION": " kid:真相 。造成 !D! 点伤害。 NL 选择 !M! 张卡牌 kid:翻转 。"
+    "DESCRIPTION": " kid:真相 。造成 !D! 点伤害。 NL 选择 !M! 张卡牌 kid:翻转 。",
+    "EXTENDED_DESCRIPTION": [
+      "翻转"
+    ]
   },
   "${modID}:PokerFace": {
     "NAME": "扑克脸",
@@ -72,11 +75,17 @@
   },
   "${modID}:PokerGun": {
     "NAME": "扑克枪",
-    "DESCRIPTION": "丢弃任意数量的 kid:反面 卡牌。 NL 每丢弃一张牌，造成 !D! 点伤害。"
+    "DESCRIPTION": "丢弃任意数量的 kid:反面 卡牌。 NL 每丢弃一张牌，造成 !D! 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "丢弃"
+    ]
   },
   "${modID}:Recapture": {
     "NAME": "夺回",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张卡牌从弃牌堆加入手牌，并将它们 kid:翻转 至 kid:反面 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张卡牌从弃牌堆加入手牌，并将它们 kid:翻转 至 kid:反面 。",
+    "EXTENDED_DESCRIPTION": [
+      "放回手牌"
+    ]
   },
   "${modID}:Notice": {
     "NAME": "预告函",
@@ -84,7 +93,10 @@
   },
   "${modID}:Cheat": {
     "NAME": "出千",
-    "DESCRIPTION": "选择你手中的一张 kid:反面 牌打出。 NL 它的费用为0。"
+    "DESCRIPTION": "选择你手中的一张 kid:反面 牌打出。 NL 它的费用为0。",
+    "EXTENDED_DESCRIPTION": [
+      "无视费用打出"
+    ]
   },
   "${modID}:PhantomSteal": {
     "NAME": "偷天换日",
@@ -151,7 +163,7 @@
     "NAME": "真诚歉意",
     "DESCRIPTION": "只有当你手中没有 kid:反面 卡牌时才能打出。 NL 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "你手中有 kid:反面 卡牌。"
+      "我手中有反面卡牌。"
     ]
   },
   "${modID}:TrickExposure": {
@@ -174,11 +186,17 @@
   },
   "${modID}:WhiteCloak": {
     "NAME": "白色披风",
-    "DESCRIPTION": "kid:真相 。 NL 获得 !B! 点 格挡 。 NL 选择 kid:翻转 你手中的 !M! 张卡牌。"
+    "DESCRIPTION": "kid:真相 。 NL 获得 !B! 点 格挡 。 NL 选择 kid:翻转 你手中的 !M! 张卡牌。",
+    "EXTENDED_DESCRIPTION": [
+      "翻转"
+    ]
   },
   "${modID}:Transmitter": {
     "NAME": "发信器",
-    "DESCRIPTION": "kid:真相 。 NL kid:标记 你手中的一张卡牌。 NL 消耗 。"
+    "DESCRIPTION": "kid:真相 。 NL kid:标记 你手中的一张卡牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "标记"
+    ]
   },
   "${modID}:LoopholeDetection": {
     "NAME": "破绽觉察",
@@ -225,7 +243,10 @@
   },
   "${modID}:CardTrick": {
     "NAME": "卡牌戏法",
-    "DESCRIPTION": "抽 !M! 张牌并将其 kid:翻转 至 kid:反面 。 NL 丢弃 !M! 张牌并将其 kid:翻转 至 kid:正面 。"
+    "DESCRIPTION": "抽 !M! 张牌并将其 kid:翻转 至 kid:反面 。 NL 丢弃 !M! 张牌并将其 kid:翻转 至 kid:正面 。",
+    "EXTENDED_DESCRIPTION": [
+      "丢弃并翻转卡牌至正面。"
+    ]
   },
   "${modID}:Fish": {
     "NAME": "鱼",
@@ -238,16 +259,26 @@
   "${modID}:SilverBullet": {
     "NAME": "银色子弹",
     "DESCRIPTION": " 消耗 你手中的一张 kid:宝石 。 稀有 牌造成 30 点伤害，罕见 牌造成 20 点伤害，其他牌造成 10 点伤害。",
-    "UPGRADE_DESCRIPTION": "消耗你手中的一张 kid:宝石 。 稀有 牌造成 40 点伤害，罕见 牌造成 30 点伤害，其他牌造成 20 点伤害。"
+    "UPGRADE_DESCRIPTION": "消耗你手中的一张 kid:宝石 。 稀有 牌造成 40 点伤害，罕见 牌造成 30 点伤害，其他牌造成 20 点伤害。",
+    "EXTENDED_DESCRIPTION": [
+      "消耗"
+    ]
   },
   "${modID}:WonderForm": {
     "NAME": "奇迹形态",
     "DESCRIPTION": "当你抽到 kid:反面 牌时，其 [E] 减 1。 NL 虚无 。",
-    "UPGRADE_DESCRIPTION": "当你抽到 kid:反面 牌时，其 [E] 减 1。"
+    "UPGRADE_DESCRIPTION": "当你抽到 kid:反面 牌时，其 [E] 减 1。",
+    "EXTENDED_DESCRIPTION": [
+      " NL 虚无 。"
+    ]
   },
   "${modID}:DualIdentity": {
     "NAME": "双重身份",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出后 kid:翻转 并变为 技能 牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 打出后 kid:翻转 并变为 技能 牌。",
+    "EXTENDED_DESCRIPTION": [
+      "造成 !D! 点伤害。 NL 打出后 kid:翻转 并变为 技能 牌。",
+      "获得 !B! 点 格挡。 NL 打出后 kid:翻转 并变为 技能 牌。"
+    ]
   },
   "${modID}:Restitution": {
     "NAME": "归还赃物",
@@ -256,7 +287,10 @@
   "${modID}:Steal": {
     "NAME": "窃取",
     "DESCRIPTION": "从你的抽牌堆中选择一张 kid:宝石 卡加入你的手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 从你的抽牌堆中选择一张 kid:宝石 卡加入你的手牌。 NL 消耗 。"
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 从你的抽牌堆中选择一张 kid:宝石 卡加入你的手牌。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "放入手牌"
+    ]
   },
   "${modID}:Glider": {
     "NAME": "滑翔翼",
@@ -268,7 +302,10 @@
   },
   "${modID}:Counterfeit": {
     "NAME": "赝品",
-    "DESCRIPTION": "选择你手中的一张卡牌并添加 !M! 张该卡牌的副本到你的手牌。副本为 虚无 。 消耗 。"
+    "DESCRIPTION": "选择你手中的一张卡牌并添加 !M! 张该卡牌的副本到你的手牌。副本为 虚无 。 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL 虚无 。"
+    ]
   },
   "${modID}:Forgery": {
     "NAME": "伪造",
@@ -334,10 +371,21 @@
   },
   "${modID}:Reason": {
     "NAME": "推理",
-    "DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 将所有相同的卡牌 kid:翻转 至 kid:正面 。"
+    "DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 将所有相同的卡牌 kid:翻转 至 kid:正面 。",
+    "EXTENDED_DESCRIPTION": [
+      "翻转到正面"
+    ]
   },
   "${modID}:HatTrick": {
     "NAME": "帽子戏法",
     "DESCRIPTION": "如果你连续 3 次打出相同的卡牌，对所有敌人造成 !M! 点伤害。"
+  },
+
+  "${modID}:Kid:Gem": {
+    "NAME": "宝石",
+    "DESCRIPTION": " NL 不能打出。 NL 保留。",
+    "EXTENDED_DESCRIPTION": [
+      "不能打出宝石牌。"
+    ]
   }
 }

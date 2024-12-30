@@ -31,7 +31,10 @@
   },
   "${modID}:Feint": {
     "NAME": "Feint",
-    "DESCRIPTION": "Kid:Actual. Deal !D! damage. NL Select !M! cards to Kid:Flip."
+    "DESCRIPTION": "Kid:Actual. Deal !D! damage. NL Select !M! cards to Kid:Flip.",
+    "EXTENDED_DESCRIPTION": [
+      "Flip"
+    ]
   },
   "${modID}:PokerFace": {
     "NAME": "Poker Face",
@@ -72,11 +75,17 @@
   },
   "${modID}:PokerGun": {
     "NAME": "Poker Gun",
-    "DESCRIPTION": "Discard any number of Kid:Face-down cards. NL Deal !D! damage for each card discarded."
+    "DESCRIPTION": "Discard any number of Kid:Face-down cards. NL Deal !D! damage for each card discarded.",
+    "EXTENDED_DESCRIPTION": [
+      "discard"
+    ]
   },
   "${modID}:Recapture": {
     "NAME": "Recapture",
-    "DESCRIPTION": "Deal !D! damage. NL Put !M! cards from your discard pile to your hand. Kid:Flip them to Kid:Face-down."
+    "DESCRIPTION": "Deal !D! damage. NL Put !M! cards from your discard pile to your hand. Kid:Flip them to Kid:Face-down.",
+    "EXTENDED_DESCRIPTION": [
+      "return to hand."
+    ]
   },
   "${modID}:Notice": {
     "NAME": "Notice",
@@ -84,7 +93,10 @@
   },
   "${modID}:Cheat": {
     "NAME": "Cheat",
-    "DESCRIPTION": "Select a Kid:Face-down card in your hand. NL Play it without energy cost."
+    "DESCRIPTION": "Select a Kid:Face-down card in your hand. NL Play it without energy cost.",
+    "EXTENDED_DESCRIPTION": [
+      "Play without energy cost."
+    ]
   },
   "${modID}:PhantomSteal": {
     "NAME": "Phantom Steal",
@@ -151,7 +163,7 @@
     "NAME": "Heartfelt Apologies",
     "DESCRIPTION": "Can only be played if you have no Kid:Face-down cards in hand. NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
-      "You have Kid:Face-down cards in hand."
+      "I have Face-down cards in hand."
     ]
   },
   "${modID}:TrickExposure": {
@@ -174,11 +186,17 @@
   },
   "${modID}:WhiteCloak": {
     "NAME": "White Cloak",
-    "DESCRIPTION": "Kid:Actual. NL Gain !B! block. NL Choose to Kid:Flip !M! cards in your hand."
+    "DESCRIPTION": "Kid:Actual. NL Gain !B! block. NL Choose to Kid:Flip !M! cards in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Flip"
+    ]
   },
   "${modID}:Transmitter": {
     "NAME": "Transmitter",
-    "DESCRIPTION": "Kid:Actual. NL Kid:Mark a card in your hand. NL Exhaust."
+    "DESCRIPTION": "Kid:Actual. NL Kid:Mark a card in your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Mark"
+    ]
   },
   "${modID}:LoopholeDetection": {
     "NAME": "Loophole Detection",
@@ -226,7 +244,10 @@
   },
   "${modID}:CardTrick": {
     "NAME": "Card Trick",
-    "DESCRIPTION": "Draw !M! card and Kid:Flip to Kid:Face-down. NL Discard !M! card and Kid:Flip to Kid:Face-up."
+    "DESCRIPTION": "Draw !M! card and Kid:Flip to Kid:Face-down. NL Discard !M! card and Kid:Flip to Kid:Face-up.",
+    "EXTENDED_DESCRIPTION": [
+      "Discard and Flip cards to Face-up."
+    ]
   },
   "${modID}:Fish": {
     "NAME": "Fish",
@@ -239,7 +260,10 @@
   "${modID}:SilverBullet": {
     "NAME": "Silver Bullet",
     "DESCRIPTION": "Exhaust a Kid:Gem in your hand. Rare deal 30 damage, Uncommon deal 20 damage, otherwise deal 10 damage.",
-    "UPGRADE_DESCRIPTION": "Exhaust a Kid:Gem in your hand. Rare deal 40 damage, Uncommon deal 30 damage, otherwise deal 20 damage."
+    "UPGRADE_DESCRIPTION": "Exhaust a Kid:Gem in your hand. Rare deal 40 damage, Uncommon deal 30 damage, otherwise deal 20 damage.",
+    "EXTENDED_DESCRIPTION": [
+      "Exhaust"
+    ]
   },
   "${modID}:WonderForm": {
     "NAME": "Wonder Form",
@@ -248,7 +272,11 @@
   },
   "${modID}:DualIdentity": {
     "NAME": "Dual Identity",
-    "DESCRIPTION": "Deal !D! damage. NL Kid:Flipped when played and change to Skill card."
+    "DESCRIPTION": "Deal !D! damage. NL Kid:Flipped when played and change to Skill card.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL Flipped when played.",
+      "Gain !B! Block. NL Flipped when played."
+    ]
   },
   "${modID}:Restitution": {
     "NAME": "Restitution",
@@ -257,7 +285,10 @@
   "${modID}:Steal": {
     "NAME": "Steal",
     "DESCRIPTION": "Choose a Kid:Gem from your draw pile and put it into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a Kid:Gem from your draw pile and put it into your hand. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a Kid:Gem from your draw pile and put it into your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "put into your hand."
+    ]
   },
   "${modID}:Glider": {
     "NAME": "Glider",
@@ -269,11 +300,17 @@
   },
   "${modID}:Counterfeit": {
     "NAME": "Counterfeit",
-    "DESCRIPTION": "Choose a card in your hand and add !M! copies of it to your hand. Copies are Ethereal. Exhaust."
+    "DESCRIPTION": "Choose a card in your hand and add !M! copies of it to your hand. Copies are Ethereal. Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      " NL Ethereal."
+    ]
   },
   "${modID}:Forgery": {
     "NAME": "Forgery",
-    "DESCRIPTION": "Deal !D! damage. NL Copy a random card in your hand. Copy is Ethereal."
+    "DESCRIPTION": "Deal !D! damage. NL Copy a random card in your hand. Copy is Ethereal.",
+    "EXTENDED_DESCRIPTION": [
+      " NL Ethereal."
+    ]
   },
   "${modID}:SleepGas": {
     "NAME": "Sleep Gas",
@@ -335,10 +372,21 @@
   },
   "${modID}:Reason": {
     "NAME": "Reason",
-    "DESCRIPTION": "Choose 1 card in your deck. NL Kid:Flip all the same cards in all piles to Kid:Face-up."
+    "DESCRIPTION": "Choose 1 card in your deck. NL Kid:Flip all the same cards in all piles to Kid:Face-up.",
+    "EXTENDED_DESCRIPTION": [
+      "Flip to Face-up"
+    ]
   },
   "${modID}:HatTrick": {
     "NAME": "Hat Trick",
     "DESCRIPTION": "If you play 3 same cards in a row, deal !M! damage to all enemies."
+  },
+
+  "${modID}:Kid:Gem": {
+    "NAME": "Gem",
+    "DESCRIPTION": "Unplayable. NL Retain.",
+    "EXTENDED_DESCRIPTION": [
+      "Cannot play Gem card."
+    ]
   }
 }
