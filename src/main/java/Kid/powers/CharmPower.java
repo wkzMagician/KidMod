@@ -7,18 +7,17 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class CharmPower extends BasePower {
 		public static final String POWER_ID = "Kid:CharmPower";
 		public static final String NAME = "Charm";
-		public static final String[] DESCRIPTIONS = new String[] {
-						"At the end of your turn, reduce all enemies' HP by "
-		};
+		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public CharmPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("charm");
+				this.loadRegion("Charm");
 				this.name = NAME;
 				this.amount = amount;
 				this.updateDescription();

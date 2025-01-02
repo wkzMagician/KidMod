@@ -3,13 +3,12 @@ import Kid.cards.KidCard;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 public class TrickExposurePower extends BasePower {
 		public static final String POWER_ID = "Kid:TrickExposurePower";
 		public static final String NAME = "Trick Exposure";
-		public static final String[] DESCRIPTIONS = new String[] {
-						"Whenever you play a reversed Kid card, flip it to front."
-		};
+		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public TrickExposurePower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);

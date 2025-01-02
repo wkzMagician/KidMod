@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
@@ -14,10 +15,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 public class DarkStarPower extends BasePower {
 		public static final String POWER_ID = "Kid:DarkStarPower";
 		public static final String NAME = "Dark Star";
-		public static final String[] DESCRIPTIONS = new String[] {
-						"Gain ",
-				" temporary Strength."
-		};
+		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public DarkStarPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);

@@ -6,15 +6,13 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class HatTrickPower extends BasePower {
 		public static final String POWER_ID = "Kid:HatTrickPower";
 		public static final String NAME = "Hat Trick";
-		public static final String[] DESCRIPTIONS = new String[] {
-						"If you play 3 same cards in a turn, deal ",
-						" damage to all enemies.",
-		};
+		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		private int damage;
 

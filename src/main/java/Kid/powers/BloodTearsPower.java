@@ -5,16 +5,13 @@ import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class BloodTearsPower extends BasePower {
 		public static final String POWER_ID = "Kid:BloodTearsPower";
 		public static final String NAME = "Blood Tears";
-		public static final String[] DESCRIPTIONS = new String[] {
-				"At the end of your turn, you can choose ",
-				" card ",
-				" cards ",
-		};
+		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public BloodTearsPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);

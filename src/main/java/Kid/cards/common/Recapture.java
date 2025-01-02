@@ -55,6 +55,9 @@ public class Recapture extends KidCard {
 				p.hand.addToTop(c);
 				p.discardPile.removeCard(c);
 				c.applyPowers();
+
+				// 更新hand的显示
+				p.hand.refreshHandLayout();
 			}
 		}));
 	}

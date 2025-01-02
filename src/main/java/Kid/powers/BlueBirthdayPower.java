@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
@@ -14,10 +15,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 public class BlueBirthdayPower extends BasePower {
 		public static final String POWER_ID = "Kid:BlueBirthdayPower";
 		public static final String NAME = "Blue Birthday";
-		public static final String[] DESCRIPTIONS = new String[] {
-						"Gain ",
-				" additional energy at the start of your turn."
-		};
+		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public BlueBirthdayPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);

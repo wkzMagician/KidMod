@@ -13,16 +13,13 @@ import Kid.cards.uncommon.PupilOfMoon;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class MasterThiefPower extends BasePower {
 		public static final String POWER_ID = "Kid:MasterThiefPower";
 		public static final String NAME = "Master Thief";
-		public static final String[] DESCRIPTIONS = new String[] {
-						"At the end of your turn, add ",
-				" random Gem to your hand.",
-				" random Gems to your hand."
-		};
+		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		// 可能打印的卡牌列表
 		private static final String[] cards_string = {

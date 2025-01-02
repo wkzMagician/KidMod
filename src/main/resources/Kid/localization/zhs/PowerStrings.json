@@ -1,8 +1,137 @@
 {
   "${modID}:PowerID": {
-    "NAME": "Ultimate Power",
+    "NAME": "终极力量",
     "DESCRIPTIONS": [
-      "You are Very Cool and Strong."
+      "你非常酷且强大。"
+    ]
+  },
+  "${modID}:BloodTearsPower": {
+    "NAME": "红色眼泪",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，你可以选择 ",
+      " 张牌消耗。",
+      " 张牌消耗。"
+    ]
+  },
+  "${modID}:BlueBirthdayPower": {
+    "NAME": "蓝色生日",
+    "DESCRIPTIONS": [
+      "在你的回合开始时获得 ",
+      " 点额外能量。"
+    ]
+  },
+  "${modID}:CharmPower": {
+    "NAME": "魅力",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，减少所有敌人的HP #b"
+    ]
+  },
+  "${modID}:DarkStarPower": {
+    "NAME": "黑暗星辰",
+    "DESCRIPTIONS": [
+      "获得 ",
+      " 点临时力量。"
+    ]
+  },
+  "${modID}:ElfLipsPower": {
+    "NAME": "妖精之唇",
+    "DESCRIPTIONS": [
+      "标记你手中费用为0的卡牌。",
+      "以不同颜色标记你手中费用为0、2、3的卡牌。"
+    ]
+  },
+  "${modID}:HatTrickPower": {
+    "NAME": "帽子戏法",
+    "DESCRIPTIONS": [
+      "如果你在一个回合中打出3张相同的卡牌，对所有敌人造成 ",
+      " 点伤害。"
+    ]
+  },
+  "${modID}:LoopholeDetectionPower": {
+    "NAME": "漏洞探测",
+    "DESCRIPTIONS": [
+      "标记你手中费用最高的卡牌。"
+    ]
+  },
+  "${modID}:MasterThiefPower": {
+    "NAME": "神偷",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，向你的手中添加 ",
+      " 张随机宝石。",
+      " 张随机宝石。"
+    ]
+  },
+  "${modID}:MindMagicPower": {
+    "NAME": "心灵魔术",
+    "DESCRIPTIONS": [
+      "每当翻转一张卡牌时，获得 #b",
+      " 点格挡。"
+    ]
+  },
+  "${modID}:MotherOfGemsPower": {
+    "NAME": "宝石之母",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，抽1张牌。",
+      "在你的回合开始时，抽 #b2 张牌。"
+    ]
+  },
+  "${modID}:PandoraPower": {
+    "NAME": "潘多拉",
+    "DESCRIPTIONS": [
+      "在你的回合结束时恢复 ",
+      " 点HP。"
+    ]
+  },
+  "${modID}:ParisSunshinePower": {
+    "NAME": "巴黎艳阳",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 ",
+      " 点魅力。"
+    ]
+  },
+  "${modID}:PupilOfMoonPower": {
+    "NAME": "月之瞳",
+    "DESCRIPTIONS": [
+      "获得 ",
+      " 点临时敏捷。"
+    ]
+  },
+  "${modID}:RestitutionPower": {
+    "NAME": "归还赃物",
+    "DESCRIPTIONS": [
+      "每当你丢弃一张宝石时，对一名随机敌人造成 ",
+      " 点伤害。"
+    ]
+  },
+  "${modID}:ScoutPower": {
+    "NAME": "侦察",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，从弃牌堆中选择 ",
+      " 张牌来保留。"
+    ]
+  },
+  "${modID}:SneakPower": {
+    "NAME": "潜行",
+    "DESCRIPTIONS": [
+      "保留你手中所有的反面牌。"
+    ]
+  },
+  "${modID}:TrickExposurePower": {
+    "NAME": "诡计揭露",
+    "DESCRIPTIONS": [
+      "每当你打出一张反面牌时，将其翻转为正面。"
+    ]
+  },
+  "${modID}:UnparalleledSkillPower": {
+    "NAME": "魔高一丈",
+    "DESCRIPTIONS": [
+      "每当你抽一张牌时，将其翻转为反面。"
+    ]
+  },
+  "${modID}:WonderFormPower": {
+    "NAME": "奇迹形态",
+    "DESCRIPTIONS": [
+      "当你抽到一张反面牌时，它的能量消耗减少1点。"
     ]
   }
 }

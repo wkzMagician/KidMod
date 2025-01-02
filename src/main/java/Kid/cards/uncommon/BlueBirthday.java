@@ -10,7 +10,9 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class BlueBirthday extends GemCard {
@@ -22,6 +24,8 @@ public class BlueBirthday extends GemCard {
 			CardTarget.SELF,
 			-2
 	);
+
+	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:BlueBirthday");
 
 	private static final int ENERGY_NUM = 1;
 

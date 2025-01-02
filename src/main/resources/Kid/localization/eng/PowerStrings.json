@@ -4,5 +4,134 @@
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
+  },
+  "${modID}:BloodTearsPower": {
+    "NAME": "Blood Tears",
+    "DESCRIPTIONS": [
+      "At the end of your turn, you can choose ",
+      " card to Exhaust.",
+      " cards to Exhaust."
+    ]
+  },
+  "${modID}:BlueBirthdayPower": {
+    "NAME": "Blue Birthday",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " additional energy at the start of your turn."
+    ]
+  },
+  "${modID}:CharmPower": {
+    "NAME": "Charm",
+    "DESCRIPTIONS": [
+      "At the end of your turn, reduce all enemies' HP by "
+    ]
+  },
+  "${modID}:DarkStarPower": {
+    "NAME": "Dark Star",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " temporary Strength."
+    ]
+  },
+  "${modID}:ElfLipsPower": {
+    "NAME": "Elf Lips",
+    "DESCRIPTIONS": [
+      "Mark the card with 0 cost in your hand.",
+      "Mark the card with 0, 2, 3 cost with different colors in your hand."
+    ]
+  },
+  "${modID}:HatTrickPower": {
+    "NAME": "Hat Trick",
+    "DESCRIPTIONS": [
+      "If you play 3 same cards in a turn, deal ",
+      " damage to all enemies."
+    ]
+  },
+  "${modID}:LoopholeDetectionPower": {
+    "NAME": "Loophole Detection",
+    "DESCRIPTIONS": [
+      "Mark the card with the highest cost in your hand."
+    ]
+  },
+  "${modID}:MasterThiefPower": {
+    "NAME": "Master Thief",
+    "DESCRIPTIONS": [
+      "At the end of your turn, add ",
+      " random Gem to your hand.",
+      " random Gems to your hand."
+    ]
+  },
+  "${modID}:MindMagicPower": {
+    "NAME": "Mind Magic",
+    "DESCRIPTIONS": [
+      "Whenever you Flip a card, gain #b ",
+      "Block."
+    ]
+  },
+  "${modID}:MotherOfGemsPower": {
+    "NAME": "Mother of Gems",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw 1 additional card.",
+      "At the start of your turn, draw #b2 additional cards."
+    ]
+  },
+  "${modID}:PandoraPower": {
+    "NAME": "Pandora",
+    "DESCRIPTIONS": [
+      "Heal ",
+      " HP at the end of your turn."
+    ]
+  },
+  "${modID}:ParisSunshinePower": {
+    "NAME": "Paris Sunshine",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain ",
+      " Charm."
+    ]
+  },
+  "${modID}:PupilOfMoonPower": {
+    "NAME": "Pupil of Moon",
+    "DESCRIPTIONS": [
+      "Gain ",
+      " temporary Dexterity."
+    ]
+  },
+  "${modID}:RestitutionPower": {
+    "NAME": "Restitution",
+    "DESCRIPTIONS": [
+      "Whenever you discard a Gem, deal ",
+      " damage to a random enemy."
+    ]
+  },
+  "${modID}:ScoutPower": {
+    "NAME": "Scout",
+    "DESCRIPTIONS": [
+      "At the end of your turn, choose ",
+      " card from discard pile to Retain."
+    ]
+  },
+  "${modID}:SneakPower": {
+    "NAME": "Sneak",
+    "DESCRIPTIONS": [
+      "Retain all Face-down cards in your hand."
+    ]
+  },
+  "${modID}:TrickExposurePower": {
+    "NAME": "Trick Exposure",
+    "DESCRIPTIONS": [
+      "Whenever you play a Face-down card, Flip it to Face-up."
+    ]
+  },
+  "${modID}:UnparalleledSkillPower": {
+    "NAME": "Unparalleled Skill",
+    "DESCRIPTIONS": [
+      "Whenever you draw a card, Flip it to Face-down."
+    ]
+  },
+  "${modID}:WonderFormPower": {
+    "NAME": "Wonder Form",
+    "DESCRIPTIONS": [
+      "When you draw a Face-down card, it costs 1 less energy."
+    ]
   }
 }

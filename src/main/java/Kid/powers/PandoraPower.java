@@ -5,16 +5,14 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Objects;
 
 public class PandoraPower extends BasePower {
 		public static final String POWER_ID = "Kid:PandoraPower";
 		public static final String NAME = "Pandora";
-		public static final String[] DESCRIPTIONS = new String[] {
-						"Heal ",
-				" HP at the end of your turn."
-		};
+		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public PandoraPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);

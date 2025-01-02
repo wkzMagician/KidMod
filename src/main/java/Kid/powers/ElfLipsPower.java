@@ -3,6 +3,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
@@ -13,10 +14,7 @@ import java.util.ArrayList;
 public class ElfLipsPower extends BasePower {
 		public static final String POWER_ID = "Kid:ElfLipsPower";
 		public static final String NAME = "Elf Lips";
-		public static final String[] DESCRIPTIONS = new String[] {
-						"Mark the card with 0 cost in your hand.",
-				"Mark the card with 0, 2, 3 cost with different colors in your hand."
-		};
+		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		private ArrayList<AbstractCard> markedCards = new ArrayList<>();
 
