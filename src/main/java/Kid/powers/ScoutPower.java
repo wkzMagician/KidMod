@@ -10,15 +10,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ScoutPower extends BasePower {
 		public static final String POWER_ID = "Kid:ScoutPower";
-		public static final String NAME = "Scout";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public ScoutPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("Scout");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override

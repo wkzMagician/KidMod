@@ -5,15 +5,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 public class ParisSunshinePower extends BasePower {
 		public static final String POWER_ID = "Kid:ParisSunshinePower";
-		public static final String NAME = "ParisSunshine";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public ParisSunshinePower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("ParisSunshine");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override

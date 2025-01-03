@@ -10,15 +10,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class BloodTearsPower extends BasePower {
 		public static final String POWER_ID = "Kid:BloodTearsPower";
-		public static final String NAME = "Blood Tears";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public BloodTearsPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("BloodTears");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override

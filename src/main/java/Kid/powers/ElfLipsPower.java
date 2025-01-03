@@ -13,17 +13,11 @@ import java.util.ArrayList;
 
 public class ElfLipsPower extends BasePower {
 		public static final String POWER_ID = "Kid:ElfLipsPower";
-		public static final String NAME = "Elf Lips";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		private ArrayList<AbstractCard> markedCards = new ArrayList<>();
 
 		public ElfLipsPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("ElfLips");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 
 				applyPower();
 		}

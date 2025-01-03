@@ -14,15 +14,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class BlueBirthdayPower extends BasePower {
 		public static final String POWER_ID = "Kid:BlueBirthdayPower";
-		public static final String NAME = "Blue Birthday";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public BlueBirthdayPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("BlueBirthday");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override

@@ -8,17 +8,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class LoopholeDetectionPower extends BasePower {
 		public static final String POWER_ID = "Kid:LoopholeDetectionPower";
-		public static final String NAME = "Loophole Detection";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		private AbstractCard markedCard = null;
 
 		public LoopholeDetectionPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("LoopholeDetection");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 
 				this.remark();
 		}

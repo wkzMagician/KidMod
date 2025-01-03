@@ -18,8 +18,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class MasterThiefPower extends BasePower {
 		public static final String POWER_ID = "Kid:MasterThiefPower";
-		public static final String NAME = "Master Thief";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		// 可能打印的卡牌列表
 		private static final String[] cards_string = {
@@ -48,10 +46,6 @@ public class MasterThiefPower extends BasePower {
 
 		public MasterThiefPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("MasterThief");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override

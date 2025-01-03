@@ -9,15 +9,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 public class RestitutionPower extends BasePower {
 		public static final String POWER_ID = "Kid:RestitutionPower";
-		public static final String NAME = "Restitution";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public RestitutionPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("Restitution");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override

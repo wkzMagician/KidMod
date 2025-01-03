@@ -11,8 +11,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class HatTrickPower extends BasePower {
 		public static final String POWER_ID = "Kid:HatTrickPower";
-		public static final String NAME = "Hat Trick";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		private int damage;
 
@@ -20,8 +18,6 @@ public class HatTrickPower extends BasePower {
 
 		public HatTrickPower(AbstractCreature owner, int magicNumber) {
 				super(POWER_ID, PowerType.BUFF, false, owner, 0);
-				this.loadRegion("LoopholeDetection");
-				this.name = NAME;
 				this.amount = 0;
 				this.damage = magicNumber;
 				this.updateDescription();

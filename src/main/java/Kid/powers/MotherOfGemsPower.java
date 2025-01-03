@@ -8,15 +8,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 public class MotherOfGemsPower extends BasePower {
 		public static final String POWER_ID = "Kid:MotherOfGemsPower";
-		public static final String NAME = "Mother of Gems";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public MotherOfGemsPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("MotherOfGems");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override

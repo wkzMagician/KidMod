@@ -8,15 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class SneakPower extends BasePower {
 		public static final String POWER_ID = "Kid:SneakPower";
-		public static final String NAME = "Sneak";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public SneakPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("Sneak");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override

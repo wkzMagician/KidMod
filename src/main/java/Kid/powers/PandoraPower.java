@@ -11,15 +11,9 @@ import java.util.Objects;
 
 public class PandoraPower extends BasePower {
 		public static final String POWER_ID = "Kid:PandoraPower";
-		public static final String NAME = "Pandora";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public PandoraPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("Pandora");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		private boolean otherGemInHand() {

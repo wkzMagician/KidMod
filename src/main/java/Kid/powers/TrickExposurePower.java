@@ -7,15 +7,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 
 public class TrickExposurePower extends BasePower {
 		public static final String POWER_ID = "Kid:TrickExposurePower";
-		public static final String NAME = "Trick Exposure";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public TrickExposurePower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("TrickExposure");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override

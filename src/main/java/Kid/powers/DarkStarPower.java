@@ -14,16 +14,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class DarkStarPower extends BasePower {
 		public static final String POWER_ID = "Kid:DarkStarPower";
-		public static final String NAME = "Dark Star";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public DarkStarPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("DarkStar");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
-
 				applyPower();
 		}
 

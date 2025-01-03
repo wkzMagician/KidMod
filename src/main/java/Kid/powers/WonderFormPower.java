@@ -9,15 +9,9 @@ import java.util.ArrayList;
 
 public class WonderFormPower extends BasePower {
 		public static final String POWER_ID = "Kid:WonderFormPower";
-		public static final String NAME = "Wonder Form";
-		public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
 		public WonderFormPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-				this.loadRegion("WonderForm");
-				this.name = NAME;
-				this.amount = amount;
-				this.updateDescription();
 		}
 
 		@Override
