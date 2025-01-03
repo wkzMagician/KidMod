@@ -1,9 +1,10 @@
 {
-  "${modID}:RelicID": {
-    "NAME": "Good Relic",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+  "${modID}:MagicHat": {
+    "NAME": "魔术帽",
+    "FLAVOR": "这是一顶货真价实的魔术帽。",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "在你的回合结束时，选择 #b1 张牌 #yKid:翻转 。",
+      "翻转"
     ]
   }
 }

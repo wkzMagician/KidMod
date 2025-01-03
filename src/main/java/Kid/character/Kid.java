@@ -6,6 +6,7 @@ import static Kid.KidMod.makeID;
 import Kid.cards.basic.Defend;
 import Kid.cards.basic.MagicStrike;
 import Kid.cards.basic.Strike;
+import Kid.relics.MagicHat;
 import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
@@ -159,7 +160,7 @@ public class Kid extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         //IDs of starting relics. You can have multiple, but one is recommended.
-        retVal.add(BurningBlood.ID);
+        retVal.add(MagicHat.ID);
 
         return retVal;
     }

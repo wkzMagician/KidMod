@@ -1,9 +1,10 @@
 {
-  "${modID}:RelicID": {
-    "NAME": "Good Relic",
-    "FLAVOR": "Flavor text displayed in detailed relic view.",
+  "${modID}:MagicHat": {
+    "NAME": "Magic Hat",
+    "FLAVOR": "It is truly a magic hat.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. [E] is an energy icon."
+      "At the end of your turn, choose #b1 card to #yKid:Flip.",
+      "Flip"
     ]
   }
 }
