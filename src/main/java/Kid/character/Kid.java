@@ -10,6 +10,7 @@ import Kid.relics.MagicHat;
 import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.AbstractAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -41,7 +42,7 @@ public class Kid extends CustomPlayer {
     public static final int ORB_SLOTS = 0;
 
     //Strings
-    private static final String ID = makeID("CharacterID"); //This should match whatever you have in the CharacterStrings.json file
+    private static final String ID = makeID("Kid"); //This should match whatever you have in the CharacterStrings.json file
     private static String[] getNames() { return CardCrawlGame.languagePack.getCharacterString(ID).NAMES; }
     private static String[] getText() { return CardCrawlGame.languagePack.getCharacterString(ID).TEXT; }
 
@@ -121,17 +122,34 @@ public class Kid extends CustomPlayer {
     //Actual character class code below this point
 
     public Kid() {
-        super(getNames()[0], Meta.YOUR_CHARACTER,
-                new CustomEnergyOrb(orbTextures, characterPath("energyorb/vfx.png"), layerSpeeds), //Energy Orb
-                new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
+//        super(getNames()[0], Meta.YOUR_CHARACTER,
+//                new CustomEnergyOrb(orbTextures, characterPath("energyorb/vfx.png"), layerSpeeds), //Energy Orb
+//                new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
+//
+//        initializeClass(null,
+//                SHOULDER_2,
+//                SHOULDER_1,
+//                CORPSE,
+//                getLoadout(),
+//                20.0F, -20.0F, 200.0F, 250.0F, //Character hitbox. x y position, then width and height.
+//                new EnergyManager(ENERGY_PER_TURN));
 
-        initializeClass(null,
-                SHOULDER_2,
-                SHOULDER_1,
-                CORPSE,
-                getLoadout(),
-                20.0F, -20.0F, 200.0F, 250.0F, //Character hitbox. x y position, then width and height.
-                new EnergyManager(ENERGY_PER_TURN));
+        super(getNames()[0], Meta.YOUR_CHARACTER,
+            new CustomEnergyOrb(orbTextures, characterPath("energyorb/vfx.png"), layerSpeeds), //Energy Orb
+            new AbstractAnimation() { //Change the Animation line to this
+                @Override
+                public Type type() {
+                    return Type.NONE; //A NONE animation results in the image given in initializeClass being used
+                }
+            });
+
+        initializeClass(characterPath("image.png"), //The image to use. The rest of the method is unchanged.
+            SHOULDER_2,
+            SHOULDER_1,
+            CORPSE,
+            getLoadout(),
+            20.0F, -20.0F, 200.0F, 250.0F, //Character hitbox. x y position, then width and height.
+            new EnergyManager(ENERGY_PER_TURN));
 
         //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
         dialogX = (drawX + 0.0F * Settings.scale);

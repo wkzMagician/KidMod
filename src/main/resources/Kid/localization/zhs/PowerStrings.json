@@ -133,5 +133,12 @@
     "DESCRIPTIONS": [
       "当你抽到一张 #y反面 牌时，它的能量消耗减少1点。"
     ]
+  },
+  "${modID}:DisguisePower": {
+    "NAME": "易容",
+    "DESCRIPTIONS": [
+      "防止下 ",
+      " 次你失去 #y魅力 。"
+    ]
   }
 }

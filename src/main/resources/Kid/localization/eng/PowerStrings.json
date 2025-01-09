@@ -133,5 +133,12 @@
     "DESCRIPTIONS": [
       "When you draw a #yFace-down card, it costs 1 less energy."
     ]
+  },
+  "${modID}:DisguisePower": {
+    "NAME": "Disguise",
+    "DESCRIPTIONS": [
+      "Prevent the next ",
+      " time you would lose #yCharm."
+    ]
   }
 }

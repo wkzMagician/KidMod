@@ -34,7 +34,24 @@ public class CharmPower extends BasePower {
 		public void wasHPLost(DamageInfo info, int damageAmount) {
 			super.wasHPLost(info, damageAmount);
 
-			this.amount /= 2;
+			// 是否有DisguisePower
+			if(this.owner.hasPower("Kid:DisguisePower")) {
+				// 获取DisguisePower
+				DisguisePower power = (DisguisePower) this.owner.getPower("Kid:DisguisePower");
+				// 如果DisguisePower的amount大于0
+				if(power.amount > 0) {
+					// 减少DisguisePower的amount
+					power.amount--;
+					// 更新DisguisePower的描述
+					power.updateDescription();
+
+					if(power.amount <= 0) {
+						addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, power));
+					}
+				}
+			}else{
+				this.amount /= 2;
+			}
 
 			if(this.amount <= 0) {
 				addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));

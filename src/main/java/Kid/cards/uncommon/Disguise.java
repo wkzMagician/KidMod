@@ -1,7 +1,8 @@
-package Kid.cards.rare;
+package Kid.cards.uncommon;
 
 import Kid.cards.KidCard;
 import Kid.character.Kid;
+import Kid.powers.DisguisePower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,9 +15,9 @@ public class Disguise extends KidCard {
 	private static final CardStats info = new CardStats(
 			Kid.Meta.CARD_COLOR,
 			CardType.POWER,
-			CardRarity.RARE,
+			CardRarity.UNCOMMON,
 			CardTarget.SELF,
-			2
+			1
 	);
 
 	public Disguise() {
@@ -27,7 +28,7 @@ public class Disguise extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new ApplyPowerAction(p, p, new BufferPower(p, this.magicNumber)));
+		addToBot(new ApplyPowerAction(p, p, new DisguisePower(p, this.magicNumber)));
 	}
 
 	@Override
