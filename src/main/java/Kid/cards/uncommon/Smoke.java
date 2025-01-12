@@ -20,7 +20,7 @@ public class Smoke extends KidCard {
 			CardType.SKILL,
 			CardRarity.UNCOMMON,
 			CardTarget.SELF,
-			0
+			1
 	);
 
 	// 虚弱层数
@@ -31,8 +31,6 @@ public class Smoke extends KidCard {
 		super(ID, info);
 
 		setMagic(WEAK, UPG_WEAK); //Sets the card's magic number and how much it changes when upgraded.
-
-		setExhaust(true);
 	}
 
 	@Override

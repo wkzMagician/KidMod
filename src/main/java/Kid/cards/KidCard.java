@@ -26,6 +26,9 @@ public abstract class KidCard extends BaseCard {
 		TOP,
 	}
 
+	// 当前的翻牌次数，静态变量
+	public static int flipCount = 0;
+
 		// 构造方法
 
 	public KidCard(String id, CardStats stats) {
@@ -98,7 +101,13 @@ public abstract class KidCard extends BaseCard {
 	}
 
 
+	// 回合开始时
+	@Override
+	public void atTurnStart() {
+		super.atTurnStart();
 
+		flipCount = 0;
+	}
 
 
 
@@ -116,6 +125,8 @@ public abstract class KidCard extends BaseCard {
 
 	public void triggerOnFlip() {
 		if(isActual) return;
+
+		flipCount++;
 
 		addToTop(new TriggerFlipPowerAction(AbstractDungeon.player, AbstractDungeon.player));
 	}

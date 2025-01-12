@@ -18,8 +18,8 @@ public class PokerFace extends KidCard {
 			0
 	);
 
-	private static final int BLOCK = 20;
-	private static final int UPG_BLOCK = 10;
+	private static final int BLOCK = 10;
+	private static final int UPG_BLOCK = 4;
 
 	public PokerFace() {
 		super(ID, info);

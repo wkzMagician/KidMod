@@ -23,8 +23,8 @@ public class ParisSunshine extends GemCard {
 			-2
 	);
 
-	private static final int CHARM = 2;
-	private static final int UPG_CHARM = 1;
+	private static final int CHARM = 3;
+	private static final int UPG_CHARM = 2;
 
 	public ParisSunshine() {
 		super(ID, info);

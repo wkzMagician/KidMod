@@ -23,7 +23,7 @@
   },
   "${modID}:AlertHint": {
     "NAME": "情报提示",
-    "DESCRIPTION": " kid:真相 。 NL 获得 !B! 点 格挡 。 NL 选择 !M! 张卡牌 kid:翻转 至 kid:正面 。"
+    "DESCRIPTION": " kid:真相 。 NL 造成 !D! 点 伤害 。 NL 选择 !M! 张卡牌 kid:翻转 至 kid:正面 。"
   },
   "${modID}:FaceMask": {
     "NAME": "防护面具",
@@ -55,7 +55,7 @@
   },
   "${modID}:Smoke": {
     "NAME": "烟雾弹",
-    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。 NL 消耗 。"
+    "DESCRIPTION": "给予所有敌人 !M! 层 虚弱 。"
   },
   "${modID}:Swap": {
     "NAME": "掉包",
@@ -100,8 +100,7 @@
   },
   "${modID}:PhantomSteal": {
     "NAME": "偷天换日",
-    "DESCRIPTION": "交换抽牌堆与弃牌堆。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "交换抽牌堆与弃牌堆。"
+    "DESCRIPTION": "造成 !D! 伤害。 NL 交换抽牌堆与弃牌堆。"
   },
   "${modID}:RepeatTrick": {
     "NAME": "故技重施",
@@ -156,7 +155,7 @@
   },
   "${modID}:Flashbang": {
     "NAME": "闪光弹",
-    "DESCRIPTION": "将所有手牌 kid:翻转 至 kid:正面 。",
+    "DESCRIPTION": " kid:真相 。 NL 将所有手牌 kid:翻转 至 kid:正面 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": " kid:真相 。 NL 将所有手牌 kid:翻转 至 kid:正面 。"
   },
   "${modID}:HeartfeltApologies": {
@@ -177,7 +176,7 @@
   },
   "${modID}:Peek": {
     "NAME": "偷窥",
-    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 施加 !M! 层 易伤 。"
+    "DESCRIPTION": "造成 kid:魅力 层数 !M! 倍的伤害。 NL 移除所有 kid:魅力 。"
   },
   "${modID}:CoverUp": {
     "NAME": "障眼法",
@@ -243,9 +242,9 @@
   },
   "${modID}:CardTrick": {
     "NAME": "卡牌戏法",
-    "DESCRIPTION": "抽 !M! 张牌并将其 kid:翻转 至 kid:反面 。 NL 丢弃 !M! 张牌并将其 kid:翻转 至 kid:正面 。",
+    "DESCRIPTION": "造成本回合你 kid:翻转 的卡牌数量的伤害。",
     "EXTENDED_DESCRIPTION": [
-      "丢弃并翻转卡牌至正面。"
+      "(造成 !D! 点伤害。)"
     ]
   },
   "${modID}:Fish": {
@@ -313,7 +312,7 @@
   },
   "${modID}:SleepGas": {
     "NAME": "催眠瓦斯",
-    "DESCRIPTION": "所有敌人失去 !M! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "给予所有敌人 !M! 层 易伤 。"
   },
   "${modID}:Skywalk": {
     "NAME": "空中步行",
@@ -354,8 +353,12 @@
   },
   "${modID}:Curtsy": {
     "NAME": "屈膝礼",
-    "DESCRIPTION": "将你的 kid:魅力 翻倍。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "将你的 kid:魅力 变为3倍。 NL 消耗 。"
+    "DESCRIPTION": "手牌中每有一张 kid:反面 卡牌，获得 !M! 点 kid:魅力 。",
+    "EXTENDED_DESCRIPTION": [
+      "手牌中有 ",
+      " 张反面卡牌。",
+      " 张反面卡牌。"
+    ]
   },
   "${modID}:ArmsCarry": {
     "NAME": "公主抱",

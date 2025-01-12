@@ -1,16 +1,16 @@
-package Kid.cards.rare;
+package Kid.cards.uncommon;
 
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 public class SleepGas extends KidCard {
 	public static final String ID = makeID(SleepGas.class.getSimpleName());
@@ -19,7 +19,7 @@ public class SleepGas extends KidCard {
 			CardType.SKILL,
 			CardRarity.RARE,
 			CardTarget.SELF,
-			2
+			1
 	);
 
 	private static final int MAGIC = 2;
@@ -36,9 +36,8 @@ public class SleepGas extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		// 降低所有敌人的力量
 		for(AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-			addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -this.magicNumber), -this.magicNumber));
+			addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 		}
 	}
 

@@ -25,22 +25,46 @@ public class Curtsy extends KidCard {
 
 	public Curtsy() {
 		super(ID, info);
+		setMagic(2, 1);
+	}
 
-		setExhaust(true);
+	@Override
+	public void applyPowers() {
+		super.applyPowers();
+		this.rawDescription = cardStrings.DESCRIPTION;
+
+		int count = 0;
+		for(AbstractCard c : AbstractDungeon.player.hand.group) {
+			if(c instanceof KidCard && ((KidCard) c).isReverse()) {
+				count++;
+			}
+		}
+
+		if(count == 1) {
+			this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[1];
+		}else if(count > 1) {
+			this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[2];
+		}
+
+		initializeDescription();
+	}
+
+	@Override
+	public void onMoveToDiscard() {
+		this.rawDescription = cardStrings.DESCRIPTION;
+		initializeDescription();
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		// 获得能力的魅力层数
-		AbstractPower power = p.getPower("Kid:CharmPower");
-		if(power == null) return;
-		int charm = power.amount;
-		if(charm <= 0) return;
-		// 翻倍
-
-		if(this.upgraded){ // 三倍
-			charm *= 2;
+		int count = 0;
+		for(AbstractCard c : p.hand.group) {
+			if(c instanceof KidCard && ((KidCard) c).isReverse()) {
+				count++;
+			}
 		}
+
+		int charm = count * magicNumber;
 
 		addToBot(new ApplyPowerAction(p, p, new CharmPower(p, charm), charm));
 	}

@@ -23,7 +23,7 @@
   },
   "${modID}:AlertHint": {
     "NAME": "Alert Hint",
-    "DESCRIPTION": "Kid:Actual. NL Gain !B! Block. NL Select !M! cards to Kid:Flip to Kid:Face-up ."
+    "DESCRIPTION": "Kid:Actual. NL Deal !D! damage. NL Select !M! cards to Kid:Flip to Kid:Face-up ."
   },
   "${modID}:FaceMask": {
     "NAME": "Face Mask",
@@ -55,7 +55,7 @@
   },
   "${modID}:Smoke": {
     "NAME": "Smoke",
-    "DESCRIPTION": "Apply !M! Weak to all enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Weak to all enemies."
   },
   "${modID}:Swap": {
     "NAME": "Swap",
@@ -100,8 +100,7 @@
   },
   "${modID}:PhantomSteal": {
     "NAME": "Phantom Steal",
-    "DESCRIPTION": "Exchange your draw pile with your discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exchange your draw pile with your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL Exchange your draw pile with your discard pile."
   },
   "${modID}:RepeatTrick": {
     "NAME": "Repeat Trick",
@@ -156,7 +155,7 @@
   },
   "${modID}:Flashbang": {
     "NAME": "Flashbang",
-    "DESCRIPTION": "Set all hand cards to Kid:Face-up. ",
+    "DESCRIPTION": "Kid:Actual. NL Set all hand cards to Kid:Face-up. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Kid:Actual. NL Set all hand cards to Kid:Face-up."
   },
   "${modID}:HeartfeltApologies": {
@@ -177,7 +176,7 @@
   },
   "${modID}:Peek": {
     "NAME": "Peek",
-    "DESCRIPTION": "Gain [E] [E] [E] . NL Gain !M! Vulnerable."
+    "DESCRIPTION": "Deal damage equal to !M! times the Kid:Charm you have. NL Remove all Kid:Charm."
   },
   "${modID}:CoverUp": {
     "NAME": "Cover-Up",
@@ -244,9 +243,9 @@
   },
   "${modID}:CardTrick": {
     "NAME": "Card Trick",
-    "DESCRIPTION": "Draw !M! card and Kid:Flip to Kid:Face-down. NL Discard !M! card and Kid:Flip to Kid:Face-up.",
+    "DESCRIPTION": "Deal damage equal to the number of cards you Kid:Flip in this turn.",
     "EXTENDED_DESCRIPTION": [
-      "Discard and Flip cards to Face-up."
+      "( Deal !D! damage. )"
     ]
   },
   "${modID}:Fish": {
@@ -314,7 +313,7 @@
   },
   "${modID}:SleepGas": {
     "NAME": "Sleep Gas",
-    "DESCRIPTION": "All enemies lose !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Vulnerable to all enemies. NL Exhaust."
   },
   "${modID}:Skywalk": {
     "NAME": "Skywalk",
@@ -355,8 +354,12 @@
   },
   "${modID}:Curtsy": {
     "NAME": "Curtsy",
-    "DESCRIPTION": "Double your Kid:Charm. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple your Kid:Charm. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Kid:Charm for each Kid:Face-down card in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "You have ",
+      " Kid:Face-down card in your hand.",
+      " Kid:Face-down cards in your hand."
+    ]
   },
   "${modID}:ArmsCarry": {
     "NAME": "Arms Carry",

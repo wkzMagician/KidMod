@@ -18,7 +18,7 @@ public class FansSupport extends KidCard {
 			-1
 	);
 
-	private static final int CHARM = 4;
+	private static final int CHARM = 5;
 	private static final int UPGRADE_CHARM = 2;
 
 	public FansSupport() {

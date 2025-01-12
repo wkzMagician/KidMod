@@ -17,14 +17,14 @@ public class AlertHint extends KidCard {
 	public static final String ID = makeID(AlertHint.class.getSimpleName());
 	private static final CardStats info = new CardStats(
 			Kid.Meta.CARD_COLOR,
-			CardType.SKILL,
+			CardType.ATTACK,
 			CardRarity.COMMON,
-			CardTarget.SELF,
+			CardTarget.ENEMY,
 			0
 	);
 
-	private static final int BLOCK = 3;
-	private static final int UPG_BLOCK = 1;
+	private static final int DAMAGE = 4;
+	private static final int UPG_DAMAGE = 2;
 
 	private static final int FLIP_AMOUNT = 1;
 	private static final int UPG_FLIP_AMOUNT = 1;
@@ -34,13 +34,13 @@ public class AlertHint extends KidCard {
 
 		this.isActual = true;
 
-		setBlock(BLOCK, UPG_BLOCK); //Sets the card's block and how much it changes when upgraded.
+		setDamage(DAMAGE, UPG_DAMAGE);
 		setMagic(FLIP_AMOUNT, UPG_FLIP_AMOUNT); //Sets the card's magic number and how much it changes when upgraded.
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new GainBlockAction(p, p, block));
+		addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 		addToBot(new SetCardSideAction(p, p, magicNumber, Strategy.SELECT, false));
 	}
 

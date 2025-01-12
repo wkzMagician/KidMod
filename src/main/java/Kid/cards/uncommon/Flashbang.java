@@ -25,13 +25,14 @@ public class Flashbang extends KidCard {
 
 	public Flashbang() {
 		super(ID, info);
+		setExhaust(true);
 	}
 
 	@Override
 	public void upgrade() {
 		if (!upgraded) {
 			upgradeName();
-			this.isActual = true;
+			setExhaust(false);
 			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
 			initializeDescription();
 		}

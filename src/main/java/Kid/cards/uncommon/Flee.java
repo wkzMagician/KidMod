@@ -20,7 +20,7 @@ public class Flee extends KidCard {
 			1
 	);
 
-	private static final int BLOCK = 13;
+	private static final int BLOCK = 11;
 	private static final int UPG_BLOCK = 4;
 
 	public Flee() {
