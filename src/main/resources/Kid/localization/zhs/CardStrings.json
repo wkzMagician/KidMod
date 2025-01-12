@@ -151,7 +151,8 @@
   },
   "${modID}:MindMagic": {
     "NAME": "心灵魔术",
-    "DESCRIPTION": "每当你 kid:翻转 一张卡牌时，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "每当你 kid:翻转 一张卡牌时，获得 !M! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 每当你 kid:翻转 一张卡牌时，获得 !M! 点 格挡 。"
   },
   "${modID}:Flashbang": {
     "NAME": "闪光弹",
@@ -242,9 +243,11 @@
   },
   "${modID}:CardTrick": {
     "NAME": "卡牌戏法",
-    "DESCRIPTION": "造成本回合你 kid:翻转 的卡牌数量的伤害。",
+    "DESCRIPTION": "本回合你每 kid:翻转 一张卡牌，造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      "(造成 !D! 点伤害。)"
+      "(本回合已 kid:翻转 ",
+      " 张卡牌。)",
+      " 张卡牌。)"
     ]
   },
   "${modID}:Fish": {

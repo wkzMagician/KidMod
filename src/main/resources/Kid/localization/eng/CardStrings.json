@@ -151,7 +151,8 @@
   },
   "${modID}:MindMagic": {
     "NAME": "Mind Magic",
-    "DESCRIPTION": "Whenever you Kid:Flip a card, gain !M! Block."
+    "DESCRIPTION": "Whenever you Kid:Flip a card, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Kid:Flip a card, gain !M! Block."
   },
   "${modID}:Flashbang": {
     "NAME": "Flashbang",
@@ -243,9 +244,11 @@
   },
   "${modID}:CardTrick": {
     "NAME": "Card Trick",
-    "DESCRIPTION": "Deal damage equal to the number of cards you Kid:Flip in this turn.",
+    "DESCRIPTION": "Deal !D! damage for each card you Kid:Flip in this turn.",
     "EXTENDED_DESCRIPTION": [
-      "( Deal !D! damage. )"
+      "(You have Kid:Flipped ",
+      " card in this turn.)",
+      " cards in this turn.)"
     ]
   },
   "${modID}:Fish": {

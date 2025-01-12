@@ -20,19 +20,24 @@ public class CardTrick extends KidCard {
 			CardType.ATTACK,
 			CardRarity.COMMON,
 			CardTarget.ENEMY,
-			1
+			2
 	);
 
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:CardTrick");
 
+	private static final int DAMAGE = 4;
+	private static final int UPGRADE_DAMAGE = 2;
+
 	public CardTrick() {
 		super(ID, info);
-		setCostUpgrade(0);
+		setDamage(DAMAGE, UPGRADE_DAMAGE);
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.BLUNT_LIGHT));
+		for(int i = 0; i < flipCount; i++) {
+			addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.SLASH_HORIZONTAL));
+		}
 
 		this.rawDescription = cardStrings.DESCRIPTION;
 		initializeDescription();
@@ -40,11 +45,13 @@ public class CardTrick extends KidCard {
 
 	@Override
 	public void applyPowers() {
-		this.baseDamage = flipCount;
-
 		super.applyPowers();
-
-		this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0];
+		this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + flipCount;
+		if(flipCount == 1) {
+			this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
+		}else {
+			this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
+		}
 		initializeDescription();
 	}
 
