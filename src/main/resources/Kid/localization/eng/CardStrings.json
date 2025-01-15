@@ -89,7 +89,8 @@
   },
   "${modID}:Notice": {
     "NAME": "Notice",
-    "DESCRIPTION": "Gain !M! Energy. NL Draw 2 cards. NL Exhaust."
+    "DESCRIPTION": "Gain [E] . NL Draw 2 cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] . NL Draw 2 cards. NL Exhaust."
   },
   "${modID}:Cheat": {
     "NAME": "Cheat",
@@ -138,8 +139,8 @@
   },
   "${modID}:Cleanse": {
     "NAME": "Cleanse",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. Clear all buffs from them. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. Clear all positive buffs from them."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. Clear all buffs except Strength from them. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. Clear all positive buffs except Strength from them. NL Exhaust."
   },
   "${modID}:StunGun": {
     "NAME": "Stun Gun",
@@ -230,8 +231,8 @@
   },
   "${modID}:BloodTears": {
     "NAME": "Blood Tears",
-    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, choose to Exhaust a card in your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Unplayable. NL Retain. NL At the end of your turn, choose to Exhaust a card in your hand."
+    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, choose to Exhaust !M! card in your hand.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, choose to Exhaust !M! cards in your hand."
   },
   "${modID}:ElfLips": {
     "NAME": "Elf Lips",
@@ -304,6 +305,7 @@
     "NAME": "Counterfeit",
     "DESCRIPTION": "Choose a card in your hand and add !M! copies of it to your hand. Copies are Ethereal. Exhaust.",
     "EXTENDED_DESCRIPTION": [
+      "copy",
       " NL Ethereal."
     ]
   },
@@ -332,8 +334,8 @@
   },
   "${modID}:Disguise": {
     "NAME": "Disguise",
-    "DESCRIPTION": "Prevent the next time you would lose HP.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would lose HP."
+    "DESCRIPTION": "Prevent the next time you would lose kid:Charm.",
+    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would lose kid:Charm."
   },
   "${modID}:Boast": {
     "NAME": "Boast",

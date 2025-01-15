@@ -18,11 +18,11 @@ public class StunGun extends KidCard {
 			CardType.ATTACK,
 			CardRarity.RARE,
 			CardTarget.ENEMY,
-			2
+			3
 	);
 
-	private static final int DAMAGE = 12;
-	private static final int UPG_DAMAGE = 6;
+	private static final int DAMAGE = 18;
+	private static final int UPG_DAMAGE = 8;
 
 	public StunGun() {
 		super(ID, info);

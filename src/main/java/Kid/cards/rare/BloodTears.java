@@ -25,9 +25,7 @@ public class BloodTears extends GemCard {
 	public BloodTears() {
 		super(ID, info);
 
-		if(upgraded) {
-			setInnate(true);
-		}
+		setMagic(1, 1);
 	}
 
 	@Override
@@ -37,8 +35,8 @@ public class BloodTears extends GemCard {
 		addToBot(new ApplyPowerAction(
 				AbstractDungeon.player,
 				AbstractDungeon.player,
-				new BloodTearsPower(AbstractDungeon.player, 1),
-				1
+				new BloodTearsPower(AbstractDungeon.player, magicNumber),
+				magicNumber
 		));
 	}
 
@@ -52,12 +50,12 @@ public class BloodTears extends GemCard {
 
 		int amount = power.amount;
 
-		if(amount > 1) {
+		if(amount > magicNumber){
 			addToBot(new ApplyPowerAction(
 					AbstractDungeon.player,
 					AbstractDungeon.player,
-					new BloodTearsPower(AbstractDungeon.player, -1),
-					-1
+					new BloodTearsPower(AbstractDungeon.player, -magicNumber),
+					-magicNumber
 			));
 		}else{
 			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BloodTearsPower.POWER_ID));

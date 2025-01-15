@@ -89,7 +89,8 @@
   },
   "${modID}:Notice": {
     "NAME": "预告函",
-    "DESCRIPTION": "获得 [E] [E] [E] 。 NL 抽 2 张牌。 NL 消耗 。"
+    "DESCRIPTION": "获得 [E] 。 NL 抽 2 张牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] 。 NL 抽 2 张牌。 NL 消耗 。"
   },
   "${modID}:Cheat": {
     "NAME": "出千",
@@ -138,8 +139,8 @@
   },
   "${modID}:Cleanse": {
     "NAME": "洗涤",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们的所有 增益 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们的所有kid:正面 增益 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们除了 力量 以外的所有 能力 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们除了 力量 以外的所有增益 能力 。"
   },
   "${modID}:StunGun": {
     "NAME": "电击枪",
@@ -229,8 +230,8 @@
   },
   "${modID}:BloodTears": {
     "NAME": "红色眼泪",
-    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 在回合结束时，选择 消耗 你手中的一张卡牌。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 不能被打出 。 NL 保留。 NL 在回合结束时，选择 消耗 你手中的一张卡牌。"
+    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 在回合结束时，选择 消耗 你手中的 !M! 张卡牌。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 保留。 NL 在回合结束时，选择 消耗 你手中的 !M! 张卡牌。"
   },
   "${modID}:ElfLips": {
     "NAME": "妖精之唇",
@@ -306,6 +307,7 @@
     "NAME": "赝品",
     "DESCRIPTION": "选择你手中的一张卡牌并添加 !M! 张该卡牌的副本到你的手牌。副本为 虚无 。 消耗 。",
     "EXTENDED_DESCRIPTION": [
+      "复制",
       " NL 虚无 。"
     ]
   },
@@ -331,8 +333,8 @@
   },
   "${modID}:Disguise": {
     "NAME": "易容术",
-    "DESCRIPTION": "获得1层 缓冲 。",
-    "UPGRADE_DESCRIPTION": "获得2层 缓冲 。"
+    "DESCRIPTION": "阻止下 1 次 kid:魅力 的损失。",
+    "UPGRADE_DESCRIPTION": "阻止下 2 次 kid:魅力 的损失。"
   },
   "${modID}:Boast": {
     "NAME": "吹嘘",

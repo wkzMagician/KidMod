@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -41,7 +42,7 @@ public class HatTrickPower extends BasePower {
 				this.amount++;
 				if (this.amount == 3) {
 					this.amount = 0;
-					addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, this.damage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+					addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, this.damage, DamageType.HP_LOSS, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 				}
 			} else {
 				this.firstCard = card;

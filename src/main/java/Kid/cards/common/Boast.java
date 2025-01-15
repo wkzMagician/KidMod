@@ -23,7 +23,7 @@ public class Boast extends KidCard {
 	);
 
 	private static final int DAMAGE = 12;
-	private static final int UPG_DAMAGE = 17;
+	private static final int UPG_DAMAGE = 5;
 
 
 	public Boast() {

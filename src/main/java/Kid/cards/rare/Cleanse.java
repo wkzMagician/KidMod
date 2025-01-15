@@ -5,6 +5,7 @@ import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -16,6 +17,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Cleanse extends KidCard {
 	public static final String ID = makeID(Cleanse.class.getSimpleName());
@@ -42,6 +47,18 @@ public class Cleanse extends KidCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		// ALL ENEMY
 		addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+		// 除了力量
+		ArrayList<Integer> strengthPowerAmount = new ArrayList<Integer>();
+		for(AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters){
+			AbstractPower power = monster.getPower(StrengthPower.POWER_ID);
+			int amount = 0;
+			if(power != null){
+				amount = power.amount;
+			}
+			strengthPowerAmount.add(amount);
+		}
+
 		// clean the buff of all enemys?
 		if(!this.upgraded){
 			// 遍历敌人
@@ -52,6 +69,15 @@ public class Cleanse extends KidCard {
 			// 遍历敌人
 			for(AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters){
 				addToBot(new RemoveBuffsAction(monster));
+			}
+		}
+
+		// 重新给予力量
+		for(int i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); i++){
+			AbstractMonster monster = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
+			int amount = strengthPowerAmount.get(i);
+			if(amount > 0){
+				addToBot(new ApplyPowerAction(monster, p, new StrengthPower(monster, amount), amount));
 			}
 		}
 	}

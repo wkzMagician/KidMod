@@ -1,5 +1,6 @@
 package Kid.cards;
 
+import static Kid.util.GeneralUtils.removePrefix;
 import static Kid.util.TextureLoader.getCardTextureString;
 
 import Kid.actions.TriggerFlipPowerAction;
@@ -76,7 +77,7 @@ public abstract class KidCard extends BaseCard {
 
 			} else {
 				// 如果翻为正面，将图片设置为正面图片
-				loadCardImage(getCardTextureString(cardID, type));
+				loadCardImage(getCardTextureString(removePrefix(this.cardID), type));
 
 //				// 将cost设为原本的cost
 //				cost = actualCost;

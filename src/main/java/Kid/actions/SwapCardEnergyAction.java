@@ -54,6 +54,13 @@ public class SwapCardEnergyAction extends AbstractGameAction {
 			AbstractCard card1 = cards.get(0);
 			AbstractCard card2 = cards.get(1);
 
+			// 如果有牌cost<0，不交换
+			if (card1.cost < 0 || card2.cost < 0) {
+				AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
+				AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
+				return;
+			}
+
 			int diff = card1.cost - card2.cost;
 			int diffForTurn = card1.costForTurn - card2.costForTurn;
 

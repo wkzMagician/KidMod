@@ -15,7 +15,7 @@ public class Disguise extends KidCard {
 	private static final CardStats info = new CardStats(
 			Kid.Meta.CARD_COLOR,
 			CardType.POWER,
-			CardRarity.UNCOMMON,
+			CardRarity.RARE,
 			CardTarget.SELF,
 			1
 	);
