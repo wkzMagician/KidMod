@@ -23,7 +23,7 @@ public class FaceMask extends KidCard {
 			1
 	);
 
-	private static final int BLOCK = 10;
+	private static final int BLOCK = 9;
 	private static final int UPG_BLOCK = 3;
 
 	public FaceMask() {

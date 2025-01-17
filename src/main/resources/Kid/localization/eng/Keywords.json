@@ -58,7 +58,7 @@
     "NAMES": [
       "Face-down"
     ],
-    "DESCRIPTION": "A Face-down card is hidden and cannot be recognized. Its cost, name, picture, and text are not visible."
+    "DESCRIPTION": "A Face-down card is hidden and cannot be recognized. Its cost, name, picture, and text are not visible. Attention: The card's rarity will be temporarily set to Special."
   },
   {
     "PROPER_NAME": "Gem",

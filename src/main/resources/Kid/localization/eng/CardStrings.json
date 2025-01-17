@@ -59,7 +59,10 @@
   },
   "${modID}:Swap": {
     "NAME": "Swap",
-    "DESCRIPTION": "Swap the energy cost of 2 cards in your hand. NL Exhaust."
+    "DESCRIPTION": "Swap the energy cost of 2 cards in your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Swap energy cost."
+    ]
   },
   "${modID}:Teleport": {
     "NAME": "Teleport",
@@ -131,7 +134,7 @@
   },
   "${modID}:MagicGlove": {
     "NAME": "Magic Glove",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards. NL Select a card to Kid:Flip."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Select !M! cards to Kid:Flip."
   },
   "${modID}:MysticTechniques": {
     "NAME": "Mystic Techniques",
@@ -178,7 +181,11 @@
   },
   "${modID}:Peek": {
     "NAME": "Peek",
-    "DESCRIPTION": "Deal damage equal to !M! times the Kid:Charm you have. NL Remove all Kid:Charm."
+    "DESCRIPTION": "Deal damage equal to !M! times the Kid:Charm you have. NL Remove all Kid:Charm.",
+    "EXTENDED_DESCRIPTION": [
+      "(Deal ",
+      " damage.)"
+    ]
   },
   "${modID}:CoverUp": {
     "NAME": "Cover-Up",
@@ -245,12 +252,7 @@
   },
   "${modID}:CardTrick": {
     "NAME": "Card Trick",
-    "DESCRIPTION": "Deal !D! damage for each card you Kid:Flip in this turn.",
-    "EXTENDED_DESCRIPTION": [
-      "(You have Kid:Flipped ",
-      " card in this turn.)",
-      " cards in this turn.)"
-    ]
+    "DESCRIPTION": "Deal !D! damage. NL Every time you kid:Flip a card in this combat, increase damage by !M!."
   },
   "${modID}:Fish": {
     "NAME": "Fish",
@@ -262,8 +264,7 @@
   },
   "${modID}:SilverBullet": {
     "NAME": "Silver Bullet",
-    "DESCRIPTION": "Exhaust a Kid:Gem in your hand. Rare deal 30 damage, Uncommon deal 20 damage, otherwise deal 10 damage.",
-    "UPGRADE_DESCRIPTION": "Exhaust a Kid:Gem in your hand. Rare deal 40 damage, Uncommon deal 30 damage, otherwise deal 20 damage.",
+    "DESCRIPTION": "Exhaust a Kid:Gem in your hand. Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust"
     ]
@@ -326,7 +327,8 @@
   },
   "${modID}:TowerDiamond": {
     "NAME": "Tower Diamond",
-    "DESCRIPTION": "Unplayable. NL If Retained, gain !M! Strength."
+    "DESCRIPTION": "Unplayable. NL Gain !M! temporary Strength for each time this card is Kid:Flipped in this turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Gain !M! temporary Strength for each time this card is Kid:Flipped in this turn. NL Retain."
   },
   "${modID}:FakeGem": {
     "NAME": "Fake Gem",
@@ -380,9 +382,10 @@
   },
   "${modID}:Reason": {
     "NAME": "Reason",
-    "DESCRIPTION": "Choose 1 card in your deck. NL Kid:Flip all the same cards in all piles to Kid:Face-up.",
+    "DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the chosen card, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the chosen card, gain [E] [E] .",
     "EXTENDED_DESCRIPTION": [
-      "Flip to Face-up"
+      "Choose"
     ]
   },
   "${modID}:HatTrick": {

@@ -18,7 +18,7 @@
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
   "${modID}:MagicStrike": {
-    "NAME": "魔法打击",
+    "NAME": "魔术打击",
     "DESCRIPTION": "造成 !D! 点伤害。 NL kid:翻转 3 张随机卡牌至 kid:反面 。"
   },
   "${modID}:AlertHint": {
@@ -59,7 +59,10 @@
   },
   "${modID}:Swap": {
     "NAME": "掉包",
-    "DESCRIPTION": "交换手中 2 张卡牌的能量消耗。 NL 消耗 。"
+    "DESCRIPTION": "交换手中 2 张卡牌的能量消耗。 NL 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "交换能量"
+    ]
   },
   "${modID}:Teleport": {
     "NAME": "瞬间移动",
@@ -131,7 +134,7 @@
   },
   "${modID}:MagicGlove": {
     "NAME": "魔术手套",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL 选择一张手牌 kid:翻转 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 1 张牌。 NL 选择 !M! 张手牌 kid:翻转 。"
   },
   "${modID}:MysticTechniques": {
     "NAME": "秘术之牌",
@@ -178,7 +181,11 @@
   },
   "${modID}:Peek": {
     "NAME": "偷窥",
-    "DESCRIPTION": "造成 kid:魅力 层数 !M! 倍的伤害。 NL 移除所有 kid:魅力 。"
+    "DESCRIPTION": "造成 kid:魅力 层数 !M! 倍的伤害。 NL 移除所有 kid:魅力 。",
+    "EXTENDED_DESCRIPTION": [
+      "(造成 ",
+      " 点伤害。)"
+    ]
   },
   "${modID}:CoverUp": {
     "NAME": "障眼法",
@@ -244,12 +251,7 @@
   },
   "${modID}:CardTrick": {
     "NAME": "卡牌戏法",
-    "DESCRIPTION": "本回合你每 kid:翻转 一张卡牌，造成 !D! 点伤害。",
-    "EXTENDED_DESCRIPTION": [
-      "(本回合已 kid:翻转 ",
-      " 张卡牌。)",
-      " 张卡牌。)"
-    ]
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 本场战斗每 kid:翻转 一张卡牌，将伤害提升 !M! 点。"
   },
   "${modID}:Fish": {
     "NAME": "鱼",
@@ -261,8 +263,7 @@
   },
   "${modID}:SilverBullet": {
     "NAME": "银色子弹",
-    "DESCRIPTION": " 消耗 你手中的一张 kid:宝石 。 稀有 牌造成 30 点伤害，罕见 牌造成 20 点伤害，其他牌造成 10 点伤害。",
-    "UPGRADE_DESCRIPTION": "消耗你手中的一张 kid:宝石 。 稀有 牌造成 40 点伤害，罕见 牌造成 30 点伤害，其他牌造成 20 点伤害。",
+    "DESCRIPTION": " 消耗 你手中的一张 kid:宝石 。 造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
       "消耗"
     ]
@@ -325,7 +326,8 @@
   },
   "${modID}:TowerDiamond": {
     "NAME": "钟塔钻石",
-    "DESCRIPTION": " 不能被打出 。 NL 如果 保留 ，获得 !M! 点 力量 。"
+    "DESCRIPTION": " 不能被打出 。 NL 本回合每 kid:翻转 这张卡牌，获得 !M! 点临时 力量 。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 本回合每 kid:翻转 这张卡牌，获得 !M! 点临时 力量 。 NL 保留 。"
   },
   "${modID}:FakeGem": {
     "NAME": "假宝石",
@@ -350,7 +352,7 @@
   },
   "${modID}:ParisSunshine": {
     "NAME": "巴黎艳阳",
-    "DESCRIPTION": " 无法打 出。 NL 保留 。 NL 在你的回合开始时，获得 !M! 点 kid:魅力 。"
+    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 在你的回合开始时，获得 !M! 点 kid:魅力 。"
   },
   "${modID}:PresentFlower": {
     "NAME": "献花",
@@ -379,9 +381,10 @@
   },
   "${modID}:Reason": {
     "NAME": "推理",
-    "DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 将所有相同的卡牌 kid:翻转 至 kid:正面 。",
+    "DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 如果你打出的下一张反面牌是该卡牌，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 如果你打出的下一张反面牌是该卡牌，获得 [E] [E] 。",
     "EXTENDED_DESCRIPTION": [
-      "翻转到正面"
+      "校验"
     ]
   },
   "${modID}:HatTrick": {

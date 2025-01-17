@@ -31,8 +31,13 @@ public class SilverBullet extends KidCard {
 
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:SilverBullet");
 
+	private static final int DAMAGE_PER_CARD = 25;
+	private static final int UPGRADE_DAMAGE = 10;
+
 	public SilverBullet() {
 		super(ID, info);
+
+		setDamage(DAMAGE_PER_CARD, UPGRADE_DAMAGE);
 	}
 
 	@Override
@@ -40,32 +45,6 @@ public class SilverBullet extends KidCard {
 		addToBot(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0],
 				false, false, c -> c instanceof GemCard, list -> {
 			for(AbstractCard c : list) {
-				int damage = 0;
-				if(this.upgraded){
-					switch (c.rarity) {
-						case COMMON:
-							damage = 20;
-							break;
-						case UNCOMMON:
-							damage = 30;
-							break;
-						case RARE:
-							damage = 40;
-							break;
-					}
-				}else{
-					switch (c.rarity) {
-						case COMMON:
-							damage = 10;
-							break;
-						case UNCOMMON:
-							damage = 20;
-							break;
-						case RARE:
-							damage = 30;
-							break;
-					}
-				}
 				addToBot(new DamageAction(m, new DamageInfo(p, damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 				addToBot(new ExhaustSpecificCardAction(c, p.hand));
 			}

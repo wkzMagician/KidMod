@@ -18,7 +18,7 @@ public class Scout extends KidCard {
 			CardType.POWER,
 			CardRarity.UNCOMMON,
 			CardTarget.SELF,
-			1
+			2
 	);
 
 	private static final int MAGIC = 1;

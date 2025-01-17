@@ -25,39 +25,28 @@ public class CardTrick extends KidCard {
 
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:CardTrick");
 
-	private static final int DAMAGE = 4;
-	private static final int UPGRADE_DAMAGE = 2;
+	private static final int BASE_DAMAGE = 12;
+
+	private static final int INCREASE_DAMAGE = 2;
+	private static final int UPGRADE_INCREASE_DAMAGE = 3;
 
 	public CardTrick() {
 		super(ID, info);
-		setDamage(DAMAGE, UPGRADE_DAMAGE);
+		setDamage(BASE_DAMAGE);
+		setMagic(INCREASE_DAMAGE, UPGRADE_INCREASE_DAMAGE);
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		for(int i = 0; i < flipCount; i++) {
-			addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.SLASH_HORIZONTAL));
-		}
-
-		this.rawDescription = cardStrings.DESCRIPTION;
-		initializeDescription();
+		addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AttackEffect.BLUNT_HEAVY));
 	}
 
 	@Override
 	public void applyPowers() {
-		super.applyPowers();
-		this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + flipCount;
-		if(flipCount == 1) {
-			this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[1];
-		}else {
-			this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[2];
-		}
-		initializeDescription();
-	}
+		this.damage = BASE_DAMAGE + magicNumber * flipCount;
 
-	@Override
-	public void onMoveToDiscard() {
-		this.rawDescription = cardStrings.DESCRIPTION;
+		super.applyPowers();
+
 		initializeDescription();
 	}
 

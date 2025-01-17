@@ -17,6 +17,8 @@ public abstract class KidCard extends BaseCard {
 	protected String actualName;
 //	protected Integer actualCost;
 
+	protected CardRarity actualRarity;
+
 	// 真实的卡牌无法被翻面
 	protected boolean isActual = false;
 
@@ -29,6 +31,7 @@ public abstract class KidCard extends BaseCard {
 
 	// 当前的翻牌次数，静态变量
 	public static int flipCount = 0;
+	public static int totalFlipCount = 0;
 
 		// 构造方法
 
@@ -37,6 +40,9 @@ public abstract class KidCard extends BaseCard {
 
 //		actualDescription = rawDescription;
 		actualName = name;
+//		actualCost = cost;
+
+		actualRarity = rarity;
 	}
 
 	@Override
@@ -67,8 +73,10 @@ public abstract class KidCard extends BaseCard {
 				this.isSeen = false;
 
 //				// 将卡片名字设为"???"
-				actualName = name;
 				name = "???";
+
+				rarity = CardRarity.SPECIAL;
+
 //
 //				// 设置卡片描述为"???"
 //				actualDescription = rawDescription;
@@ -86,6 +94,8 @@ public abstract class KidCard extends BaseCard {
 
 //				// 将卡片名字设为原本的名字
 				name = actualName;
+
+				rarity = actualRarity;
 //
 //				// 设置卡片描述为原本的描述
 //				rawDescription = actualDescription;
@@ -128,6 +138,7 @@ public abstract class KidCard extends BaseCard {
 		if(isActual) return;
 
 		flipCount++;
+		totalFlipCount++;
 
 		addToTop(new TriggerFlipPowerAction(AbstractDungeon.player, AbstractDungeon.player));
 	}

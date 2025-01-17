@@ -37,16 +37,6 @@ public class Peek extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-			// 获得能力的魅力层数
-		int charm = 0;
-		AbstractPower power = p.getPower("Kid:CharmPower");
-		if(power != null){
-			charm = power.amount;
-			if(charm <= 0) charm = 0;
-		}
-
-		// 计算伤害
-		this.baseDamage = this.magicNumber * charm;
 		applyPowers();
 
 		// 造成伤害
@@ -78,9 +68,20 @@ public class Peek extends KidCard {
 
 	@Override
 	public void applyPowers() {
+		// 获得能力的魅力层数
+		int charm = 0;
+		AbstractPower power = AbstractDungeon.player.getPower("Kid:CharmPower");
+		if(power != null){
+			charm = power.amount;
+			if(charm <= 0) charm = 0;
+		}
+
+		// 计算伤害
+		this.baseDamage = this.magicNumber * charm;
+
 		super.applyPowers();
 		this.rawDescription = cardStrings.DESCRIPTION;
-		this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + this.magicNumber + cardStrings.EXTENDED_DESCRIPTION[1];
+		this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + this.damage + cardStrings.EXTENDED_DESCRIPTION[1];
 		initializeDescription();
 	}
 

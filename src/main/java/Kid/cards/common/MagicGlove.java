@@ -25,21 +25,21 @@ public class MagicGlove extends KidCard {
 	private static final int DAMAGE = 7;
 	private static final int UPG_DAMAGE = 2;
 
-	private static final int DRAW_AMOUNT = 2;
-	private static final int UPG_DRAW_AMOUNT = 1;
+	private static final int FLIP_AMOUNT = 2;
+	private static final int UPG_FLIP_AMOUNT = 1;
 
 	public MagicGlove() {
 		super(ID, info);
 
 		setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
-		setMagic(DRAW_AMOUNT, UPG_DRAW_AMOUNT); //Sets the card's magic number and how much it changes when upgraded.
+		setMagic(FLIP_AMOUNT, UPG_FLIP_AMOUNT); //Sets the card's magic number and how much it changes when upgraded.
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		addToBot(new DrawCardAction(p, magicNumber));
-		addToBot(new FlipCardAction(p, p, 1, Strategy.SELECT));
+		addToBot(new DrawCardAction(p, 1));
+		addToBot(new FlipCardAction(p, p, magicNumber, Strategy.SELECT));
 	}
 
 	@Override

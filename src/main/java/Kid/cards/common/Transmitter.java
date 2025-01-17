@@ -1,6 +1,5 @@
 package Kid.cards.common;
 
-import Kid.actions.SetCardSideRandomAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;

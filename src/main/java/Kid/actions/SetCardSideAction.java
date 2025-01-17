@@ -69,14 +69,27 @@ public class SetCardSideAction extends AbstractGameAction {
 				// 获取cardList
 				ArrayList<AbstractCard> cardList = new ArrayList<>(this.p.hand.group);
 				for (int i = 0; i < this.amount; i++) {
+					if(cardList.size() == 0) {
+						break;
+					}
+
 					// 随机获取一张牌
 					AbstractCard c = cardList.get(AbstractDungeon.cardRandomRng.random(cardList.size() - 1));
 					// 判断:不是KidCard,则不执行
 					if (!(c instanceof KidCard)) {
 						// 从cardList中移除这张牌
 						cardList.remove(c);
+						i -= 1;
 						continue;
 					}
+
+					// ! 如果状态一致，跳过
+					if(((KidCard) c).isReverse() == this.isFlipped) {
+						cardList.remove(c);
+						i -= 1;
+						continue;
+					}
+
 					((KidCard) c).setFlipped(this.isFlipped);
 
 					cardList.remove(c);
