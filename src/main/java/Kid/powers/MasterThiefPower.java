@@ -23,7 +23,6 @@ public class MasterThiefPower extends BasePower {
 		private static final String[] cards_string = {
 				"Kid:DarkStar",
 				"Kid:PupilOfMoon",
-				"Kid:FakeGem",
 				"Kid:ElfLips",
 				"Kid:MotherOfGems",
 				"Kid:BloodTears",

@@ -8,11 +8,13 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import org.lwjgl.Sys;
 
 public class Recapture extends KidCard {
 	public static final String ID = makeID(Recapture.class.getSimpleName());
@@ -42,22 +44,17 @@ public class Recapture extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		// 是否升级？
 		String text = cardStrings.EXTENDED_DESCRIPTION[0];
 
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		addToBot(new SelectCardsAction(p.discardPile.group, magicNumber, text, false, c -> true, list -> {
+		addToTop(new SelectCardsAction(p.discardPile.group, magicNumber, text, false, c -> true, list -> {
 			for (AbstractCard c : list) {
 				if(c instanceof KidCard) {
 					((KidCard) c).setFlipped(true);
 				}
 
-				p.hand.addToTop(c);
+				p.hand.addToHand(c);
 				p.discardPile.removeCard(c);
-				c.applyPowers();
-
-				// 更新hand的显示
-				p.hand.refreshHandLayout();
 			}
 		}));
 	}
