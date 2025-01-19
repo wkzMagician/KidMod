@@ -23,7 +23,10 @@
   },
   "${modID}:AlertHint": {
     "NAME": "情报提示",
-    "DESCRIPTION": " kid:真相 。 NL 造成 !D! 点 伤害 。 NL 选择 !M! 张卡牌 kid:翻转 至 kid:正面 。"
+    "DESCRIPTION": " kid:真相 。 NL 造成 !D! 点 伤害 。 NL 选择 !M! 张卡牌 kid:翻转 至 kid:正面 。",
+    "EXTENDED_DESCRIPTION": [
+      "翻转到正面"
+    ]
   },
   "${modID}:FaceMask": {
     "NAME": "防护面具",
@@ -122,7 +125,7 @@
   "${modID}:Prepare": {
     "NAME": "筹备",
     "DESCRIPTION": " kid:真相 。 NL 获得 !B! 点 格挡 。 NL 将一张 *奇迹 洗入你的抽牌堆。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 将一张 *奇迹+ 洗入你的抽牌堆。"
+    "UPGRADE_DESCRIPTION": " kid:真相 。 NL 获得 !B! 点 格挡 。 NL 将一张 *奇迹+ 洗入你的抽牌堆。"
   },
   "${modID}:Sneak": {
     "NAME": "潜行",
@@ -242,8 +245,8 @@
   },
   "${modID}:ElfLips": {
     "NAME": "妖精之唇",
-    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL kid:标记 你手中能量消耗为 0 的卡牌。 NL 当你使用一张 kid:正面 卡牌时丢弃。",
-    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 保留 。 NL kid:标记 你手中能量消耗为 0、2、3 的卡牌。 NL 当你使用一张 kid:正面 卡牌时丢弃。"
+    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 显示 kid:反面 卡牌的稀有度。 NL 当你使用一张 kid:正面 卡牌时丢弃。",
+    "UPGRADE_DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 显示 kid:反面 卡牌的稀有度。"
   },
   "${modID}:Vanish": {
     "NAME": "金蝉脱壳",
@@ -314,7 +317,10 @@
   },
   "${modID}:Forgery": {
     "NAME": "伪造",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 复制你手中的一张卡牌。副本为 虚无 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机 复制你手中的一张卡牌。副本为 虚无 。",
+    "EXTENDED_DESCRIPTION": [
+      " NL 虚无 。"
+    ]
   },
   "${modID}:SleepGas": {
     "NAME": "催眠瓦斯",
@@ -340,7 +346,7 @@
   },
   "${modID}:Boast": {
     "NAME": "吹嘘",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌位于 kid:反面 ，将一张 *假宝石 洗入你的抽牌堆。 NL kid:翻转 此卡牌。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张牌位于 kid:反面 ，将2张 *假宝石 洗入你的抽牌堆。 NL kid:翻转 此卡牌。"
   },
   "${modID}:FansSupport": {
     "NAME": "粉丝声援",
@@ -362,9 +368,9 @@
     "NAME": "屈膝礼",
     "DESCRIPTION": "手牌中每有一张 kid:反面 卡牌，获得 !M! 点 kid:魅力 。",
     "EXTENDED_DESCRIPTION": [
-      "手牌中有 ",
-      " 张反面卡牌。",
-      " 张反面卡牌。"
+      " (手牌中有 ",
+      " 张反面卡牌。)",
+      " 张反面卡牌。)"
     ]
   },
   "${modID}:ArmsCarry": {
@@ -372,7 +378,7 @@
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得造成伤害的 kid:魅力 。"
   },
   "${modID}:Bow": {
-    "NAME": "鞠躬",
+    "NAME": "鞠躬致意",
     "DESCRIPTION": "丢弃 !M! 张卡牌。 NL 获得 5 点 kid:魅力 。"
   },
   "${modID}:Ingratiate": {
@@ -392,7 +398,7 @@
     "DESCRIPTION": "如果你连续 3 次打出相同的卡牌，对所有敌人造成 !M! 点伤害。"
   },
 
-  "${modID}:Kid:Gem": {
+  "${modID}:Gem": {
     "NAME": "宝石",
     "DESCRIPTION": " NL 不能打出。 NL 保留。",
     "EXTENDED_DESCRIPTION": [

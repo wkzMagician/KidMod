@@ -36,6 +36,7 @@ public class Forgery extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AttackEffect.BLUNT_HEAVY));
+
 		// 随机复制1张手牌
 		AbstractCard c = p.hand.getRandomCard(true);
 		while (c == this) {

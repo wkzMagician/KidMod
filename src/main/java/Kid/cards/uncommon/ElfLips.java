@@ -31,8 +31,31 @@ public class ElfLips extends GemCard {
 	public void triggerOnOtherCardPlayed(AbstractCard c) {
 		super.triggerOnOtherCardPlayed(c);
 
+		if(this.upgraded) return;
+
 		if(c instanceof KidCard && !((KidCard) c).isReverse()) {
 			addToBot(new DiscardSpecificCardAction(this));
+		}
+	}
+
+	private void setCardRarityVisible(boolean visible) {
+		for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+			if(c instanceof KidCard && ((KidCard) c).isReverse()){
+				KidCard kc = (KidCard) c;
+				kc.rarity = visible ? kc.actualRarity : CardRarity.SPECIAL;
+			}
+		}
+		for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+			if(c instanceof KidCard && ((KidCard) c).isReverse()){
+				KidCard kc = (KidCard) c;
+				kc.rarity = visible ? kc.actualRarity : CardRarity.SPECIAL;
+			}
+		}
+		for (AbstractCard c : AbstractDungeon.player.hand.group) {
+			if(c instanceof KidCard && ((KidCard) c).isReverse()){
+				KidCard kc = (KidCard) c;
+				kc.rarity = visible ? kc.actualRarity : CardRarity.SPECIAL;
+			}
 		}
 	}
 
@@ -41,50 +64,37 @@ public class ElfLips extends GemCard {
 		super.addPower();
 
 		AbstractPower power = AbstractDungeon.player.getPower(ElfLipsPower.POWER_ID);
-		if(power != null){
-			int amount = power.amount;
+		if(power != null) return;
 
-			if(amount == -1 && upgraded){
-				addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ElfLipsPower.POWER_ID));
-				addToBot(new ApplyPowerAction(
-						AbstractDungeon.player,
-						AbstractDungeon.player,
-						new ElfLipsPower(AbstractDungeon.player, -2)
-				));
-			}
-
-			return;
-		}
-
-		int i = upgraded ? -2 : -1;
 		addToBot(new ApplyPowerAction(
 				AbstractDungeon.player,
 				AbstractDungeon.player,
-				new ElfLipsPower(AbstractDungeon.player, i)
+				new ElfLipsPower(AbstractDungeon.player)
 		));
+
+		setCardRarityVisible(true);
 	}
 
 	@Override
 	public void removePower() {
 		super.removePower();
 
-		AbstractPower power = AbstractDungeon.player.getPower(ElfLipsPower.POWER_ID);
-		if(power == null) return;
-		int amount = power.amount;
-
-		if(amount == -2 && !upgraded) return;
-
 		// 遍历手牌中是否还存在其它ElfLips
-		int card_count = 0;
+		boolean toRemove = true;
 		for(AbstractCard c : AbstractDungeon.player.hand.group){
-			if(c.cardID.equals(ElfLips.ID)){
-				card_count++;
+			if(c instanceof ElfLips && c != this) {
+				toRemove = false;
+				break;
 			}
 		}
 
-		if(card_count <= 1){
+		if(toRemove){
 			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ElfLipsPower.POWER_ID));
 		}
+
+		setCardRarityVisible(false);
+
+		applyPowers();
 	}
 
 	@Override

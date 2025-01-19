@@ -43,9 +43,12 @@ public class Steal extends KidCard {
 		// 选择抽牌堆中的1张宝石牌加入手牌
 		addToBot(new SelectCardsAction(p.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0],
 				false,  c -> c instanceof GemCard, list -> {
+			System.out.println(list.size());
+
 			for (AbstractCard c : list) {
 				// 将选择的宝石牌加入手牌
-				p.drawPile.moveToHand(c, p.drawPile);
+				p.hand.addToHand(c);
+				p.drawPile.removeCard(c);
 			}
 		}
 		));

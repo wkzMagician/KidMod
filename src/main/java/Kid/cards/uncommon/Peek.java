@@ -61,7 +61,7 @@ public class Peek extends KidCard {
 		}else{
 			// 如果没有DisguisePower，清除CharmPower
 			if(p.hasPower("Kid:CharmPower")) {
-				addToBot(new RemoveSpecificPowerAction(p, p, p.getPower("Kid:CharmPower")));
+				addToBot(new RemoveSpecificPowerAction(p, p, "Kid:CharmPower"));
 			}
 		}
 	}

@@ -4,6 +4,7 @@ import static Kid.util.GeneralUtils.removePrefix;
 import static Kid.util.TextureLoader.getCardTextureString;
 
 import Kid.actions.TriggerFlipPowerAction;
+import Kid.powers.ElfLipsPower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,7 +18,7 @@ public abstract class KidCard extends BaseCard {
 	protected String actualName;
 //	protected Integer actualCost;
 
-	protected CardRarity actualRarity;
+	public CardRarity actualRarity;
 
 	// 真实的卡牌无法被翻面
 	protected boolean isActual = false;
@@ -75,7 +76,10 @@ public abstract class KidCard extends BaseCard {
 //				// 将卡片名字设为"???"
 				name = "???";
 
-				rarity = CardRarity.SPECIAL;
+				// 如果有ElfLipsPower，不会隐藏稀有度
+				if(!AbstractDungeon.player.hasPower(ElfLipsPower.POWER_ID)){
+					rarity = CardRarity.SPECIAL;
+				}
 
 //
 //				// 设置卡片描述为"???"
@@ -117,14 +121,8 @@ public abstract class KidCard extends BaseCard {
 	public void atTurnStart() {
 		super.atTurnStart();
 
-		flipCount = 0;
+		KidCard.flipCount = 0;
 	}
-
-
-
-
-
-
 
 	// 重写makeStatEquivalentCopy方法，使得复制的卡牌也是翻面的
 	@Override
@@ -137,8 +135,8 @@ public abstract class KidCard extends BaseCard {
 	public void triggerOnFlip() {
 		if(isActual) return;
 
-		flipCount++;
-		totalFlipCount++;
+		KidCard.flipCount++;
+		KidCard.totalFlipCount++;
 
 		addToTop(new TriggerFlipPowerAction(AbstractDungeon.player, AbstractDungeon.player));
 	}

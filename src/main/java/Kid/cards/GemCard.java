@@ -3,6 +3,8 @@ package Kid.cards;
 import Kid.actions.TriggerFlipPowerAction;
 import Kid.actions.TriggerRestitutionPowerAction;
 import Kid.util.CardStats;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.utility.ExhaustAllEtherealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -16,8 +18,6 @@ public abstract class GemCard extends KidCard {
 	// 需要重写其onDiscard以及onDraw方法,onExhaust方法
 
 	protected boolean hasPower = false;
-
-	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Gem");
 
 	// 构造方法
 	public GemCard(String id, CardStats stats) {
@@ -35,7 +35,7 @@ public abstract class GemCard extends KidCard {
 
 	@Override
 	public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-		this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
+		this.cantUseMessage = CardCrawlGame.languagePack.getCardStrings("Kid:Gem").EXTENDED_DESCRIPTION[0];
 		return false;
 	}
 
@@ -60,11 +60,18 @@ public abstract class GemCard extends KidCard {
 		}
 	}
 
+//	@Override
+//	public void triggerOnEndOfPlayerTurn() {
+//		super.triggerOnEndOfPlayerTurn();
+//
+//		addToTop(new ExhaustAllEtherealAction());
+//	}
+
 	@Override
-	public void triggerOnEndOfPlayerTurn() {
-//		if(!this.retain){
-//			removePower();
-//		}
+	public void triggerOnEndOfTurnForPlayingCard(){
+		super.triggerOnEndOfTurnForPlayingCard();
+
+		addToTop(new ExhaustAllEtherealAction());
 	}
 
 	@Override
@@ -91,7 +98,10 @@ public abstract class GemCard extends KidCard {
 		if(this.hasPower){
 			removePower();
 		}
+	}
 
+	@Override
+	public void triggerOnManualDiscard() {
 		addToTop(new TriggerRestitutionPowerAction(AbstractDungeon.player, AbstractDungeon.player));
 	}
 }

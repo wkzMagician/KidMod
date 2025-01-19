@@ -39,7 +39,7 @@ public class Boast extends KidCard {
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 		if(this.isReverse()){
 			FakeGem fakeGem = new FakeGem();
-			addToBot(new MakeTempCardInDrawPileAction(fakeGem, 1, true, true));
+			addToBot(new MakeTempCardInDrawPileAction(fakeGem, 2, true, true));
 		}
 		this.flip();
 	}

@@ -10,17 +10,19 @@ import java.util.Objects;
 public class ReasonPower extends BasePower {
 		public static final String POWER_ID = "Kid:ReasonPower";
 
-		AbstractCard card;
+		AbstractCard card = null;
 
 		public ReasonPower(AbstractCreature owner, AbstractCard card, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
 				this.card = card;
+				updateDescription();
 		}
 
 		@Override
 		public void updateDescription() {
 			// if the next card you play is ..., gain amount energy
-			this.description = DESCRIPTIONS[0] + card.name + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+			if(card == null) this.description = "uninitialized";
+			else this.description = DESCRIPTIONS[0] + card.name + (this.amount == 1 ? DESCRIPTIONS[1] : DESCRIPTIONS[2]);
 		}
 
 	@Override

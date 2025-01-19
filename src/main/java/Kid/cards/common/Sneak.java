@@ -33,11 +33,7 @@ public class Sneak extends KidCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new GainBlockAction(p, p, block));
 		// 保留手中所有反面牌
-		for (AbstractCard c : p.hand.group) {
-			if (c instanceof KidCard && ((KidCard) c).isReverse()) {
-				addToBot(new ApplyPowerAction(p, p, new SneakPower(p, -1)));
-			}
-		}
+		addToBot(new ApplyPowerAction(p, p, new SneakPower(p, -1)));
 	}
 
 	@Override

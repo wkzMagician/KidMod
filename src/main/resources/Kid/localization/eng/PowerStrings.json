@@ -36,8 +36,7 @@
   "${modID}:ElfLipsPower": {
     "NAME": "Elf Lips",
     "DESCRIPTIONS": [
-      "#yMark the card with 0 cost in your hand.",
-      "#yMark the card with 0, 2, 3 cost with different colors in your hand."
+      "#yFace-down cards now show rarity."
     ]
   },
   "${modID}:HatTrickPower": {
@@ -139,6 +138,14 @@
     "DESCRIPTIONS": [
       "Prevent the next ",
       " time you would lose #yCharm."
+    ]
+  },
+  "${modID}:ReasonPower": {
+    "NAME": "Reason",
+    "DESCRIPTIONS": [
+      "If the next card you play is #y",
+      "  gain [E] .",
+      "  gain [E] [E] ."
     ]
   }
 }

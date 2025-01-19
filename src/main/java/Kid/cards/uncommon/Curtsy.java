@@ -35,14 +35,17 @@ public class Curtsy extends KidCard {
 
 		int count = 0;
 		for(AbstractCard c : AbstractDungeon.player.hand.group) {
+			if(c == this) continue;
 			if(c instanceof KidCard && ((KidCard) c).isReverse()) {
 				count++;
 			}
 		}
 
 		if(count == 1) {
-			this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[1];
-		}else if(count > 1) {
+			this.rawDescription +=
+					cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[1];
+//		}else if(count > 1) {
+		}else{
 			this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[2];
 		}
 
@@ -59,6 +62,7 @@ public class Curtsy extends KidCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		int count = 0;
 		for(AbstractCard c : p.hand.group) {
+			if(c == this) continue;
 			if(c instanceof KidCard && ((KidCard) c).isReverse()) {
 				count++;
 			}

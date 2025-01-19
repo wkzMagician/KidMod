@@ -15,8 +15,8 @@
   },
   "${modID}:SetCardSideAction": {
     "TEXT": [
-      "Flip to Face-up.",
       "Flip to Face-down.",
+      "Flip to Face-up.",
       "Flip the card. Players cannot see the Face-down card's details."
     ]
   },

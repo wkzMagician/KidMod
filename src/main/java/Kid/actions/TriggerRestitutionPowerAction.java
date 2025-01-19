@@ -14,6 +14,8 @@ public class TriggerRestitutionPowerAction extends AbstractGameAction {
 	private static final float DURATION = Settings.ACTION_DUR_XFAST;
 
 	public TriggerRestitutionPowerAction(AbstractCreature target, AbstractCreature source) {
+		System.out.println("trigger restitution");
+
 		this.p = (AbstractPlayer) target;
 		this.source = source;
 		this.duration = DURATION;
@@ -29,9 +31,11 @@ public class TriggerRestitutionPowerAction extends AbstractGameAction {
 					RestitutionPower restitutionPower = (RestitutionPower) power;
 					// 调用MindMagicPower的onFlipCard方法
 					restitutionPower.onDiscardGem();
-
 				}
 			}
+
+			// End
+			this.tickDuration();
 		}
 
 		this.isDone = true;

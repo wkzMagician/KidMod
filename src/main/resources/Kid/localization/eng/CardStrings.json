@@ -23,7 +23,10 @@
   },
   "${modID}:AlertHint": {
     "NAME": "Alert Hint",
-    "DESCRIPTION": "Kid:Actual. NL Deal !D! damage. NL Select !M! cards to Kid:Flip to Kid:Face-up ."
+    "DESCRIPTION": "Kid:Actual. NL Deal !D! damage. NL Select !M! cards to Kid:Flip to Kid:Face-up .",
+    "EXTENDED_DESCRIPTION": [
+      "Flip to Face-up"
+    ]
   },
   "${modID}:FaceMask": {
     "NAME": "Face Mask",
@@ -243,8 +246,8 @@
   },
   "${modID}:ElfLips": {
     "NAME": "Elf Lips",
-    "DESCRIPTION": "Unplayable. NL Retain. NL Kid:Mark cards with 0 energy cost in your hand. NL Discard when you play a Kid:Face-up card.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL Kid:Mark cards with 0, 2, 3 energy costs in your hand. NL Discard when you play a Kid:Face-up card."
+    "DESCRIPTION": "Unplayable. NL Retain. NL Display Kid:Face-down cards' rarity. NL Discard when you play a Kid:Face-up card.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL Display Kid:Face-down cards' rarity."
   },
   "${modID}:Vanish": {
     "NAME": "Vanish",
@@ -341,7 +344,7 @@
   },
   "${modID}:Boast": {
     "NAME": "Boast",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is Kid:Flipped, shuffle a *FakeGem into your draw pile. NL Kid:Flip this card."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Kid:Flipped, shuffle 2 *FakeGems into your draw pile. NL Kid:Flip this card."
   },
   "${modID}:FansSupport": {
     "NAME": "Fans Support",
@@ -363,9 +366,9 @@
     "NAME": "Curtsy",
     "DESCRIPTION": "Gain !M! Kid:Charm for each Kid:Face-down card in your hand.",
     "EXTENDED_DESCRIPTION": [
-      "You have ",
-      " Kid:Face-down card in your hand.",
-      " Kid:Face-down cards in your hand."
+      " (You have ",
+      " Kid:Face-down card in your hand.)",
+      " Kid:Face-down cards in your hand.)"
     ]
   },
   "${modID}:ArmsCarry": {
@@ -393,7 +396,7 @@
     "DESCRIPTION": "If you play 3 same cards in a row, deal !M! damage to all enemies."
   },
 
-  "${modID}:Kid:Gem": {
+  "${modID}:Gem": {
     "NAME": "Gem",
     "DESCRIPTION": "Unplayable. NL Retain.",
     "EXTENDED_DESCRIPTION": [

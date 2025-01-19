@@ -14,64 +14,28 @@ import java.util.ArrayList;
 public class ElfLipsPower extends BasePower {
 		public static final String POWER_ID = "Kid:ElfLipsPower";
 
-		private ArrayList<AbstractCard> markedCards = new ArrayList<>();
+		public ElfLipsPower(AbstractCreature owner) {
+				super(POWER_ID, PowerType.BUFF, false, owner, -1);
 
-		public ElfLipsPower(AbstractCreature owner, int amount) {
-				super(POWER_ID, PowerType.BUFF, false, owner, amount);
-
-				applyPower();
+//				applyPower();
 		}
 
 		@Override
 		public void updateDescription() {
-
-			if(this.amount == -1) {
-					this.description = DESCRIPTIONS[0];
-			} else this.description = DESCRIPTIONS[1];
+			this.description = DESCRIPTIONS[0];
 		}
 
-		private void applyPower() {
-			// 清除之前标记
-			for(AbstractCard c : markedCards) {
-				c.glowColor = new Color(0.2F, 0.9F, 1.0F, 0.25F);
-			}
-			markedCards.clear();
-
-			for(AbstractCard c : AbstractDungeon.player.hand.group) {
-				if (c.costForTurn == 0) {
-					if (!c.glowColor.equals(Color.GOLD.cpy())) {
-						// 粉色
-						markedCards.add(c);
-						c.glowColor = new Color(1.0F, 0.753F, 0.796F, 0.25F);
-					}
-				}
-
-				if (amount == -2) {
-					if (c.costForTurn == 2) {
-						if (!c.glowColor.equals(Color.GOLD.cpy())) {
-							// 绿色
-							markedCards.add(c);
-							c.glowColor = new Color(0.0F, 1.0F, 0.0F, 0.25F);
-						}
-					}
-					if (c.costForTurn == 3) {
-						if (!c.glowColor.equals(Color.GOLD.cpy())) {
-							// 红色
-							markedCards.add(c);
-							c.glowColor = new Color(1.0F, 0.0F, 0.0F, 0.25F);
-						}
-					}
-				}
-			}
-		}
-
-		@Override
-		public void atStartOfTurn() {
-			applyPower();
-		}
-
-		@Override
-		public void onDrawOrDiscard() {
-			applyPower();
-		}
+//		private void applyPower() {
+//			// 遍历三个手牌堆里的所有卡牌
+//		}
+//
+//		@Override
+//		public void atStartOfTurn() {
+//			applyPower();
+//		}
+//
+//		@Override
+//		public void onDrawOrDiscard() {
+//			applyPower();
+//		}
 }

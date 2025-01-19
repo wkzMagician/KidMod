@@ -30,6 +30,7 @@ public class PokerFace extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for (AbstractCard c : p.hand.group) {
+			if(c == this) continue;
 			if (c instanceof KidCard && !((KidCard) c).isReverse()) {
 				return;
 			}

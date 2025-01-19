@@ -7,6 +7,7 @@ import Kid.powers.PandoraPower;
 import Kid.powers.ParisSunshinePower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -39,18 +40,12 @@ public class ParisSunshine extends GemCard {
 		AbstractPower power = AbstractDungeon.player.getPower(ParisSunshinePower.POWER_ID);
 		if(power == null) return;
 
-		int amount = power.amount;
-
-		if(amount > 1) {
-			addToBot(new ApplyPowerAction(
-					AbstractDungeon.player,
-					AbstractDungeon.player,
-					new ParisSunshinePower(AbstractDungeon.player, -magicNumber),
-					-magicNumber
-			));
-		}else{
-			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, ParisSunshinePower.POWER_ID));
-		}
+		addToBot(new ReducePowerAction(
+				AbstractDungeon.player,
+				AbstractDungeon.player,
+				ParisSunshinePower.POWER_ID,
+				magicNumber
+		));
 	}
 
 	@Override

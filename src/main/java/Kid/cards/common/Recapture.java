@@ -1,17 +1,20 @@
 package Kid.cards.common;
 
 import Kid.actions.FlipCardAction;
+import Kid.actions.SetCardSideAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.lwjgl.Sys;
@@ -46,17 +49,13 @@ public class Recapture extends KidCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		String text = cardStrings.EXTENDED_DESCRIPTION[0];
 
-		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-		addToTop(new SelectCardsAction(p.discardPile.group, magicNumber, text, false, c -> true, list -> {
-			for (AbstractCard c : list) {
-				if(c instanceof KidCard) {
-					((KidCard) c).setFlipped(true);
-				}
+		// 获取弃牌堆大小
+		int discardPileSize = AbstractDungeon.player.discardPile.size();
+		int amount = Math.min(discardPileSize, magicNumber);
 
-				p.hand.addToHand(c);
-				p.discardPile.removeCard(c);
-			}
-		}));
+		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+		addToBot(new BetterDiscardPileToHandAction(magicNumber));
+		addToBot(new SetCardSideAction(p, p, amount, Strategy.TOP, true));
 	}
 
 	@Override

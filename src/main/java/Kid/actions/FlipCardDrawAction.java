@@ -44,10 +44,9 @@ public class FlipCardDrawAction extends AbstractGameAction {
 					this.addToTop(new FlipCardDrawAction(this.drawAmount - 1));
 					this.addToTop(new DrawCardAction(1));
 				}
-			} else
-			{
-				this.addToTop(new FlipCardDrawAction(this.drawAmount));
-				this.addToTop(new EmptyDeckShuffleAction());
+			} else if(!p.discardPile.isEmpty()){
+					this.addToTop(new FlipCardDrawAction(this.drawAmount));
+					this.addToTop(new EmptyDeckShuffleAction());
 			}
 
 			this.isDone = true;

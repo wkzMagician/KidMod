@@ -41,6 +41,8 @@ public class Reason extends KidCard {
 
 		addToBot(new SelectCardsAction(p.masterDeck.group, 1, cardStrings.EXTENDED_DESCRIPTION[0],
 				false, c -> true, list -> {
+			if(list.isEmpty()) return;
+
 			AbstractCard card = list.get(0);
 			// * 2.将选择的牌记录在ReasonPower中
 			addToBot(new ApplyPowerAction(p, p, new ReasonPower(p, card, magicNumber), magicNumber));

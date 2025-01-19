@@ -36,8 +36,7 @@
   "${modID}:ElfLipsPower": {
     "NAME": "妖精之唇",
     "DESCRIPTIONS": [
-      "#y标记 你手中费用为0的卡牌。",
-      "以不同颜色 #y标记 你手中费用为0、2、3的卡牌。"
+      "#y反面 卡牌现在会显示稀有度"
     ]
   },
   "${modID}:HatTrickPower": {
@@ -139,6 +138,14 @@
     "DESCRIPTIONS": [
       "防止下 ",
       " 次你失去 #y魅力 。"
+    ]
+  },
+  "${modID}:ReasonPower": {
+    "NAME": "推理",
+    "DESCRIPTIONS": [
+      "如果你下一张打出的手牌是 #y",
+      "  获得 [E] .",
+      "  获得 [E] [E] ."
     ]
   }
 }

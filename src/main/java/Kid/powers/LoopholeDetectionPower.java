@@ -42,7 +42,8 @@ public class LoopholeDetectionPower extends BasePower {
 
 				// 高亮
 				if (markedCard != null) {
-					markedCard.glowColor = Color.GOLD.cpy();
+//					markedCard.glowColor = Color.GOLD.cpy();
+					markedCard.glowColor = new Color(1.0F, 0.0F, 0.0F, 0.25F);
 				}
 		}
 

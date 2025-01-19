@@ -4,8 +4,10 @@ import Kid.cards.GemCard;
 import Kid.character.Kid;
 import Kid.powers.BlueBirthdayPower;
 import Kid.powers.DarkStarPower;
+import Kid.powers.PandoraPower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -52,16 +54,12 @@ public class DarkStar extends GemCard {
 
 		int amount = power.amount;
 
-		if(amount > 1) {
-			addToBot(new ApplyPowerAction(
-					AbstractDungeon.player,
-					AbstractDungeon.player,
-					new DarkStarPower(AbstractDungeon.player, -magicNumber),
-					-magicNumber
-			));
-		}else{
-			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DarkStarPower.POWER_ID));
-		}
+		addToBot(new ReducePowerAction(
+				AbstractDungeon.player,
+				AbstractDungeon.player,
+				DarkStarPower.POWER_ID,
+				magicNumber
+		));
 	}
 
 	@Override

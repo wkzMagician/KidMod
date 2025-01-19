@@ -5,9 +5,11 @@ import Kid.character.Kid;
 import Kid.powers.BloodTearsPower;
 import Kid.powers.BlueBirthdayPower;
 import Kid.powers.DarkStarPower;
+import Kid.powers.PandoraPower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -96,16 +98,12 @@ public class BlueBirthday extends GemCard {
 
 		int amount = power.amount;
 
-		if(amount > 1) {
-			addToBot(new ApplyPowerAction(
-					AbstractDungeon.player,
-					AbstractDungeon.player,
-					new BlueBirthdayPower(AbstractDungeon.player, -1),
-					-1
-			));
-		}else{
-			addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, BlueBirthdayPower.POWER_ID));
-		}
+		addToBot(new ReducePowerAction(
+				AbstractDungeon.player,
+				AbstractDungeon.player,
+				BlueBirthdayPower.POWER_ID,
+				1
+		));
 	}
 
 	@Override

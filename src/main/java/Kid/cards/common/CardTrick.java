@@ -25,10 +25,10 @@ public class CardTrick extends KidCard {
 
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:CardTrick");
 
-	private static final int BASE_DAMAGE = 12;
+	private static final int BASE_DAMAGE = 8;
 
-	private static final int INCREASE_DAMAGE = 2;
-	private static final int UPGRADE_INCREASE_DAMAGE = 3;
+	private static final int INCREASE_DAMAGE = 1;
+	private static final int UPGRADE_INCREASE_DAMAGE = 2;
 
 	public CardTrick() {
 		super(ID, info);
@@ -43,7 +43,7 @@ public class CardTrick extends KidCard {
 
 	@Override
 	public void applyPowers() {
-		this.damage = BASE_DAMAGE + magicNumber * flipCount;
+		setDamage(BASE_DAMAGE + KidCard.totalFlipCount * magicNumber);
 
 		super.applyPowers();
 

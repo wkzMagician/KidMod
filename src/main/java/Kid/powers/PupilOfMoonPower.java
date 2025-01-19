@@ -31,6 +31,8 @@ public class PupilOfMoonPower extends BasePower {
 	private void applyPower() {
 		addToBot(new ApplyPowerAction(this.owner, this.owner, new DexterityPower(this.owner, this.amount), this.amount));
 		addToBot(new ApplyPowerAction(this.owner, this.owner, new LoseDexterityPower(this.owner, this.amount), this.amount));
+
+		// 如果能力层数为0
 	}
 
 	@Override
@@ -41,16 +43,17 @@ public class PupilOfMoonPower extends BasePower {
 	// 造成伤害
 	@Override
 	public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+		super.onAttack(info, damageAmount, target);
+
+		if(damageAmount <= 0 ) return;
 
 		// 遍历手牌
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
-			// 找到黑暗星辰
 			if (c.cardID.equals("Kid:PupilOfMoon")) {
 				// 丢弃
 				addToBot(new DiscardSpecificCardAction(c));
 				break;
 			}
 		}
-		super.onAttack(info, damageAmount, target);
 	}
 }

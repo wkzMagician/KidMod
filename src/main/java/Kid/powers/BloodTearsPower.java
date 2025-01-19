@@ -25,7 +25,7 @@ public class BloodTearsPower extends BasePower {
 		}
 
 		@Override
-		public void atEndOfTurn(boolean isPlayer) {
+		public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
 			if (isPlayer) {
 				addToBot(new ExhaustAction(amount, false, true, true));
 			}
