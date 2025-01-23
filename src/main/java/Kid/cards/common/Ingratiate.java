@@ -23,7 +23,7 @@ public class Ingratiate extends KidCard {
 			1
 	);
 
-	private static final int DAMAGE = 5;
+	private static final int DAMAGE = 7;
 	private static final int UPG_DAMAGE = 3;
 
 	private static final int CHARM = 4;

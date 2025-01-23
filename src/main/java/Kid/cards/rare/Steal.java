@@ -49,6 +49,8 @@ public class Steal extends KidCard {
 				// 将选择的宝石牌加入手牌
 				p.hand.addToHand(c);
 				p.drawPile.removeCard(c);
+				// 触发宝石的效果
+				((GemCard) c).addPower();
 			}
 		}
 		));

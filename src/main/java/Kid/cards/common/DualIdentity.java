@@ -60,6 +60,7 @@ public class DualIdentity extends KidCard {
 		super.setFlipped(flipped);
 		this.isSeen = true;
 		this.name = this.actualName;
+		this.rarity = this.actualRarity;
 
 		if(!isFlipped){
 			this.type = CardType.ATTACK;

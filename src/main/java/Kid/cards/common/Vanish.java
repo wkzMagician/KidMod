@@ -32,9 +32,12 @@ public class Vanish extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		int amount = 10 - p.hand.size();
+		amount = Math.min(amount, magicNumber);
+
 		addToBot(new GainBlockAction(p, p, block));
 		addToBot(new DrawCardAction(magicNumber));
-		addToBot(new SetCardSideAction(p, p, magicNumber, Strategy.TOP, true));
+		addToBot(new SetCardSideAction(p, p, amount, Strategy.TOP, true));
 	}
 
 	@Override

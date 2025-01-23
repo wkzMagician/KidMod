@@ -158,8 +158,7 @@
   },
   "${modID}:MindMagic": {
     "NAME": "Mind Magic",
-    "DESCRIPTION": "Whenever you Kid:Flip a card, gain !M! Block.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you Kid:Flip a card, gain !M! Block."
+    "DESCRIPTION": "Whenever you Kid:Flip a card, gain !M! Block."
   },
   "${modID}:Flashbang": {
     "NAME": "Flashbang",
@@ -269,7 +268,8 @@
     "NAME": "Silver Bullet",
     "DESCRIPTION": "Exhaust a Kid:Gem in your hand. Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
-      "Exhaust"
+      "Exhaust",
+      "You don't have Gem in hand!"
     ]
   },
   "${modID}:WonderForm": {
@@ -322,7 +322,7 @@
   },
   "${modID}:SleepGas": {
     "NAME": "Sleep Gas",
-    "DESCRIPTION": "Apply !M! Vulnerable to all enemies. NL Exhaust."
+    "DESCRIPTION": "All enemies lose !M! Strength . NL Exhaust."
   },
   "${modID}:Skywalk": {
     "NAME": "Skywalk",

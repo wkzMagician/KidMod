@@ -51,6 +51,7 @@ public class CharmPower extends BasePower {
 				}
 			}else{
 				this.amount /= 2;
+				this.updateDescription();
 			}
 
 			if(this.amount <= 0) {

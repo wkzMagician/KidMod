@@ -8,5 +8,27 @@
       " into a description.",
       " Exactly how depends on the potion, and you can set it up however you want."
     ]
+  },
+  "${modID}:FlipPotion": {
+    "NAME": "Flip Potion",
+    "DESCRIPTIONS": [
+      "#yFlips any number of cards in your hand.",
+      "Flip"
+    ]
+  },
+  "${modID}:AlchemyPotion": {
+    "NAME": "Alchemy Potion",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " random #yGem to your hand.",
+      " random #yGems to your hand."
+    ]
+  },
+  "${modID}:CharmPotion": {
+    "NAME": "Charm Potion",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yCharm ."
+    ]
   }
 }

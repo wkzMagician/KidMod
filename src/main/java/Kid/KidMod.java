@@ -1,5 +1,6 @@
 package Kid;
 
+import Kid.potions.BasePotion;
 import Kid.relics.BaseRelic;
 import basemod.AutoAdd;
 import basemod.BaseMod;
@@ -77,6 +78,9 @@ public class KidMod implements
         //If you want to set up a config panel, that will be done here.
         //The Mod Badges page has a basic example of this, but setting up config is overall a bit complex.
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
+
+        // Register potions
+        registerPotions();
     }
 
     /*----------Localization----------*/
@@ -260,6 +264,18 @@ public class KidMod implements
                 //If you want all your relics to be visible by default, just remove this if statement.
                 if (info.seen)
                     UnlockTracker.markRelicAsSeen(relic.relicId);
+            });
+    }
+
+    public static void registerPotions() {
+        new AutoAdd(modID) //Loads files from this mod
+            .packageFilter(BasePotion.class) //In the same package as this class
+            .any(BasePotion.class, (info, potion) -> { //Run this code for any classes that extend this class
+                //These three null parameters are colors.
+                //If they're not null, they'll overwrite whatever color is set in the potions themselves.
+                //This is an old feature added before having potions determine their own color was possible.
+                BaseMod.addPotion(potion.getClass(), null, null, null, potion.ID, potion.playerClass);
+                //playerClass will make a potion character-specific. By default, it's null and will do nothing.
             });
     }
 }

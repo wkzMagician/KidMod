@@ -30,7 +30,6 @@ public class MagicStrike extends KidCard {
 
 		setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
 
-		tags.add(CardTags.STARTER_STRIKE);
 		tags.add(CardTags.STRIKE);
 	}
 

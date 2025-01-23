@@ -30,6 +30,10 @@ public class Teleport extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		// 计算牌堆顶与10的差值
+		int amount = 10 - p.hand.size();
+		amount = Math.min(amount, magicNumber);
+
 		// 抽牌，并将抽到的牌翻到反面
 		addToBot(new DrawCardAction(magicNumber));
 		addToBot(new SetCardSideAction(p, p, magicNumber, Strategy.TOP, true));

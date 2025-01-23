@@ -41,6 +41,17 @@ public class SilverBullet extends KidCard {
 	}
 
 	@Override
+	public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+		// 手牌中是否有宝石？
+		for(AbstractCard c : p.hand.group){
+			if(c instanceof GemCard) return true;
+		}
+
+		this.cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[1];
+		return false;
+	}
+
+	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0],
 				false, false, c -> c instanceof GemCard, list -> {

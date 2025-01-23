@@ -1,4 +1,4 @@
-package Kid.cards.uncommon;
+package Kid.cards.rare;
 
 import Kid.cards.KidCard;
 import Kid.character.Kid;
@@ -22,7 +22,7 @@ public class SleepGas extends KidCard {
 			1
 	);
 
-	private static final int MAGIC = 2;
+	private static final int MAGIC = 1;
 	private static final int UPG_MAGIC = 1;
 
 
@@ -37,7 +37,7 @@ public class SleepGas extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for(AbstractMonster mo : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
-			addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+			addToBot(new ApplyPowerAction(mo, p, new StrengthPower(m, -magicNumber)));
 		}
 	}
 
