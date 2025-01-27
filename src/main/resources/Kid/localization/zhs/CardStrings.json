@@ -119,8 +119,7 @@
   },
   "${modID}:OmnipotentPocket": {
     "NAME": "万能口袋",
-    "DESCRIPTION": "抽牌，直到抽到 kid:正面 牌或手牌满为止。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "抽牌，直到抽到 kid:正面 牌或手牌满为止。"
+    "DESCRIPTION": "抽牌，直到抽到 kid:正面 牌或手牌满为止。"
   },
   "${modID}:Prepare": {
     "NAME": "筹备",
@@ -179,7 +178,7 @@
   },
   "${modID}:UnparalleledSkill": {
     "NAME": "魔高一丈",
-    "DESCRIPTION": "每当你抽一张牌时，将其 kid:翻转 至 kid:反面 。"
+    "DESCRIPTION": "每当你打出一张牌时，将随机一张手牌 kid:翻转 。"
   },
   "${modID}:Peek": {
     "NAME": "偷窥",
@@ -273,11 +272,8 @@
   },
   "${modID}:WonderForm": {
     "NAME": "奇迹形态",
-    "DESCRIPTION": "当你抽到 kid:反面 牌时，其 [E] 减 1。 NL 虚无 。",
-    "UPGRADE_DESCRIPTION": "当你抽到 kid:反面 牌时，其 [E] 减 1。",
-    "EXTENDED_DESCRIPTION": [
-      " NL 虚无 。"
-    ]
+    "DESCRIPTION": " 虚无 。 NL 每回合开始时，你手中的 kid:反面 牌本回合 [E] 减 1。",
+    "UPGRADE_DESCRIPTION": "每回合开始时，你手中的 kid:反面 牌本回合 [E] 减 1。"
   },
   "${modID}:DualIdentity": {
     "NAME": "双重身份",

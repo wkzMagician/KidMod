@@ -23,18 +23,7 @@ public class OmnipotentPocket extends KidCard {
 
 	public OmnipotentPocket() {
 		super(ID, info);
-
-		setExhaust(true);
-	}
-
-	@Override
-	public void upgrade() {
-		if (!upgraded) {
-			upgradeName();
-			setExhaust(false);
-			this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-			initializeDescription();
-		}
+		setCostUpgrade(0);
 	}
 
 	@Override

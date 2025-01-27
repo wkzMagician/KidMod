@@ -1,6 +1,5 @@
 package Kid.cards.uncommon;
 
-import Kid.actions.UnflipCardInDrawPileAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;

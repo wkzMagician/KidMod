@@ -1,7 +1,7 @@
 {
-  "${modID}:MagicHat": {
-    "NAME": "Magic Hat",
-    "FLAVOR": "It is truly a magic hat.",
+  "${modID}:WhiteMagicHat": {
+    "NAME": "White Magic Hat",
+    "FLAVOR": "It is a magic hat owned by Kaito Kid.",
     "DESCRIPTIONS": [
       "At the end of your turn, choose #b1 card to #yKid:Flip.",
       "Flip"

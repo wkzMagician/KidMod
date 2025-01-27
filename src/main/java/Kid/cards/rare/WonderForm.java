@@ -23,11 +23,7 @@ public class WonderForm extends KidCard {
 	public WonderForm() {
 		super(ID, info);
 
-		if(this.upgraded){
-			setEthereal(false);
-		}else{
-			setEthereal(true);
-		}
+		setEthereal(!this.upgraded);
 	}
 
 	@Override

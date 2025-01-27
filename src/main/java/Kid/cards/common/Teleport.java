@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import java.util.ArrayList;
 
 public class Teleport extends KidCard {
 	public static final String ID = makeID(Teleport.class.getSimpleName());
@@ -37,6 +38,14 @@ public class Teleport extends KidCard {
 		// 抽牌，并将抽到的牌翻到反面
 		addToBot(new DrawCardAction(magicNumber));
 		addToBot(new SetCardSideAction(p, p, magicNumber, Strategy.TOP, true));
+		if(magicNumber > amount){
+			for(int i = 0; i < magicNumber - amount; i++){
+				AbstractCard c = p.discardPile.getNCardFromTop(i);
+				if(c instanceof KidCard){
+					((KidCard) c).setFlipped(true);
+				}
+			}
+		}
 	}
 
 	@Override

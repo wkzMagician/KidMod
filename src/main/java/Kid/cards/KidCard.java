@@ -4,8 +4,10 @@ import static Kid.util.GeneralUtils.removePrefix;
 import static Kid.util.TextureLoader.getCardTextureString;
 
 import Kid.actions.TriggerFlipPowerAction;
+import Kid.powers.CharmPower;
 import Kid.powers.ElfLipsPower;
 import Kid.util.CardStats;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -71,14 +73,18 @@ public abstract class KidCard extends BaseCard {
 //				actualCost = cost;
 //				cost = -2;
 
-				this.isSeen = false;
+				boolean hasRelic = AbstractDungeon.player.hasRelic("Kid:Monocle");
+
+				if(!hasRelic || this.rarity != CardRarity.BASIC){
+					this.isSeen = false;
 
 //				// 将卡片名字设为"???"
-				name = "???";
+					name = "???";
 
-				// 如果有ElfLipsPower，不会隐藏稀有度
-				if(!AbstractDungeon.player.hasPower(ElfLipsPower.POWER_ID)){
-					rarity = CardRarity.SPECIAL;
+					// 如果有ElfLipsPower，不会隐藏稀有度
+					if(!AbstractDungeon.player.hasPower(ElfLipsPower.POWER_ID)){
+						rarity = CardRarity.SPECIAL;
+					}
 				}
 
 //
@@ -139,5 +145,10 @@ public abstract class KidCard extends BaseCard {
 		KidCard.totalFlipCount++;
 
 		addToTop(new TriggerFlipPowerAction(AbstractDungeon.player, AbstractDungeon.player));
+
+		if(AbstractDungeon.player.hasRelic("Kid:Rose")){
+			AbstractDungeon.player.getRelic("Kid:Rose").flash();
+			addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CharmPower(AbstractDungeon.player, 1)));
+		}
 	}
 }

@@ -27,12 +27,24 @@ public class WonderFormPower extends BasePower {
 //		}
 //	}
 
+//	@Override
+//	public void onCardDraw(AbstractCard card) {
+//		if(card instanceof KidCard && ((KidCard) card).isReverse() && card.costForTurn > 0) {
+//			flash();
+//			card.setCostForTurn(card.costForTurn - 1);
+//		}
+//	}
+
 	@Override
-	public void onCardDraw(AbstractCard card) {
-		if(card instanceof KidCard && ((KidCard) card).isReverse() && card.costForTurn > 0) {
-			flash();
-			card.setCostForTurn(card.costForTurn - 1);
-		}
+	public void atStartOfTurnPostDraw() {
+			super.atStartOfTurnPostDraw();
+
+			for(AbstractCard c : AbstractDungeon.player.hand.group){
+				if(c instanceof KidCard && ((KidCard) c).isReverse() && c.costForTurn > 0){
+					flash();
+					c.setCostForTurn(c.costForTurn - 1);
+				}
+			}
 	}
 
 }

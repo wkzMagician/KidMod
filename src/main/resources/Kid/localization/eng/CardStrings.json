@@ -119,8 +119,7 @@
   },
   "${modID}:OmnipotentPocket": {
     "NAME": "Omnipotent Pocket",
-    "DESCRIPTION": "Draw until your hand is full or draw a Kid:Face-up card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw until your hand is full or draw a Kid:Face-up card."
+    "DESCRIPTION": "Draw until your hand is full or draw a Kid:Face-up card."
   },
   "${modID}:Prepare": {
     "NAME": "Prepare",
@@ -179,7 +178,7 @@
   },
   "${modID}:UnparalleledSkill": {
     "NAME": "Unparalleled Skill",
-    "DESCRIPTION": "Whenever you draw a card, Kid:Flip it to Kid:Face-down."
+    "DESCRIPTION": "Whenever you use a card, Kid:Flip a random card in your hand."
   },
   "${modID}:Peek": {
     "NAME": "Peek",
@@ -274,8 +273,8 @@
   },
   "${modID}:WonderForm": {
     "NAME": "Wonder Form",
-    "DESCRIPTION": "When you draw a Kid:Face-down card, reduce its [E] by 1. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "When you draw a Kid:Face-down card, reduce its [E] by 1."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, reduce the cost of all Kid:Face-down cards in your hand by 1 in this turn.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, reduce the cost of all Kid:Face-down cards in your hand by 1 in this turn."
   },
   "${modID}:DualIdentity": {
     "NAME": "Dual Identity",

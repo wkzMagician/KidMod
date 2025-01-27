@@ -50,7 +50,12 @@ public class CharmPower extends BasePower {
 					}
 				}
 			}else{
-				this.amount /= 2;
+				if(AbstractDungeon.player.hasRelic("Kid:Diamond")) {
+					AbstractDungeon.player.getRelic("Kid:Diamond").flash();
+					this.amount *= 0.75;
+				}else{
+					this.amount *= 0.5;
+				}
 				this.updateDescription();
 			}
 

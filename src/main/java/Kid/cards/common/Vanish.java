@@ -38,6 +38,14 @@ public class Vanish extends KidCard {
 		addToBot(new GainBlockAction(p, p, block));
 		addToBot(new DrawCardAction(magicNumber));
 		addToBot(new SetCardSideAction(p, p, amount, Strategy.TOP, true));
+		if(magicNumber > amount){
+			for(int i = 0; i < magicNumber - amount; i++){
+				AbstractCard c = p.discardPile.getNCardFromTop(i);
+				if(c instanceof KidCard){
+					((KidCard) c).setFlipped(true);
+				}
+			}
+		}
 	}
 
 	@Override

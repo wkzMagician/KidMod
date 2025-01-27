@@ -1,7 +1,7 @@
 {
-  "${modID}:MagicHat": {
-    "NAME": "魔术帽",
-    "FLAVOR": "这是一顶货真价实的魔术帽。",
+  "${modID}:WhiteMagicHat": {
+    "NAME": "白魔术帽",
+    "FLAVOR": "这是一顶怪盗基德的魔术帽。",
     "DESCRIPTIONS": [
       "在你的回合结束时，选择 #b1 张牌 #yKid:翻转 。",
       "翻转"
