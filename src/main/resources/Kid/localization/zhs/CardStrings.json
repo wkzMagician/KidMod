@@ -289,8 +289,8 @@
   },
   "${modID}:Steal": {
     "NAME": "窃取",
-    "DESCRIPTION": "从你的抽牌堆中选择一张 kid:宝石 卡加入你的手牌。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 从你的抽牌堆中选择一张 kid:宝石 卡加入你的手牌。 NL 消耗 。",
+    "DESCRIPTION": " 固有 。 从你的抽牌堆中选择 !M! 张 kid:宝石 卡加入你的手牌。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": " 固有 。 NL 从你的抽牌堆中选择 !M! 张 kid:宝石 卡加入你的手牌。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "放入手牌"
     ]
@@ -320,7 +320,7 @@
   },
   "${modID}:SleepGas": {
     "NAME": "催眠瓦斯",
-    "DESCRIPTION": "所有敌人失去 !M! 点 力量 。"
+    "DESCRIPTION": "所有敌人失去 !M! 点 力量 。 NL 消耗 。"
   },
   "${modID}:Skywalk": {
     "NAME": "空中步行",

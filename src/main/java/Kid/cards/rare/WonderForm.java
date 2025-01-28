@@ -23,12 +23,12 @@ public class WonderForm extends KidCard {
 	public WonderForm() {
 		super(ID, info);
 
-		setEthereal(!this.upgraded);
+		setEthereal(true, false);
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new ApplyPowerAction(p, p, new WonderFormPower(p, -1)));
+		addToBot(new ApplyPowerAction(p, p, new WonderFormPower(p, 1), 1));
 	}
 
 	@Override

@@ -22,12 +22,13 @@ public class Scout extends KidCard {
 	);
 
 	private static final int MAGIC = 1;
-	private static final int UPG_MAGIC = 1;
+	private static final int UPG_MAGIC = 0;
 
 	public Scout() {
 		super(ID, info);
 
 		setMagic(MAGIC, UPG_MAGIC);
+		setCostUpgrade(1);
 	}
 
 	@Override

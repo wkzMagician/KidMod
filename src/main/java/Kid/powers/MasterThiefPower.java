@@ -34,7 +34,6 @@ public class MasterThiefPower extends BasePower {
 		private static final AbstractCard[] cards = {
 				new DarkStar(),
 				new PupilOfMoon(),
-				new FakeGem(),
 				new ElfLips(),
 				new MotherOfGems(),
 				new BloodTears(),

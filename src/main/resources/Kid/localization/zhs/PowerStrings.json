@@ -130,7 +130,7 @@
   "${modID}:WonderFormPower": {
     "NAME": "奇迹形态",
     "DESCRIPTIONS": [
-      "当你抽到一张 #y反面 牌时，它的能量消耗减少1点。"
+      "每回合开始时，你手中的 kid:反面 牌本回合 [E] 减 #b"
     ]
   },
   "${modID}:DisguisePower": {

@@ -1,18 +1,23 @@
 package Kid.cards.common;
 
+import static Kid.util.GeneralUtils.removePrefix;
 import static Kid.util.TextureLoader.getCardTextureString;
 
+import Kid.actions.FlipSpecificCardAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
+import Kid.powers.ElfLipsPower;
 import Kid.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -52,28 +57,33 @@ public class DualIdentity extends KidCard {
 		}
 
 		// 翻面！
-		flip();
+		addToBot(new FlipSpecificCardAction(this));
 	}
 
 	@Override
 	public void setFlipped(boolean flipped) {
-		super.setFlipped(flipped);
-		this.isSeen = true;
-		this.name = this.actualName;
-		this.rarity = this.actualRarity;
+		if(isActual) return;
+		if(isFlipped == flipped) return;
 
-		if(!isFlipped){
-			this.type = CardType.ATTACK;
-			this.target = CardTarget.ENEMY;
-			this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
-		}else{
+		isFlipped = flipped;
+
+		if (isFlipped) {
 			this.type = CardType.SKILL;
 			this.target = CardTarget.SELF;
 			this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[1];
+
+			loadCardImage(getCardTextureString("default", type));
+		} else {
+			this.type = CardType.ATTACK;
+			this.target = CardTarget.ENEMY;
+			this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
+
+			loadCardImage(getCardTextureString(removePrefix(this.cardID), type));
 		}
 
+		triggerOnFlip();
 		initializeDescription();
-		loadCardImage(getCardTextureString(cardID, type));
+		applyPowers();
 	}
 
 	@Override

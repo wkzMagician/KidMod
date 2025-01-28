@@ -3,8 +3,78 @@
     "NAME": "White Magic Hat",
     "FLAVOR": "It is a magic hat owned by Kaito Kid.",
     "DESCRIPTIONS": [
-      "At the end of your turn, choose #b1 card to #yKid:Flip.",
+      "At the end of your turn, choose #b1 card to #yFlip.",
       "Flip"
+    ]
+  },
+  "${modID}:BlackMagicHat": {
+    "NAME": "Black Magic Hat",
+    "FLAVOR": "It is a magic hat owned by Kuroba Touichi, the father of Kaito Kid, which is more charming.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, #yFlip all cards in your hand."
+    ]
+  },
+  "${modID}:Spade": {
+    "NAME": "Spade",
+    "FLAVOR": "It is a spade poker card.",
+    "DESCRIPTIONS": [
+      "Gain #b4 #yPlated #yArmor at the start of each combat."
+    ]
+  },
+  "${modID}:Heart": {
+    "NAME": "Heart",
+    "FLAVOR": "It is a heart poker card.",
+    "DESCRIPTIONS": [
+      "Prevent the first 2 times you would lose #yCharm each combat."
+    ]
+  },
+  "${modID}:Diamond": {
+    "NAME": "Diamond",
+    "FLAVOR": "It is a diamond poker card.",
+    "DESCRIPTIONS": [
+      "Each time you lose #yCharm, only lose 25% of it."
+    ]
+  },
+  "${modID}:Club": {
+    "NAME": "Club",
+    "FLAVOR": "It is a club poker card.",
+    "DESCRIPTIONS": [
+      "#yFace-down cards deal #b2 more damage."
+    ]
+  },
+  "${modID}:Joker": {
+    "NAME": "Joker",
+    "FLAVOR": "It is a joker poker card.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, draw #b2 more cards. #yFlip all drawn cards to #yFace-down."
+    ]
+  },
+  "${modID}:Monocle": {
+    "NAME": "Monocle",
+    "FLAVOR": "It is a monocle.",
+    "DESCRIPTIONS": [
+      "#yBasic cards that are #yFace-down can be seen normally."
+    ]
+  },
+  "${modID}:LilyLock": {
+    "NAME": "Lily Lock",
+    "FLAVOR": "It is a master key that can unlock any lock.",
+    "DESCRIPTIONS": [
+      "Get #b1 random #yGem at the start of each combat."
+    ]
+  },
+  "${modID}:MagicCape": {
+    "NAME": "Magic Cape",
+    "FLAVOR": "It is a cape that can make you invisible.",
+    "DESCRIPTIONS": [
+      "Gain [E] the first time you play a #yFace-down card each turn."
+    ]
+  },
+  "${modID}:Rose": {
+    "NAME": "Rose",
+    "FLAVOR": "It is a rose.",
+    "DESCRIPTIONS": [
+      "Every time you#yFlip a card, gain #b1 #yCharm."
     ]
   }
 }

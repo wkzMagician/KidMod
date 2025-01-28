@@ -12,7 +12,7 @@ public class Joker extends BaseRelic {
 		private static final String NAME = Joker.class.getSimpleName();
 		public static final String ID = makeID(NAME);
 
-		private static final RelicTier RARITY = RelicTier.STARTER;
+		private static final RelicTier RARITY = RelicTier.SHOP;
 		private static final LandingSound SOUND = LandingSound.CLINK;
 
 		private static final int ADDITIONAL_DRAW = 2;

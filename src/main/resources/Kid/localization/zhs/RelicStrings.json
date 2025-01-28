@@ -1,10 +1,80 @@
 {
   "${modID}:WhiteMagicHat": {
-    "NAME": "白魔术帽",
-    "FLAVOR": "这是一顶怪盗基德的魔术帽。",
+    "NAME": "白色魔术帽",
+    "FLAVOR": "这是怪盗基德所拥有的魔术帽。",
     "DESCRIPTIONS": [
-      "在你的回合结束时，选择 #b1 张牌 #yKid:翻转 。",
+      "在你的回合结束时，选择 #b1 张牌进行 #y翻转 。",
       "翻转"
+    ]
+  },
+  "${modID}:BlackMagicHat": {
+    "NAME": "黑色魔术帽",
+    "FLAVOR": "这是怪盗基德的父亲黑羽盗一所拥有的魔术帽，更加迷人。",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，将你手中的所有牌 #y翻转 。"
+    ]
+  },
+  "${modID}:Spade": {
+    "NAME": "黑桃",
+    "FLAVOR": "这是一张黑桃扑克牌。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得 #b4 点 #y多层护甲 。"
+    ]
+  },
+  "${modID}:Heart": {
+    "NAME": "红心",
+    "FLAVOR": "这是一张红心扑克牌。",
+    "DESCRIPTIONS": [
+      "在每场战斗中，防止你前2次失去 #y魅力 。"
+    ]
+  },
+  "${modID}:Diamond": {
+    "NAME": "方块",
+    "FLAVOR": "这是一张方块扑克牌。",
+    "DESCRIPTIONS": [
+      "每次你失去 #y魅力 时，只失去其 #b25% 。"
+    ]
+  },
+  "${modID}:Club": {
+    "NAME": "梅花",
+    "FLAVOR": "这是一张梅花扑克牌。",
+    "DESCRIPTIONS": [
+      " #y背面 朝下的牌造成 #b2 点额外伤害。"
+    ]
+  },
+  "${modID}:Joker": {
+    "NAME": "小丑",
+    "FLAVOR": "这是一张小丑扑克牌。",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，抽 #b2 张额外的牌。将抽到的所有牌 #y翻转 为 #y背面 。"
+    ]
+  },
+  "${modID}:Monocle": {
+    "NAME": "单片眼镜",
+    "FLAVOR": "这是一副单片眼镜。",
+    "DESCRIPTIONS": [
+      "可以正常查看 #y背面 的 #y基础 牌。"
+    ]
+  },
+  "${modID}:LilyLock": {
+    "NAME": "莉莉之锁",
+    "FLAVOR": "这是一把可以打开任何锁的万能钥匙。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得 #b1 个随机 #y宝石 。"
+    ]
+  },
+  "${modID}:MagicCape": {
+    "NAME": "魔法斗篷",
+    "FLAVOR": "这是一件可以让你隐身的斗篷。",
+    "DESCRIPTIONS": [
+      "每个回合，当你第一次打出 #y背面 牌时，获得 [E] 。"
+    ]
+  },
+  "${modID}:Rose": {
+    "NAME": "玫瑰",
+    "FLAVOR": "这是一朵玫瑰。",
+    "DESCRIPTIONS": [
+      "每次你 #y翻转 一张牌时，获得 #b1 点 #y魅力 。"
     ]
   }
 }

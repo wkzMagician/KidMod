@@ -290,8 +290,8 @@
   },
   "${modID}:Steal": {
     "NAME": "Steal",
-    "DESCRIPTION": "Choose a Kid:Gem from your draw pile and put it into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a Kid:Gem from your draw pile and put it into your hand. NL Exhaust.",
+    "DESCRIPTION": "Innate. NL Choose !M! Kid:Gem from your draw pile and put it into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose !M! Kid:Gems from your draw pile and put it into your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "put into your hand."
     ]

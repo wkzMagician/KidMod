@@ -1,4 +1,5 @@
 package Kid.powers;
+import Kid.actions.WonderAction;
 import Kid.cards.KidCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -16,8 +17,9 @@ public class WonderFormPower extends BasePower {
 
 		@Override
 		public void updateDescription() {
-				this.description = DESCRIPTIONS[0];
+			this.description = DESCRIPTIONS[0] + this.amount;
 		}
+
 
 //	@Override
 //	public void onCardDraw(AbstractCard c) {
@@ -39,12 +41,16 @@ public class WonderFormPower extends BasePower {
 	public void atStartOfTurnPostDraw() {
 			super.atStartOfTurnPostDraw();
 
-			for(AbstractCard c : AbstractDungeon.player.hand.group){
-				if(c instanceof KidCard && ((KidCard) c).isReverse() && c.costForTurn > 0){
-					flash();
-					c.setCostForTurn(c.costForTurn - 1);
-				}
-			}
+			this.flash();
+
+			addToBot(new WonderAction(owner, amount));
+
+//			for(AbstractCard c : AbstractDungeon.player.hand.group){
+//				if(c instanceof KidCard && ((KidCard) c).isReverse() && c.costForTurn > 0){
+//					flash();
+//					c.setCostForTurn(c.costForTurn - 1);
+//				}
+//			}
 	}
 
 }

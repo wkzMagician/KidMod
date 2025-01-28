@@ -1,36 +1,17 @@
-# Basic Mod
+# Kid Mod
 
-This is an empty Slay the Spire mod + a modding tutorial.
+This is a Slay the Spire mod which added Kaito Kid as a playable character.  
 
-This tutorial will help with setup and the basics of Slay the Spire modding, but it will not teach you Java. If you know nothing of Java or programming in general, you are strongly recommended to look up a free online course and do at least some of it. It is possible to do modding with almost no proper knowledge, but it will make things much more difficult.
+The framework is based on https://github.com/Alchyr/BasicMod. Thanks to author for the great work.
 
----
+My bilibili account: https://space.bilibili.com/513270285
 
-## Check the wiki to get started:
+If you find any bugs or have any suggestions, please feel free to contact me. You can also create an issue on GitHub or comment in Steam Workshop.
 
-https://github.com/Alchyr/BasicMod/wiki
+怪盗基德的杀戮尖塔模组。
 
----
+模组的框架基于 https://github.com/Alchyr/BasicMod . 感谢作者的工作。  
 
-## Know what you're doing?
+我的bilibili账号：https://space.bilibili.com/513270285
 
-You can still use this mod as a base, or you could use another template like https://github.com/DarkVexon/ProTemplate
-
-You can find more options in the pins of the #modding-technical channel in the Slay the Spire discord server.
-
----
-
-### Some HD Slay the Spire art assets (courtesy of Gremious, creator of DefaultMod):
-
-Includes:
-- Empty Relic Template feat. empty bottle
-- Empty Card Template
-- Color-Changable cardback
-- A couple of HD Monster vectors (Louse, Nob, Sentry, Sneaky Gremlin)
-- A coupe of HD items (J.A.X., A Coin)
-- 2 people silhouettes
-- A curse Background
-
-https://github.com/Gremious/StS-DefaultModBase#some-hd-slay-the-spire-art-assets
-
----
+如果你发现了任何bug或者有任何建议，请随时联系我。你也可以在GitHub上创建一个issue或者在Steam创意工坊中评论。

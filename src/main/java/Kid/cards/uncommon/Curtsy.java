@@ -25,7 +25,7 @@ public class Curtsy extends KidCard {
 
 	public Curtsy() {
 		super(ID, info);
-		setMagic(2, 1);
+		setMagic(3, 1);
 	}
 
 	@Override

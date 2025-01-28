@@ -1,5 +1,6 @@
 package Kid.cards.common;
 
+import Kid.actions.DrawAndFlipToBackAction;
 import Kid.actions.SetCardSideAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
@@ -32,20 +33,8 @@ public class Vanish extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		int amount = 10 - p.hand.size();
-		amount = Math.min(amount, magicNumber);
-
 		addToBot(new GainBlockAction(p, p, block));
-		addToBot(new DrawCardAction(magicNumber));
-		addToBot(new SetCardSideAction(p, p, amount, Strategy.TOP, true));
-		if(magicNumber > amount){
-			for(int i = 0; i < magicNumber - amount; i++){
-				AbstractCard c = p.discardPile.getNCardFromTop(i);
-				if(c instanceof KidCard){
-					((KidCard) c).setFlipped(true);
-				}
-			}
-		}
+		addToBot(new DrawAndFlipToBackAction(magicNumber));
 	}
 
 	@Override

@@ -130,7 +130,7 @@
   "${modID}:WonderFormPower": {
     "NAME": "Wonder Form",
     "DESCRIPTIONS": [
-      "When you draw a #yFace-down card, it costs 1 less energy."
+      "At the start of your turn, reduce the cost of all Kid:Face-down cards in your hand by #b"
     ]
   },
   "${modID}:DisguisePower": {

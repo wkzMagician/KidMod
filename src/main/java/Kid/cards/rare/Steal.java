@@ -29,19 +29,15 @@ public class Steal extends KidCard {
 		super(ID, info);
 
 		setExhaust(true);
-	}
-
-	@Override
-	public void upgrade() {
-		super.upgrade();
-
 		setInnate(true);
+
+		setMagic(1, 1); //Sets the card's magic number and how much it changes when upgraded.
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		// 选择抽牌堆中的1张宝石牌加入手牌
-		addToBot(new SelectCardsAction(p.drawPile.group, 1, cardStrings.EXTENDED_DESCRIPTION[0],
+		addToBot(new SelectCardsAction(p.drawPile.group, magicNumber, cardStrings.EXTENDED_DESCRIPTION[0],
 				false,  c -> c instanceof GemCard, list -> {
 			System.out.println(list.size());
 

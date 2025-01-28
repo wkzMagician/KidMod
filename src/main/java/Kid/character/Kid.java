@@ -3,6 +3,7 @@ package Kid.character;
 import static Kid.KidMod.characterPath;
 import static Kid.KidMod.makeID;
 
+import Kid.cards.KidCard;
 import Kid.cards.basic.Defend;
 import Kid.cards.basic.MagicStrike;
 import Kid.cards.basic.Strike;
@@ -30,6 +31,13 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import java.util.ArrayList;
 
 public class Kid extends CustomPlayer {
+    @Override
+    public void onVictory() {
+        super.onVictory();
+
+        KidCard.totalFlipCount = 0;
+    }
+
     //Stats
     public static final int ENERGY_PER_TURN = 3;
     public static final int MAX_HP = 70;

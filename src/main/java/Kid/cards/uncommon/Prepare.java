@@ -24,7 +24,7 @@ public class Prepare extends KidCard {
 			1
 	);
 
-	private static final int BLOCK = 4;
+	private static final int BLOCK = 5;
 
 	public Prepare() {
 		super(ID, info);
