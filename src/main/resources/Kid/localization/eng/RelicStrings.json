@@ -1,7 +1,7 @@
 {
   "${modID}:WhiteMagicHat": {
     "NAME": "White Magic Hat",
-    "FLAVOR": "It is a magic hat owned by Kaito Kid.",
+    "FLAVOR": "It is a magic hat owned by Kaitou Kid.",
     "DESCRIPTIONS": [
       "At the end of your turn, choose #b1 card to #yFlip.",
       "Flip"
@@ -9,7 +9,7 @@
   },
   "${modID}:BlackMagicHat": {
     "NAME": "Black Magic Hat",
-    "FLAVOR": "It is a magic hat owned by Kuroba Touichi, the father of Kaito Kid, which is more charming.",
+    "FLAVOR": "It is a magic hat owned by Kuroba Touichi, the father of Kaitou Kid, which is more charming.",
     "DESCRIPTIONS": [
       "At the end of your turn, #yFlip all cards in your hand."
     ]
