@@ -88,8 +88,7 @@ public class DrawAndFlipToBackAction extends AbstractGameAction {
 		}
 		if (!this.shuffleCheck) {
 			if (this.amount + AbstractDungeon.player.hand.size() > 10) {
-				int handSizeAndDraw = 10 - this.amount + AbstractDungeon.player.hand.size();
-				this.amount += handSizeAndDraw;
+				this.amount = 10 - AbstractDungeon.player.hand.size();
 				AbstractDungeon.player.createHandIsFullDialog();
 			}
 			if (this.amount > deckSize) {

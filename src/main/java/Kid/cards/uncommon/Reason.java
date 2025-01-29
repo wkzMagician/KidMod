@@ -27,7 +27,7 @@ public class Reason extends KidCard {
 
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Reason");
 
-	private static final int ENERGY = 1;
+	private static final int ENERGY = 2;
 	private static final int UPGRADE_PLUS_ENERGY = 1;
 
 	public Reason() {

@@ -145,7 +145,7 @@
   "${modID}:Cleanse": {
     "NAME": "洗涤",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们除了 力量 以外的所有 能力 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们除了 力量 以外的所有增益 能力 。"
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 清除他们除了 力量 以外的所有正面 能力 。 NL 消耗 。"
   },
   "${modID}:StunGun": {
     "NAME": "电击枪",

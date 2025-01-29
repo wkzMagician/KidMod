@@ -24,8 +24,8 @@ public class Skywalk extends KidCard {
 	private static final int UPG_BLOCK = 2;
 
 	// 预见
-	private static final int PLATED_ARMOR = 2;
-	private static final int UPG_PLATED_ARMOR = 1;
+	private static final int PLATED_ARMOR = 3;
+	private static final int UPG_PLATED_ARMOR = 2;
 
 	public Skywalk() {
 		super(ID, info);
