@@ -1,4 +1,5 @@
 package Kid.powers;
+import Kid.cards.KidCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -25,7 +26,10 @@ public class LoopholeDetectionPower extends BasePower {
 		// 首次检测
 		private void remark() {
 				if(markedCard != null) {
-					markedCard.glowColor = new Color(0.2F, 0.9F, 1.0F, 0.25F);
+//					markedCard.glowColor = new Color(0.2F, 0.9F, 1.0F, 0.25F);
+					if(markedCard instanceof KidCard){
+						((KidCard)markedCard).setMarked(false);
+					}
 				}
 				markedCard = null;
 
@@ -43,7 +47,10 @@ public class LoopholeDetectionPower extends BasePower {
 				// 高亮
 				if (markedCard != null) {
 //					markedCard.glowColor = Color.GOLD.cpy();
-					markedCard.glowColor = new Color(1.0F, 0.0F, 0.0F, 0.25F);
+//					markedCard.glowColor = new Color(1.0F, 0.0F, 0.0F, 0.25F);
+					if(markedCard instanceof KidCard){
+						((KidCard)markedCard).setMarked(true);
+					}
 				}
 		}
 

@@ -7,14 +7,22 @@ import Kid.actions.TriggerFlipPowerAction;
 import Kid.powers.CharmPower;
 import Kid.powers.ElfLipsPower;
 import Kid.util.CardStats;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class KidCard extends BaseCard {
+
+	private static final Logger log = LoggerFactory.getLogger(KidCard.class);
 	// 新的属性：翻面
 	protected boolean isFlipped = false;
+
+	// 是否被标记？
+	public boolean isMarked = false;
 
 //	protected String actualDescription;
 	protected String actualName;
@@ -67,7 +75,8 @@ public abstract class KidCard extends BaseCard {
 
 			// 如果翻为反面，将图片设置为默认图片
 			if (isFlipped) {
-				loadCardImage(getCardTextureString("default", type));
+				if(!isMarked) loadCardImage(getCardTextureString("default", type));
+				else loadCardImage(getCardTextureString("marked", type));
 
 //				// 将cost设为-2，表示这张卡不显示能量
 //				actualCost = cost;
@@ -75,7 +84,7 @@ public abstract class KidCard extends BaseCard {
 
 				boolean hasRelic = AbstractDungeon.player.hasRelic("Kid:Monocle");
 
-				if(!hasRelic || this.rarity != CardRarity.BASIC){
+				if(!isMarked && !(hasRelic && this.rarity == CardRarity.BASIC)){
 					this.isSeen = false;
 
 //				// 将卡片名字设为"???"
@@ -117,8 +126,41 @@ public abstract class KidCard extends BaseCard {
 			applyPowers();
 	}
 
+	public void setMarked(boolean marked) {
+		this.isMarked = marked;
+		if(this.isReverse()){
+			if(!isMarked) {
+				boolean hasRelic = AbstractDungeon.player.hasRelic("Kid:Monocle");
+				if(!(hasRelic && this.rarity == CardRarity.BASIC)){
+					this.isSeen = false;
+					name = "???";
+					// 如果有ElfLipsPower，不会隐藏稀有度
+					if(!AbstractDungeon.player.hasPower(ElfLipsPower.POWER_ID)){
+						rarity = CardRarity.SPECIAL;
+					}
+				}
+				loadCardImage(getCardTextureString("default", type));
+			} else {
+				loadCardImage(getCardTextureString("marked", type));
+				this.isSeen = true;
+				this.name = actualName;
+				this.rarity = actualRarity;
+			}
+			applyPowers();
+		}
+		if(marked){
+			this.glowColor = new Color(1.0F, 0.0F, 0.0F, 0.25F);
+		}else{
+			this.glowColor = new Color(0.2F, 0.9F, 1.0F, 0.25F);
+		}
+	}
+
 	public boolean isReverse() {
 			return isFlipped;
+	}
+
+	public boolean isMarked() {
+		return isMarked;
 	}
 
 

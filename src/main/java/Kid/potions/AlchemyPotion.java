@@ -9,7 +9,7 @@ import Kid.cards.rare.TowerDiamond;
 import Kid.cards.status.FakeGem;
 import Kid.cards.uncommon.BlueBirthday;
 import Kid.cards.uncommon.DarkStar;
-import Kid.cards.rare.ElfLips;
+import Kid.cards.uncommon.ElfLips;
 import Kid.cards.uncommon.MotherOfGems;
 import Kid.cards.uncommon.PupilOfMoon;
 import com.badlogic.gdx.graphics.Color;

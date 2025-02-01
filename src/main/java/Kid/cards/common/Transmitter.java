@@ -37,10 +37,11 @@ public class Transmitter extends KidCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		String text = cardStrings.EXTENDED_DESCRIPTION[0];
 		// 选择一张手牌
-		addToBot(new SelectCardsInHandAction(1, text, list -> {
+		addToBot(new SelectCardsInHandAction(1, text, c -> c instanceof KidCard && !((KidCard) c).isMarked(), list -> {
 			for (AbstractCard c : list) {
 				// 设置高亮
-				c.glowColor = GOLD_BORDER_GLOW_COLOR;
+//				c.glowColor = GOLD_BORDER_GLOW_COLOR;
+				((KidCard)c).setMarked(true);
 			}
 		}));
 	}
