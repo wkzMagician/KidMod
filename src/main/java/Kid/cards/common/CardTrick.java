@@ -27,8 +27,8 @@ public class CardTrick extends KidCard {
 
 	private static final int BASE_DAMAGE = 8;
 
-	private static final int INCREASE_DAMAGE = 1;
-	private static final int UPGRADE_INCREASE_DAMAGE = 2;
+	private static final int INCREASE_DAMAGE = 2;
+	private static final int UPGRADE_INCREASE_DAMAGE = 1;
 
 	public CardTrick() {
 		super(ID, info);

@@ -23,7 +23,7 @@
   },
   "${modID}:AlertHint": {
     "NAME": "Alert Hint",
-    "DESCRIPTION": "Kid:Actual. NL Deal !D! damage. NL Select !M! cards to Kid:Flip to Kid:Face-up .",
+    "DESCRIPTION": "Kid:Actual. NL Deal !D! damage. NL You may select !M! cards to Kid:Flip to Kid:Face-up .",
     "EXTENDED_DESCRIPTION": [
       "Flip to Face-up"
     ]
@@ -34,7 +34,7 @@
   },
   "${modID}:Feint": {
     "NAME": "Feint",
-    "DESCRIPTION": "Kid:Actual. Deal !D! damage. NL Select !M! cards to Kid:Flip.",
+    "DESCRIPTION": "Kid:Actual. Deal !D! damage. NL You may select !M! cards to Kid:Flip.",
     "EXTENDED_DESCRIPTION": [
       "Flip"
     ]
@@ -132,15 +132,18 @@
   },
   "${modID}:Raid": {
     "NAME": "Raid",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is Kid:Flipped, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Kid:Face-down, deal !D! damage again."
   },
   "${modID}:MagicGlove": {
     "NAME": "Magic Glove",
-    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL Select !M! cards to Kid:Flip."
+    "DESCRIPTION": "Deal !D! damage. NL Draw 1 card. NL You may select !M! cards to Kid:Flip.",
+    "EXTENDED_DESCRIPTION": [
+      "Flip"
+    ]
   },
   "${modID}:MysticTechniques": {
     "NAME": "Mystic Techniques",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is Kid:Flipped, gain [E] [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL If this card is Kid:Face-down, gain [E] [E] ."
   },
   "${modID}:Cleanse": {
     "NAME": "Cleanse",
@@ -195,7 +198,7 @@
   },
   "${modID}:WhiteCloak": {
     "NAME": "White Cloak",
-    "DESCRIPTION": "Kid:Actual. NL Gain !B! block. NL Choose to Kid:Flip !M! cards in your hand.",
+    "DESCRIPTION": "Kid:Actual. NL Gain !B! block. NL You may choose to Kid:Flip !M! cards in your hand.",
     "EXTENDED_DESCRIPTION": [
       "Flip"
     ]
@@ -235,7 +238,7 @@
   },
   "${modID}:Pandora": {
     "NAME": "Pandora",
-    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, heal !M! HP. NL Discard when other Kid:Gems in your hand."
+    "DESCRIPTION": "Unplayable. NL Retain. NL At the end of your turn, heal !M! HP. NL Discard when other Kid:Gems in your hand at turn end."
   },
   "${modID}:BloodTears": {
     "NAME": "Blood Tears",
@@ -325,7 +328,7 @@
   },
   "${modID}:Skywalk": {
     "NAME": "Skywalk",
-    "DESCRIPTION": "Gain !B! Block. NL If this card is Kid:Flipped, Gain !M! *Plated *Armor."
+    "DESCRIPTION": "Gain !B! Block. NL If this card is Kid:Face-down, Gain !M! *Plated *Armor."
   },
   "${modID}:TowerDiamond": {
     "NAME": "Tower Diamond",
@@ -338,8 +341,7 @@
   },
   "${modID}:Disguise": {
     "NAME": "Disguise",
-    "DESCRIPTION": "Prevent the next time you would lose kid:Charm.",
-    "UPGRADE_DESCRIPTION": "Prevent the next 2 times you would lose kid:Charm."
+    "DESCRIPTION": "Prevent the next !M! times you would lose kid:Charm."
   },
   "${modID}:Boast": {
     "NAME": "Boast",
@@ -384,8 +386,8 @@
   },
   "${modID}:Reason": {
     "NAME": "Reason",
-    "DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the chosen card, gain [E] .",
-    "UPGRADE_DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the chosen card, gain [E] [E] .",
+    "DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the same card as the chosen card, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the same card as the chosen card, gain [E] [E] .",
     "EXTENDED_DESCRIPTION": [
       "Choose"
     ]

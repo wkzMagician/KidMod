@@ -23,7 +23,7 @@
   },
   "${modID}:AlertHint": {
     "NAME": "情报提示",
-    "DESCRIPTION": " kid:真相 。 NL 造成 !D! 点 伤害 。 NL 选择 !M! 张卡牌 kid:翻转 至 kid:正面 。",
+    "DESCRIPTION": " kid:真相 。 NL 造成 !D! 点 伤害 。 NL 选择最多 !M! 张卡牌 kid:翻转 至 kid:正面 。",
     "EXTENDED_DESCRIPTION": [
       "翻转到正面"
     ]
@@ -34,7 +34,7 @@
   },
   "${modID}:Feint": {
     "NAME": "佯攻",
-    "DESCRIPTION": " kid:真相 。造成 !D! 点伤害。 NL 选择 !M! 张卡牌 kid:翻转 。",
+    "DESCRIPTION": " kid:真相 。造成 !D! 点伤害。 NL 选择最多 !M! 张卡牌 kid:翻转 。",
     "EXTENDED_DESCRIPTION": [
       "翻转"
     ]
@@ -88,7 +88,7 @@
   },
   "${modID}:Recapture": {
     "NAME": "夺回",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张卡牌从弃牌堆加入手牌，并将它们 kid:翻转 至 kid:反面 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将 !M! 张卡牌从弃牌堆加入手牌，并将其 kid:翻转 至 kid:反面 。",
     "EXTENDED_DESCRIPTION": [
       "放回手牌"
     ]
@@ -136,11 +136,14 @@
   },
   "${modID}:MagicGlove": {
     "NAME": "魔术手套",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 1 张牌。 NL 选择 !M! 张手牌 kid:翻转 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 1 张牌。 NL 选择最多 !M! 张手牌 kid:翻转 。",
+    "EXTENDED_DESCRIPTION": [
+      "翻转"
+    ]
   },
   "${modID}:MysticTechniques": {
     "NAME": "秘术之牌",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡牌被 kid:翻转 ，获得 [E] [E] 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果这张卡牌位于 kid:反面 ，获得 [E] [E] 。"
   },
   "${modID}:Cleanse": {
     "NAME": "洗涤",
@@ -149,7 +152,7 @@
   },
   "${modID}:StunGun": {
     "NAME": "电击枪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 使敌人 晕眩 。 NL 消耗。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 使敌人 晕眩 。 NL 消耗 。"
   },
   "${modID}:Cardistry": {
     "NAME": "花切",
@@ -195,7 +198,7 @@
   },
   "${modID}:WhiteCloak": {
     "NAME": "白色披风",
-    "DESCRIPTION": "kid:真相 。 NL 获得 !B! 点 格挡 。 NL 选择 kid:翻转 你手中的 !M! 张卡牌。",
+    "DESCRIPTION": "kid:真相 。 NL 获得 !B! 点 格挡 。 NL 选择 kid:翻转 最多 !M! 张手牌。",
     "EXTENDED_DESCRIPTION": [
       "翻转"
     ]
@@ -234,7 +237,7 @@
   },
   "${modID}:Pandora": {
     "NAME": "潘多拉",
-    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 在回合结束时，恢复 !M! 点生命。 NL 当你手中有其他 kid:宝石 时丢弃。"
+    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 在回合结束时，恢复 !M! 点生命。 NL 回合结束时你手中有其他 kid:宝石 则丢弃。"
   },
   "${modID}:BloodTears": {
     "NAME": "红色眼泪",
@@ -337,8 +340,7 @@
   },
   "${modID}:Disguise": {
     "NAME": "易容术",
-    "DESCRIPTION": "阻止下 1 次 kid:魅力 的损失。",
-    "UPGRADE_DESCRIPTION": "阻止下 2 次 kid:魅力 的损失。"
+    "DESCRIPTION": "阻止下 !M! 次 kid:魅力 的损失。"
   },
   "${modID}:Boast": {
     "NAME": "吹嘘",
@@ -383,8 +385,8 @@
   },
   "${modID}:Reason": {
     "NAME": "推理",
-    "DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 如果你打出的下一张反面牌是该卡牌，获得 [E] 。",
-    "UPGRADE_DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 如果你打出的下一张反面牌是该卡牌，获得 [E] [E] 。",
+    "DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 如果你打出的下一张反面牌与该卡牌相同，获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "选择你牌组中的 1 张卡牌。 NL 如果你打出的下一张反面牌与该卡牌相同，获得 [E] [E] 。",
     "EXTENDED_DESCRIPTION": [
       "校验"
     ]

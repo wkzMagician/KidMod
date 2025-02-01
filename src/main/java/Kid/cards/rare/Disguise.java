@@ -1,4 +1,4 @@
-package Kid.cards.uncommon;
+package Kid.cards.rare;
 
 import Kid.cards.KidCard;
 import Kid.character.Kid;
@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BufferPower;
 
 public class Disguise extends KidCard {
 	public static final String ID = makeID(Disguise.class.getSimpleName());

@@ -16,26 +16,10 @@ public class ElfLipsPower extends BasePower {
 
 		public ElfLipsPower(AbstractCreature owner) {
 				super(POWER_ID, PowerType.BUFF, false, owner, -1);
-
-//				applyPower();
 		}
 
 		@Override
 		public void updateDescription() {
 			this.description = DESCRIPTIONS[0];
 		}
-
-//		private void applyPower() {
-//			// 遍历三个手牌堆里的所有卡牌
-//		}
-//
-//		@Override
-//		public void atStartOfTurn() {
-//			applyPower();
-//		}
-//
-//		@Override
-//		public void onDrawOrDiscard() {
-//			applyPower();
-//		}
 }

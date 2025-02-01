@@ -24,8 +24,8 @@ public class Pandora extends GemCard {
 			-2
 	);
 
-	private static final int HEAL_NUM = 3;
-	private static final int UP_HEAL_NUM = 2;
+	private static final int HEAL_NUM = 2;
+	private static final int UP_HEAL_NUM = 1;
 
 	public Pandora() {
 		super(ID, info);
@@ -37,9 +37,9 @@ public class Pandora extends GemCard {
 	public void triggerWhenDrawn() {
 		super.triggerWhenDrawn();
 
-		if(otherGemInHand()) {
-			addToBot(new DiscardSpecificCardAction(this));
-		}
+//		if(otherGemInHand()) {
+//			addToBot(new DiscardSpecificCardAction(this));
+//		}
 	}
 
 	private boolean otherGemInHand() {
@@ -58,7 +58,7 @@ public class Pandora extends GemCard {
 		addToBot(new ApplyPowerAction(
 				AbstractDungeon.player,
 				AbstractDungeon.player,
-				new PandoraPower(AbstractDungeon.player, this.magicNumber),
+				new PandoraPower(AbstractDungeon.player, this.magicNumber, this),
 				this.magicNumber
 		));
 	}

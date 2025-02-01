@@ -4,6 +4,7 @@ import Kid.actions.FlipCardAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -39,7 +40,12 @@ public class MagicGlove extends KidCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 		addToBot(new DrawCardAction(p, 1));
-		addToBot(new FlipCardAction(p, p, magicNumber, Strategy.SELECT));
+		addToBot(new SelectCardsInHandAction(magicNumber, cardStrings.EXTENDED_DESCRIPTION[0],
+				true, true, card -> card instanceof KidCard, list -> {
+			for (AbstractCard c : list) {
+				((KidCard) c).flip();
+			}
+		}));
 	}
 
 	@Override

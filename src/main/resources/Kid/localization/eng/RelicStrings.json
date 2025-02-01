@@ -3,7 +3,7 @@
     "NAME": "White Magic Hat",
     "FLAVOR": "It is a magic hat owned by Kaitou Kid.",
     "DESCRIPTIONS": [
-      "At the end of your turn, choose #b1 card to #yFlip.",
+      "At the end of your turn, you may choose #b1 card to #yFlip.",
       "Flip"
     ]
   },
@@ -74,7 +74,7 @@
     "NAME": "Rose",
     "FLAVOR": "It is a rose.",
     "DESCRIPTIONS": [
-      "Every time you#yFlip a card, gain #b1 #yCharm."
+      "Every time you #yFlip a card, gain #b1 #yCharm."
     ]
   }
 }

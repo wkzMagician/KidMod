@@ -12,8 +12,11 @@ import java.util.Objects;
 public class PandoraPower extends BasePower {
 		public static final String POWER_ID = "Kid:PandoraPower";
 
-		public PandoraPower(AbstractCreature owner, int amount) {
+		AbstractCard pandoraCard = null;
+
+		public PandoraPower(AbstractCreature owner, int amount, AbstractCard card) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
+				pandoraCard = card;
 		}
 
 		private boolean otherGemInHand() {
@@ -36,18 +39,29 @@ public class PandoraPower extends BasePower {
 			if(isPlayer) {
 				addToBot(new HealAction(owner, owner, this.amount));
 			}
-		}
 
-	@Override
-	public void onDrawOrDiscard() {
-		if(otherGemInHand()) {
-			for (AbstractCard c : AbstractDungeon.player.hand.group) {
-				if (c.cardID.equals("Kid:Pandora")) {
-					// 丢弃
-					addToBot(new DiscardSpecificCardAction(c));
-					break;
+			if(otherGemInHand()) {
+				for (AbstractCard c : AbstractDungeon.player.hand.group) {
+					if (c instanceof GemCard && !Objects.equals(c.cardID, "Kid:Pandora")) {
+						// 丢弃
+						addToBot(new DiscardSpecificCardAction(pandoraCard));
+						break;
+					}
 				}
 			}
 		}
-	}
+
+//	@Override
+//	public void onDrawOrDiscard() {
+//		if(otherGemInHand()) {
+//			for (AbstractCard c : AbstractDungeon.player.hand.group) {
+//				if (c.cardID.equals("Kid:Pandora")) {
+//					// 丢弃
+//					addToBot(new DiscardSpecificCardAction(c));
+//					break;
+//				}
+//			}
+//		}
+//	}
+
 }
