@@ -1,0 +1,18 @@
+{
+  "${modID}:Tutorials": {
+    "TEXT": [
+      "Kaitou Kid is capable of #yFlipping cards. #yFace-down cards are unable to recognize.",
+      "#yWhite #yMagic #yHat, the starting relic, allows you to #yFlip one card per turn. Or you can choose #ynot to #yFlip any card.",
+      "#yGems are special cards that are unplayable. When you draw a Gem, you will get temporary power effect.",
+      "Some #yGems have restrictions. When you disobey the restriction, you will get a penalty, #ydiscarding the Gem automatically."
+    ],
+    "LABEL": [
+      "Next",
+      "Got it",
+      "Flip",
+      "Gem",
+      "(Page: ",
+      ")"
+    ]
+  }
+}

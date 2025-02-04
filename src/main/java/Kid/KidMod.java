@@ -1,5 +1,6 @@
 package Kid;
 
+import Kid.actions.MessageCaller;
 import Kid.potions.BasePotion;
 import Kid.relics.BaseRelic;
 import basemod.AutoAdd;
@@ -9,6 +10,7 @@ import basemod.interfaces.EditCharactersSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
+import basemod.interfaces.OnStartBattleSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import Kid.cards.BaseCard;
 import Kid.character.Kid;
@@ -24,11 +26,15 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.Patcher;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
@@ -43,7 +49,8 @@ public class KidMod implements
         EditRelicsSubscriber,
         EditStringsSubscriber,
         EditKeywordsSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber,
+        OnStartBattleSubscriber {
     public static ModInfo info;
     public static String modID; //Edit your pom.xml to change this
     static { loadModInfo(); }
@@ -61,6 +68,15 @@ public class KidMod implements
         new KidMod();
 
         Kid.Meta.registerColor();
+
+        try {
+            tutorialSave.setProperty("activeTutorial", "true");
+            SpireConfig config = new SpireConfig("KidMod", "KidConfig", tutorialSave);
+            config.save();
+            unseenTutorial = config.getBool("activeTutorial");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public KidMod() {
@@ -132,6 +148,9 @@ public class KidMod implements
                 localizationPath(lang, "RelicStrings.json"));
         BaseMod.loadCustomStringsFile(UIStrings.class,
                 localizationPath(lang, "UIStrings.json"));
+
+        BaseMod.loadCustomStringsFile(TutorialStrings.class,
+                localizationPath(lang, "TutorialStrings.json"));
     }
 
     @Override
@@ -277,5 +296,27 @@ public class KidMod implements
                 BaseMod.addPotion(potion.getClass(), null, null, null, potion.ID, potion.playerClass);
                 //playerClass will make a potion character-specific. By default, it's null and will do nothing.
             });
+    }
+
+    public static boolean unseenTutorial = true;
+    public static Properties tutorialSave = new Properties();
+
+    public static void saveTutorialSeen() throws IOException {
+        SpireConfig config = new SpireConfig("KidMod", "KidConfig", tutorialSave);
+        config.setBool("activeTutorial", false);
+        config.save();
+    }
+
+    public static void saveTutorialUnseen() throws IOException {
+        SpireConfig config = new SpireConfig("KidMod", "KidConfig", tutorialSave);
+        config.setBool("activeTutorial", true);
+        config.save();
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        if (unseenTutorial) {
+            AbstractDungeon.actionManager.addToBottom(new MessageCaller());
+        }
     }
 }
