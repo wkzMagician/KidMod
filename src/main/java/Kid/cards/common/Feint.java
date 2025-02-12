@@ -27,9 +27,9 @@ public class Feint extends KidCard {
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:Feint");
 
 	private static final int DAMAGE = 9;
-	private static final int UPG_DAMAGE = 1;
+	private static final int UPG_DAMAGE = 2;
 
-	private static final int FLIP_AMOUNT = 1;
+	private static final int FLIP_AMOUNT = 2;
 	private static final int UPG_FLIP_AMOUNT = 1;
 
 	public Feint() {

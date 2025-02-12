@@ -28,7 +28,7 @@ public class AlertHint extends KidCard {
 
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:AlertHint");
 
-	private static final int DAMAGE = 4;
+	private static final int DAMAGE = 5;
 	private static final int UPG_DAMAGE = 2;
 
 	private static final int FLIP_AMOUNT = 1;

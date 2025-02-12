@@ -24,7 +24,7 @@ public class CoverUp extends KidCard {
 	public CoverUp() {
 		super(ID, info);
 
-		setEthereal(true);
+		setEthereal(true, false);
 
 		this.cardsToPreview = new FakeGem();
 	}
@@ -33,12 +33,7 @@ public class CoverUp extends KidCard {
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		AbstractCard fakeGem = new FakeGem();
 		addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1)));
-		if(this.upgraded){
-			addToBot(new MakeTempCardInHandAction(fakeGem, 1));
-		}else{
-			addToBot(new MakeTempCardInHandAction(fakeGem, 2));
-		}
-
+		addToBot(new MakeTempCardInHandAction(fakeGem, 2));
 	}
 
 	@Override

@@ -11,13 +11,13 @@ import java.util.ArrayList;
 public class WonderFormPower extends BasePower {
 		public static final String POWER_ID = "Kid:WonderFormPower";
 
-		public WonderFormPower(AbstractCreature owner, int amount) {
-				super(POWER_ID, PowerType.BUFF, false, owner, amount);
+		public WonderFormPower(AbstractCreature owner) {
+				super(POWER_ID, PowerType.BUFF, false, owner, -1);
 		}
 
 		@Override
 		public void updateDescription() {
-			this.description = DESCRIPTIONS[0] + this.amount;
+			this.description = DESCRIPTIONS[0];
 		}
 
 
@@ -43,7 +43,7 @@ public class WonderFormPower extends BasePower {
 
 			this.flash();
 
-			addToBot(new WonderAction(owner, amount));
+			addToBot(new WonderAction(owner));
 
 //			for(AbstractCard c : AbstractDungeon.player.hand.group){
 //				if(c instanceof KidCard && ((KidCard) c).isReverse() && c.costForTurn > 0){

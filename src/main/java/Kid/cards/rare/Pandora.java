@@ -24,7 +24,7 @@ public class Pandora extends GemCard {
 			-2
 	);
 
-	private static final int HEAL_NUM = 2;
+	private static final int HEAL_NUM = 3;
 	private static final int UP_HEAL_NUM = 1;
 
 	public Pandora() {

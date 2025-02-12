@@ -1,5 +1,7 @@
 package Kid.cards.uncommon;
 
+import Kid.actions.ModifyCardCostAction;
+import Kid.actions.RepeatTrickAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
@@ -30,6 +32,8 @@ public class RepeatTrick extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		addToBot(new ModifyCardCostAction(this, 1));
+
 		// ! 将弃牌堆顶的牌打出
 		if(p.discardPile.isEmpty()) return;
 		AbstractCard dc = p.discardPile.getTopCard();
@@ -42,8 +46,8 @@ public class RepeatTrick extends KidCard {
 		c.energyOnUse = 0;
 		AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(c, AbstractDungeon.getRandomMonster(), c.energyOnUse, true, true), true);
 
-		// 将本张手牌能量+1
-		modifyCostForCombat(1);
+//		addToBot(new RepeatTrickAction());
+//		addToBot(new ModifyCardCostAction(this, 1));
 	}
 
 	@Override

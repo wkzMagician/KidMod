@@ -45,9 +45,6 @@ public class Cleanse extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		// ALL ENEMY
-		addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-
 		// 除了力量
 		ArrayList<Integer> strengthPowerAmount = new ArrayList<Integer>();
 		for(AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters){
@@ -63,12 +60,20 @@ public class Cleanse extends KidCard {
 		if(!this.upgraded){
 			// 遍历敌人
 			for(AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters){
-				addToBot(new RemoveAllPowersAction(monster, false));
+				// 敌人没有死亡或逃跑
+				if(!monster.isDeadOrEscaped()){
+					// 清除敌人的所有buff
+					addToBot(new RemoveAllPowersAction(monster, false));
+				}
 			}
 		}else{
 			// 遍历敌人
 			for(AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters){
-				addToBot(new RemoveBuffsAction(monster));
+				// 敌人没有死亡或逃跑
+				if(!monster.isDeadOrEscaped()){
+					// 清除敌人的所有buff
+					addToBot(new RemoveBuffsAction(monster));
+				}
 			}
 		}
 
@@ -76,10 +81,13 @@ public class Cleanse extends KidCard {
 		for(int i = 0; i < AbstractDungeon.getCurrRoom().monsters.monsters.size(); i++){
 			AbstractMonster monster = AbstractDungeon.getCurrRoom().monsters.monsters.get(i);
 			int amount = strengthPowerAmount.get(i);
-			if(amount > 0){
+			if(amount > 0 && !monster.isDeadOrEscaped()){
 				addToBot(new ApplyPowerAction(monster, p, new StrengthPower(monster, amount), amount));
 			}
 		}
+
+		// ALL ENEMY
+		addToBot(new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 	}
 
 	@Override

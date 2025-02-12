@@ -20,25 +20,22 @@ public class Bow extends KidCard {
 			CardType.SKILL,
 			CardRarity.UNCOMMON,
 			CardTarget.SELF,
-			0
+			1
 	);
 
-	private static final int DISCARD = 3;
-	private static final int UPG_DISCARD = -1;
-
-	private static final int CHARM = 5;
+	private static final int CHARM = 7;
+	private static final int UPG_CHARM = 3;
 
 	public Bow() {
 		super(ID, info);
 
-		setMagic(DISCARD, UPG_DISCARD);
+		setMagic(CHARM, UPG_CHARM);
 	}
 
 	@Override
-	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new DiscardAction(p, p, this.magicNumber, false));
+	public void use(AbstractPlayer p, AbstractMonster m) {;
 		// 获得魅力
-		addToBot(new ApplyPowerAction(p, p, new CharmPower(p, CHARM), CHARM));
+		addToBot(new ApplyPowerAction(p, p, new CharmPower(p, this.magicNumber), this.magicNumber));
 	}
 
 	@Override

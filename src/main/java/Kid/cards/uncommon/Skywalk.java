@@ -20,7 +20,7 @@ public class Skywalk extends KidCard {
 			2
 	);
 
-	private static final int BLOCK = 10;
+	private static final int BLOCK = 12;
 	private static final int UPG_BLOCK = 2;
 
 	// 预见

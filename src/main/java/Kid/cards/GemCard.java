@@ -104,4 +104,13 @@ public abstract class GemCard extends KidCard {
 	public void triggerOnManualDiscard() {
 		addToTop(new TriggerRestitutionPowerAction(AbstractDungeon.player, AbstractDungeon.player));
 	}
+
+	@Override
+	public GemCard makeStatEquivalentCopy() {
+		KidCard copy = super.makeStatEquivalentCopy();
+		if(this.hasPower){
+			((GemCard) copy).addPower();
+		}
+		return (GemCard) copy;
+	}
 }

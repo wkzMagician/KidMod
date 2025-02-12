@@ -18,7 +18,7 @@ public class PokerFace extends KidCard {
 			0
 	);
 
-	private static final int BLOCK = 10;
+	private static final int BLOCK = 12;
 	private static final int UPG_BLOCK = 4;
 
 	public PokerFace() {
@@ -30,7 +30,7 @@ public class PokerFace extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		for (AbstractCard c : p.hand.group) {
-			if(c == this) continue;
+//			if(c == this) continue;
 			if (c instanceof KidCard && !((KidCard) c).isReverse()) {
 				return;
 			}

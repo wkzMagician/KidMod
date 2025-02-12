@@ -25,9 +25,9 @@ public class CardTrick extends KidCard {
 
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:CardTrick");
 
-	private static final int BASE_DAMAGE = 8;
+	private static final int BASE_DAMAGE = 12;
 
-	private static final int INCREASE_DAMAGE = 2;
+	private static final int INCREASE_DAMAGE = 1;
 	private static final int UPGRADE_INCREASE_DAMAGE = 1;
 
 	public CardTrick() {

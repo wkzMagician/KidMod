@@ -22,7 +22,7 @@ public class FancyAct extends KidCard {
 			CardType.SKILL,
 			CardRarity.UNCOMMON,
 			CardTarget.ENEMY,
-			3
+			2
 	);
 
 
@@ -31,7 +31,7 @@ public class FancyAct extends KidCard {
 		super(ID, info);
 
 		// 升级后cost变为2
-		setCostUpgrade(2);
+		setCostUpgrade(1);
 
 		// 打出后消耗
 		setExhaust(true);

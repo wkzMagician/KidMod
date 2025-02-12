@@ -23,6 +23,7 @@ public class LoopholeDetection extends KidCard {
 	public LoopholeDetection() {
 		super(ID, info);
 
+		this.isActual = true;
 		setCostUpgrade(0);
 	}
 

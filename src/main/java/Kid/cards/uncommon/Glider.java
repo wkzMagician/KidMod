@@ -20,7 +20,7 @@ public class Glider extends KidCard {
 			1
 	);
 
-	private static final int MAGIC = 4;
+	private static final int MAGIC = 5;
 	private static final int UPG_MAGIC = 2;
 
 	public Glider() {

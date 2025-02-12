@@ -4,6 +4,7 @@ import Kid.actions.UnflipCardInDrawPileAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -35,6 +36,7 @@ public class DeckInsight extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
+		addToBot(new GainBlockAction(p, block));
 		if(this.upgraded) {
 			addToBot(new UnflipCardInDrawPileAction(p, p, magicNumber));
 		}

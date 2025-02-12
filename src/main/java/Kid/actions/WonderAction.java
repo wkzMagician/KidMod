@@ -15,16 +15,15 @@ import Kid.cards.KidCard;
 public class WonderAction extends AbstractGameAction {
 	private AbstractPlayer p;
 
-	public WonderAction(AbstractCreature source, int amount) {
-		setValues((AbstractCreature)AbstractDungeon.player, source, amount);
+	public WonderAction(AbstractCreature source) {
+		setValues((AbstractCreature)AbstractDungeon.player, source, -1);
 		this.actionType = ActionType.POWER;
 	}
 
 	public void update() {
 		for(AbstractCard c : AbstractDungeon.player.hand.group){
 			if(c instanceof KidCard && ((KidCard) c).isReverse() && c.costForTurn > 0){
-				int reduceEnergyAmount = Math.min(c.costForTurn, amount);
-				c.setCostForTurn(c.costForTurn - reduceEnergyAmount);
+				c.setCostForTurn(0);
 			}
 		}
 

@@ -49,7 +49,7 @@
   "${modID}:LoopholeDetectionPower": {
     "NAME": "Loophole Detection",
     "DESCRIPTIONS": [
-      "#yMark the card with the highest cost in your hand."
+      "#yMark all BASIC cards."
     ]
   },
   "${modID}:MasterThiefPower": {
@@ -130,7 +130,7 @@
   "${modID}:WonderFormPower": {
     "NAME": "Wonder Form",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of all Kid:Face-down cards in your hand by #b"
+      "At the start of your turn, all Kid:Face-down cards in your hand cost #b0 ."
     ]
   },
   "${modID}:DisguisePower": {

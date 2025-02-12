@@ -1,5 +1,6 @@
 package Kid.cards.rare;
 
+import Kid.actions.DrawAndFlipToBackAction;
 import Kid.actions.FlipCardDrawAction;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
@@ -24,11 +25,14 @@ public class OmnipotentPocket extends KidCard {
 	public OmnipotentPocket() {
 		super(ID, info);
 		setCostUpgrade(0);
+		setInnate(true);
+		setExhaust(true);
 	}
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new FlipCardDrawAction(10 - p.hand.size()));
+//		addToBot(new FlipCardDrawAction(10 - p.hand.size()));
+		addToBot(new DrawAndFlipToBackAction(10 - p.hand.size() + 1));
 	}
 
 	@Override

@@ -27,8 +27,8 @@ public class ArmsCarry extends KidCard {
 			3
 	);
 
-	private static final int DAMAGE = 18;
-	private static final int UPG_DAMAGE = 6;
+	private static final int DAMAGE = 16;
+	private static final int UPG_DAMAGE = 5;
 
 	public ArmsCarry() {
 		super(ID, info);

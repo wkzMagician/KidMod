@@ -53,7 +53,7 @@
     "NAME": "Monocle",
     "FLAVOR": "It is a monocle.",
     "DESCRIPTIONS": [
-      "#yBasic cards that are #yFace-down can be seen normally."
+      "#yRarity of #yFace-down cards can be seen normally."
     ]
   },
   "${modID}:LilyLock": {

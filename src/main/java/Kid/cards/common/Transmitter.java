@@ -3,7 +3,6 @@ package Kid.cards.common;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,6 +30,7 @@ public class Transmitter extends KidCard {
 		setCostUpgrade(0);
 
 		setExhaust(true);
+		setSelfRetain(true);
 	}
 
 	@Override

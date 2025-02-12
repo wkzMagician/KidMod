@@ -2,6 +2,7 @@ package Kid.powers;
 import Kid.cards.KidCard;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,47 +16,28 @@ public class LoopholeDetectionPower extends BasePower {
 		public LoopholeDetectionPower(AbstractCreature owner, int amount) {
 				super(POWER_ID, PowerType.BUFF, false, owner, amount);
 
-				this.remark();
+//				this.remark();
+
+			// 标记所有牌堆中的BASIC卡牌
+			for(AbstractCard c : AbstractDungeon.player.drawPile.group){
+				if(c instanceof KidCard && c.rarity == AbstractCard.CardRarity.BASIC){
+					((KidCard)c).setMarked(true);
+				}
+			}
+			for(AbstractCard c : AbstractDungeon.player.discardPile.group){
+				if(c instanceof KidCard && c.rarity == AbstractCard.CardRarity.BASIC){
+					((KidCard)c).setMarked(true);
+				}
+			}
+			for(AbstractCard c : AbstractDungeon.player.hand.group){
+				if(c instanceof KidCard && c.rarity == AbstractCard.CardRarity.BASIC){
+					((KidCard)c).setMarked(true);
+				}
+			}
 		}
 
 		@Override
 		public void updateDescription() {
 			this.description = DESCRIPTIONS[0];
-		}
-
-		// 首次检测
-		private void remark() {
-				if(markedCard != null) {
-//					markedCard.glowColor = new Color(0.2F, 0.9F, 1.0F, 0.25F);
-					if(markedCard instanceof KidCard){
-						((KidCard)markedCard).setMarked(false);
-					}
-				}
-				markedCard = null;
-
-				int maxCost = 0;
-
-				// 遍历手牌
-				for (AbstractCard c : AbstractDungeon.player.hand.group) {
-					// 找到最大费用
-					if (c.costForTurn > maxCost) {
-						maxCost = c.costForTurn;
-						markedCard = c;
-					}
-				}
-
-				// 高亮
-				if (markedCard != null) {
-//					markedCard.glowColor = Color.GOLD.cpy();
-//					markedCard.glowColor = new Color(1.0F, 0.0F, 0.0F, 0.25F);
-					if(markedCard instanceof KidCard){
-						((KidCard)markedCard).setMarked(true);
-					}
-				}
-		}
-
-		@Override
-		public void onDrawOrDiscard() {
-			remark();
 		}
 }

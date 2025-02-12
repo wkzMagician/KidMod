@@ -35,7 +35,7 @@ public class Curtsy extends KidCard {
 
 		int count = 0;
 		for(AbstractCard c : AbstractDungeon.player.hand.group) {
-			if(c == this) continue;
+//			if(c == this) continue;
 			if(c instanceof KidCard && ((KidCard) c).isReverse()) {
 				count++;
 			}

@@ -24,7 +24,7 @@ public class PhantomSteal extends KidCard {
 	);
 
 	static private final int DAMAGE = 15;
-	static private final int UPG_DAMAGE = 20;
+	static private final int UPG_DAMAGE = 5;
 
 	public PhantomSteal() {
 		super(ID, info);

@@ -49,7 +49,7 @@
   "${modID}:LoopholeDetectionPower": {
     "NAME": "漏洞探测",
     "DESCRIPTIONS": [
-      "#y标记 你手中费用最高的卡牌。"
+      "#y标记 所有的 普通 卡牌。"
     ]
   },
   "${modID}:MasterThiefPower": {
@@ -130,7 +130,7 @@
   "${modID}:WonderFormPower": {
     "NAME": "奇迹形态",
     "DESCRIPTIONS": [
-      "每回合开始时，你手中的 kid:反面 牌本回合 [E] 减 #b"
+      "每回合开始时，你手中的 kid:反面 牌本回合耗能为 #b0 。"
     ]
   },
   "${modID}:DisguisePower": {

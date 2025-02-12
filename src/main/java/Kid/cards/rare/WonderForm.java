@@ -28,7 +28,7 @@ public class WonderForm extends KidCard {
 
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
-		addToBot(new ApplyPowerAction(p, p, new WonderFormPower(p, 1), 1));
+		addToBot(new ApplyPowerAction(p, p, new WonderFormPower(p)));
 	}
 
 	@Override

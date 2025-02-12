@@ -6,6 +6,7 @@ import static Kid.util.TextureLoader.getCardTextureString;
 import Kid.actions.TriggerFlipPowerAction;
 import Kid.powers.CharmPower;
 import Kid.powers.ElfLipsPower;
+import Kid.powers.LoopholeDetectionPower;
 import Kid.util.CardStats;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -83,15 +84,16 @@ public abstract class KidCard extends BaseCard {
 //				cost = -2;
 
 				boolean hasRelic = AbstractDungeon.player.hasRelic("Kid:Monocle");
+				boolean hasPower = AbstractDungeon.player.hasPower(LoopholeDetectionPower.POWER_ID);
 
-				if(!isMarked && !(hasRelic && this.rarity == CardRarity.BASIC)){
+				if(!isMarked && !(hasPower && this.rarity == CardRarity.BASIC)) {
 					this.isSeen = false;
 
 //				// 将卡片名字设为"???"
 					name = "???";
 
 					// 如果有ElfLipsPower，不会隐藏稀有度
-					if(!AbstractDungeon.player.hasPower(ElfLipsPower.POWER_ID)){
+					if(!hasRelic) {
 						rarity = CardRarity.SPECIAL;
 					}
 				}
@@ -129,15 +131,14 @@ public abstract class KidCard extends BaseCard {
 	public void setMarked(boolean marked) {
 		this.isMarked = marked;
 		if(this.isReverse()){
-			if(!isMarked) {
-				boolean hasRelic = AbstractDungeon.player.hasRelic("Kid:Monocle");
-				if(!(hasRelic && this.rarity == CardRarity.BASIC)){
-					this.isSeen = false;
-					name = "???";
-					// 如果有ElfLipsPower，不会隐藏稀有度
-					if(!AbstractDungeon.player.hasPower(ElfLipsPower.POWER_ID)){
-						rarity = CardRarity.SPECIAL;
-					}
+			boolean hasRelic = AbstractDungeon.player.hasRelic("Kid:Monocle");
+			boolean hasPower = AbstractDungeon.player.hasPower(LoopholeDetectionPower.POWER_ID);
+			if(!isMarked && !(hasPower && this.rarity == CardRarity.BASIC)) {
+				this.isSeen = false;
+				name = "???";
+				// 如果有ElfLipsPower，不会隐藏稀有度
+				if(!hasRelic) {
+					rarity = CardRarity.SPECIAL;
 				}
 				loadCardImage(getCardTextureString("default", type));
 			} else {
@@ -176,7 +177,9 @@ public abstract class KidCard extends BaseCard {
 	@Override
 	public KidCard makeStatEquivalentCopy() {
 			KidCard card = (KidCard) super.makeStatEquivalentCopy();
-			card.isFlipped = this.isFlipped;
+			card.isActual = this.isActual;
+			card.setFlipped(this.isFlipped);
+			card.setMarked(this.isMarked);
 			return card;
 	}
 

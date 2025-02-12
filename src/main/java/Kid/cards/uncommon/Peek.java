@@ -32,6 +32,7 @@ public class Peek extends KidCard {
 	public Peek() {
 		super(ID, info);
 
+		setExhaust(true);
 		setMagic(2, 1);
 	}
 
@@ -42,28 +43,28 @@ public class Peek extends KidCard {
 		// 造成伤害
 		addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AttackEffect.SLASH_DIAGONAL));
 
-		// 清除魅力
-		// 如果有DisguisePower，不清除
-		if(p.hasPower("Kid:DisguisePower")) {
-			// 获取DisguisePower
-			DisguisePower dis_power = (DisguisePower) p.getPower("Kid:DisguisePower");
-			// 如果DisguisePower的amount大于0
-			if(dis_power.amount > 0) {
-				// 减少DisguisePower的amount
-				dis_power.amount--;
-				// 更新DisguisePower的描述
-				dis_power.updateDescription();
-
-				if(dis_power.amount <= 0) {
-					addToBot(new RemoveSpecificPowerAction(p, p, dis_power));
-				}
-			}
-		}else{
-			// 如果没有DisguisePower，清除CharmPower
-			if(p.hasPower("Kid:CharmPower")) {
-				addToBot(new RemoveSpecificPowerAction(p, p, "Kid:CharmPower"));
-			}
-		}
+//		// 清除魅力
+//		// 如果有DisguisePower，不清除
+//		if(p.hasPower("Kid:DisguisePower")) {
+//			// 获取DisguisePower
+//			DisguisePower dis_power = (DisguisePower) p.getPower("Kid:DisguisePower");
+//			// 如果DisguisePower的amount大于0
+//			if(dis_power.amount > 0) {
+//				// 减少DisguisePower的amount
+//				dis_power.amount--;
+//				// 更新DisguisePower的描述
+//				dis_power.updateDescription();
+//
+//				if(dis_power.amount <= 0) {
+//					addToBot(new RemoveSpecificPowerAction(p, p, dis_power));
+//				}
+//			}
+//		}else{
+//			// 如果没有DisguisePower，清除CharmPower
+//			if(p.hasPower("Kid:CharmPower")) {
+//				addToBot(new RemoveSpecificPowerAction(p, p, "Kid:CharmPower"));
+//			}
+//		}
 	}
 
 	@Override

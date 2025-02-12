@@ -1,12 +1,6 @@
 package Kid.powers;
-import Kid.cards.KidCard;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.MeditateAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class ScoutPower extends BasePower {
 		public static final String POWER_ID = "Kid:ScoutPower";

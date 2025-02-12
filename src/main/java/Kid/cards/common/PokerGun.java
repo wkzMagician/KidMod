@@ -27,7 +27,7 @@ public class PokerGun extends KidCard {
 
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:PokerGun");
 
-	private static final int DAMAGE_PER_CARD = 5;
+	private static final int DAMAGE_PER_CARD = 6;
 	private static final int UPGRADE_DAMAGE = 2;
 
 	public PokerGun() {

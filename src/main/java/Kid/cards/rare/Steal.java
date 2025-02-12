@@ -4,9 +4,7 @@ import Kid.cards.GemCard;
 import Kid.cards.KidCard;
 import Kid.character.Kid;
 import Kid.util.CardStats;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import Kid.actions.MySelectCardsAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -37,7 +35,7 @@ public class Steal extends KidCard {
 	@Override
 	public void use(AbstractPlayer p, AbstractMonster m) {
 		// 选择抽牌堆中的1张宝石牌加入手牌
-		addToBot(new SelectCardsAction(p.drawPile.group, magicNumber, cardStrings.EXTENDED_DESCRIPTION[0],
+		addToBot(new MySelectCardsAction(p.drawPile.group, magicNumber, cardStrings.EXTENDED_DESCRIPTION[0],
 				false,  c -> c instanceof GemCard, list -> {
 			System.out.println(list.size());
 

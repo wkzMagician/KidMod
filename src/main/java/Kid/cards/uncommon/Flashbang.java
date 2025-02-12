@@ -25,7 +25,8 @@ public class Flashbang extends KidCard {
 
 	public Flashbang() {
 		super(ID, info);
-		setExhaust(true, false);
+		setExhaust(true);
+		setCostUpgrade(0);
 		this.isActual = true;
 	}
 

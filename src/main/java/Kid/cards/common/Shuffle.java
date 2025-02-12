@@ -22,13 +22,13 @@ public class Shuffle extends KidCard {
 			CardType.SKILL,
 			CardRarity.COMMON,
 			CardTarget.SELF,
-			1
+			0
 	);
 
 	public Shuffle() {
 		super(ID, info);
 
-		setCostUpgrade(0);
+		setExhaust(true, false);
 	}
 
 	@Override

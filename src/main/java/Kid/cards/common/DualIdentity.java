@@ -35,10 +35,10 @@ public class DualIdentity extends KidCard {
 
 	private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings("Kid:DualIdentity");
 
-	private static final int DAMAGE = 11;
+	private static final int DAMAGE = 10;
 	private static final int UPG_DAMAGE = 3;
 
-	private static final int BLOCK = 9;
+	private static final int BLOCK = 8;
 	private static final int UPG_BLOCK = 3;
 
 	public DualIdentity() {

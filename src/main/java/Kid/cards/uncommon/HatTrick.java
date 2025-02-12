@@ -17,12 +17,12 @@ public class HatTrick extends KidCard {
 			CardType.POWER,
 			CardRarity.UNCOMMON,
 			CardTarget.SELF,
-			2
+			1
 	);
 
 	private static final int MAGIC = 30;
 //	private static final int UPG_MAGIC = 10;
-	private static final int UPG_MAGIC = 0;
+	private static final int UPG_MAGIC = 10;
 
 	public HatTrick() {
 		super(ID, info);

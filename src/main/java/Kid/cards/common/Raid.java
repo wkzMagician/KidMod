@@ -21,7 +21,7 @@ public class Raid extends KidCard {
 			1
 	);
 
-	private static final int ATTACK_DMG = 8;
+	private static final int ATTACK_DMG = 9;
 	private static final int UPG_ATTACK_DMG = 3;
 
 	public Raid() {

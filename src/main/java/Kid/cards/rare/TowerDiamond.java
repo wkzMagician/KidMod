@@ -26,13 +26,14 @@ public class TowerDiamond extends GemCard {
 	);
 
 	private static final int STRENGTH = 1;
+	private static final int UPG_STRENGTH = 1;
 
 	public TowerDiamond() {
 		super(ID, info);
 
-		setSelfRetain(false, true);
+		setSelfRetain(true);
 
-		setMagic(STRENGTH);
+		setMagic(STRENGTH, UPG_STRENGTH);
 	}
 
 	@Override

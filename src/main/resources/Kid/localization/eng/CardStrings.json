@@ -30,7 +30,10 @@
   },
   "${modID}:FaceMask": {
     "NAME": "Face Mask",
-    "DESCRIPTION": "Gain !B! Block. NL Kid:Flip 3 random cards to Kid:Face-down ."
+    "DESCRIPTION": "Kid:Actual. NL Gain !B! Block. NL You may choose to Kid:Flip !M! cards in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Flip"
+    ]
   },
   "${modID}:Feint": {
     "NAME": "Feint",
@@ -45,7 +48,8 @@
   },
   "${modID}:Shuffle": {
     "NAME": "Shuffle",
-    "DESCRIPTION": "Kid:Flip all cards in your hand."
+    "DESCRIPTION": "Kid:Flip all cards in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Kid:Flip all cards in your hand."
   },
   "${modID}:DeckInsight": {
     "NAME": "Deck Insight",
@@ -119,12 +123,12 @@
   },
   "${modID}:OmnipotentPocket": {
     "NAME": "Omnipotent Pocket",
-    "DESCRIPTION": "Draw until your hand is full or draw a Kid:Face-up card."
+    "DESCRIPTION": "Innate. NL Draw until your hand is full and Kid:Flip them to Kid:Face-down. NL Exhaust."
   },
   "${modID}:Prepare": {
     "NAME": "Prepare",
-    "DESCRIPTION": "Kid:Actual. NL Gain !B! blocks. NL Shuffle a *miracle into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! blocks. NL Shuffle a *miracle+ into your draw pile."
+    "DESCRIPTION": "Kid:Actual. NL Gain !B! blocks. NL Shuffle a *Miracle into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! blocks. NL Shuffle a *Miracle+ into your draw pile."
   },
   "${modID}:Sneak": {
     "NAME": "Sneak",
@@ -164,8 +168,7 @@
   },
   "${modID}:Flashbang": {
     "NAME": "Flashbang",
-    "DESCRIPTION": "Kid:Actual. NL Set all hand cards to Kid:Face-up. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Kid:Actual. NL Set all hand cards to Kid:Face-up."
+    "DESCRIPTION": "Kid:Actual. NL Set all hand cards to Kid:Face-up. NL Exhaust."
   },
   "${modID}:HeartfeltApologies": {
     "NAME": "Heartfelt Apologies",
@@ -185,34 +188,34 @@
   },
   "${modID}:Peek": {
     "NAME": "Peek",
-    "DESCRIPTION": "Deal damage equal to !M! times the Kid:Charm you have. NL Remove all Kid:Charm.",
+    "DESCRIPTION": "Deal damage equal to !M! times the Kid:Charm you have. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "(Deal ",
+      " NL (Deal ",
       " damage.)"
     ]
   },
   "${modID}:CoverUp": {
     "NAME": "Cover-Up",
     "DESCRIPTION": "Gain 1 Intangible. NL Add 2 *FakeGem to your hand. NL Ethereal.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Add 1 *FakeGem to your hand. NL Ethereal."
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Add 2 *FakeGem to your hand."
   },
   "${modID}:WhiteCloak": {
     "NAME": "White Cloak",
-    "DESCRIPTION": "Kid:Actual. NL Gain !B! block. NL You may choose to Kid:Flip !M! cards in your hand.",
+    "DESCRIPTION": "Discard any number of Kid:Face-down cards. NL Gain !B! Block for each card discarded.",
     "EXTENDED_DESCRIPTION": [
-      "Flip"
+      "discard"
     ]
   },
   "${modID}:Transmitter": {
     "NAME": "Transmitter",
-    "DESCRIPTION": "Kid:Actual. NL Kid:Mark a card in your hand. NL Exhaust.",
+    "DESCRIPTION": "Kid:Actual. NL Retain. NL Kid:Mark a card in your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Mark"
     ]
   },
   "${modID}:LoopholeDetection": {
     "NAME": "Loophole Detection",
-    "DESCRIPTION": "Kid:Mark the card with the highest energy cost in your hand."
+    "DESCRIPTION": "kid:Actual. NL Kid:Mark all BASIC cards."
   },
   "${modID}:PupilOfMoon": {
     "NAME": "Pupil of Moon",
@@ -247,8 +250,7 @@
   },
   "${modID}:ElfLips": {
     "NAME": "Elf Lips",
-    "DESCRIPTION": "Unplayable. NL Retain. NL Display Kid:Face-down cards' rarity. NL Discard when you play a Kid:Face-up card.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL Display Kid:Face-down cards' rarity."
+    "DESCRIPTION": "Unplayable. NL Retain. NL When you draw a card whose cost is larger or equal than 2, kid:Mark this card."
   },
   "${modID}:Vanish": {
     "NAME": "Vanish",
@@ -276,8 +278,8 @@
   },
   "${modID}:WonderForm": {
     "NAME": "Wonder Form",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, reduce the cost of all Kid:Face-down cards in your hand by 1 in this turn.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, reduce the cost of all Kid:Face-down cards in your hand by 1 in this turn."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, all Kid:Face-down cards in your hand cost 0 in this turn.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, all Kid:Face-down cards in your hand cost 0 in this turn."
   },
   "${modID}:DualIdentity": {
     "NAME": "Dual Identity",
@@ -332,8 +334,7 @@
   },
   "${modID}:TowerDiamond": {
     "NAME": "Tower Diamond",
-    "DESCRIPTION": "Unplayable. NL Gain !M! temporary Strength for each time this card is Kid:Flipped in this turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Gain !M! temporary Strength for each time this card is Kid:Flipped in this turn. NL Retain."
+    "DESCRIPTION": "Unplayable. NL Retain. NL Gain !M! temporary Strength for each time this card is Kid:Flipped in this turn."
   },
   "${modID}:FakeGem": {
     "NAME": "Fake Gem",
@@ -378,7 +379,7 @@
   },
   "${modID}:Bow": {
     "NAME": "Bow",
-    "DESCRIPTION": "Discard !M! cards. NL Gain 5 Kid:Charm."
+    "DESCRIPTION": "Gain !M! Kid:Charm."
   },
   "${modID}:Ingratiate": {
     "NAME": "Ingratiate",
@@ -386,8 +387,8 @@
   },
   "${modID}:Reason": {
     "NAME": "Reason",
-    "DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the same card as the chosen card, gain [E] .",
-    "UPGRADE_DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the same card as the chosen card, gain [E] [E] .",
+    "DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the same card as the chosen card, gain [E] [E] .",
+    "UPGRADE_DESCRIPTION": "Choose 1 card in your deck. NL If the next kid:Face-down card you play is the same card as the chosen card, gain [E] [E] [E] .",
     "EXTENDED_DESCRIPTION": [
       "Choose"
     ]
