@@ -43,7 +43,9 @@
     "NAME": "帽子戏法",
     "DESCRIPTIONS": [
       "如果你在一个回合中打出3张相同的卡牌，对所有敌人造成 ",
-      " 点伤害。"
+      " 点伤害。",
+      " 你已经打出了",
+      "张"
     ]
   },
   "${modID}:LoopholeDetectionPower": {

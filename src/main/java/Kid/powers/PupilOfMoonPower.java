@@ -47,6 +47,9 @@ public class PupilOfMoonPower extends BasePower {
 
 		if(damageAmount <= 0 ) return;
 
+		// 对象不是玩家
+		if(target == AbstractDungeon.player) return;
+
 		// 遍历手牌
 		for (AbstractCard c : AbstractDungeon.player.hand.group) {
 			if (c.cardID.equals("Kid:PupilOfMoon")) {

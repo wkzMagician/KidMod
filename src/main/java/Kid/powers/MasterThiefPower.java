@@ -53,9 +53,9 @@ public class MasterThiefPower extends BasePower {
 			for (int i = 0; i < this.amount; i++) {
 				// 随机
 				int random_idx = AbstractDungeon.cardRandomRng.random(cards.length - 1);
-				AbstractCard card = cards[random_idx].makeCopy();
+				GemCard card = (GemCard) cards[random_idx].makeCopy();
+				card.hasPower = true;
 				addToBot(new MakeTempCardInHandAction(card));
-				((GemCard) card).addPower();
 			}
 		}
 }

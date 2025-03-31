@@ -160,7 +160,7 @@
   },
   "${modID}:Cardistry": {
     "NAME": "Cardistry",
-    "DESCRIPTION": "Costs 1 less [E] for each time this card is Kid:Flipped in this turn. NL Deal !D! damage 3 times."
+    "DESCRIPTION": "Costs 1 less [E] for each time this card is Kid:Flipped in this combat. NL Deal !D! damage 3 times."
   },
   "${modID}:MindMagic": {
     "NAME": "Mind Magic",
@@ -168,7 +168,7 @@
   },
   "${modID}:Flashbang": {
     "NAME": "Flashbang",
-    "DESCRIPTION": "Kid:Actual. NL Set all hand cards to Kid:Face-up. NL Exhaust."
+    "DESCRIPTION": "Kid:Actual. NL Retain. NL Set all hand cards to Kid:Face-up. NL Exhaust."
   },
   "${modID}:HeartfeltApologies": {
     "NAME": "Heartfelt Apologies",
@@ -291,7 +291,8 @@
   },
   "${modID}:Restitution": {
     "NAME": "Restitution",
-    "DESCRIPTION": "Whenever you discard a Kid:Gem, deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you discard a Kid:Gem, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Whenever you discard a Kid:Gem, draw !M! cards."
   },
   "${modID}:Steal": {
     "NAME": "Steal",
@@ -334,7 +335,7 @@
   },
   "${modID}:TowerDiamond": {
     "NAME": "Tower Diamond",
-    "DESCRIPTION": "Unplayable. NL Retain. NL Gain !M! temporary Strength for each time this card is Kid:Flipped in this turn."
+    "DESCRIPTION": "Unplayable. NL Retain. NL Gain !M! Strength for each time this card is Kid:Flipped."
   },
   "${modID}:FakeGem": {
     "NAME": "Fake Gem",

@@ -54,11 +54,11 @@ public class TowerDiamond extends GemCard {
 				magicNumber
 		));
 
-		addToBot(new ApplyPowerAction(
-				AbstractDungeon.player,
-				AbstractDungeon.player,
-				new LoseStrengthPower(AbstractDungeon.player, magicNumber),
-				magicNumber
-		));
+//		addToBot(new ApplyPowerAction(
+//				AbstractDungeon.player,
+//				AbstractDungeon.player,
+//				new LoseStrengthPower(AbstractDungeon.player, magicNumber),
+//				magicNumber
+//		));
 	}
 }

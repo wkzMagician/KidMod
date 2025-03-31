@@ -28,6 +28,8 @@ public class Flashbang extends KidCard {
 		setExhaust(true);
 		setCostUpgrade(0);
 		this.isActual = true;
+
+		setSelfRetain(true);
 	}
 
 	@Override

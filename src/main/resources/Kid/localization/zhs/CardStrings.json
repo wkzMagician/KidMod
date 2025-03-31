@@ -160,7 +160,7 @@
   },
   "${modID}:Cardistry": {
     "NAME": "花切",
-    "DESCRIPTION": "本回合每 kid:翻转 这张卡牌，减少 1 点 [E] 。 NL 造成 !D! 点伤害 3 次。"
+    "DESCRIPTION": "本场战斗每 kid:翻转 这张卡牌，减少 1 点 [E] 。 NL 造成 !D! 点伤害 3 次。"
   },
   "${modID}:MindMagic": {
     "NAME": "心灵魔术",
@@ -168,7 +168,7 @@
   },
   "${modID}:Flashbang": {
     "NAME": "闪光弹",
-    "DESCRIPTION": " kid:真相 。 NL 将所有手牌 kid:翻转 至 kid:正面 。 NL 消耗 。"
+    "DESCRIPTION": "kid:真相 。 NL 保留 。 NL 将所有手牌 kid:翻转 至 kid:正面 。 NL 消耗 。"
   },
   "${modID}:HeartfeltApologies": {
     "NAME": "真诚歉意",
@@ -215,7 +215,7 @@
   },
   "${modID}:LoopholeDetection": {
     "NAME": "漏洞探测",
-    "DESCRIPTION": "Kid:真相 。 NL kid:标记 所有的 普通 卡牌。"
+    "DESCRIPTION": "kid:真相 。 NL kid:标记 所有的 初始 卡牌。"
   },
   "${modID}:PupilOfMoon": {
     "NAME": "月之瞳",
@@ -291,7 +291,8 @@
   },
   "${modID}:Restitution": {
     "NAME": "归还赃物",
-    "DESCRIPTION": "每当你丢弃一张 kid:宝石 时，对一个随机敌人造成 !M! 点伤害。"
+    "DESCRIPTION": "每当你丢弃一张 kid:宝石 时，抽 !M! 张牌。",
+    "UPGRADE_DESCRIPTION": "每当你丢弃一张 kid:宝石 时，抽 !M! 张牌。"
   },
   "${modID}:Steal": {
     "NAME": "窃取",
@@ -334,7 +335,7 @@
   },
   "${modID}:TowerDiamond": {
     "NAME": "钟塔钻石",
-    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 本回合每 kid:翻转 这张卡牌，获得 !M! 点临时 力量 。"
+    "DESCRIPTION": " 不能被打出 。 NL 保留 。 NL 每 kid:翻转 这张卡牌，获得 !M! 点 力量 。"
   },
   "${modID}:FakeGem": {
     "NAME": "假宝石",

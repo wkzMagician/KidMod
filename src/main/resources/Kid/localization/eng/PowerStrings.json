@@ -43,7 +43,9 @@
     "NAME": "Hat Trick",
     "DESCRIPTIONS": [
       "If you play 3 same cards in a turn, deal ",
-      " damage to all enemies."
+      " damage to all enemies.",
+      " You have played ",
+      " "
     ]
   },
   "${modID}:LoopholeDetectionPower": {

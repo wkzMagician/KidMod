@@ -52,6 +52,6 @@ public class Cardistry extends KidCard {
 		super.triggerOnFlip();
 
 		// 每次翻转时，费用减1
-		this.costForTurn = Math.max(0, this.costForTurn - 1);
+		this.modifyCostForCombat(-1);
 	}
 }

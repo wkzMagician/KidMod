@@ -20,12 +20,11 @@ public class Restitution extends KidCard {
 			1
 	);
 
-	private static final int MAGIC_NUM = 8;
-	private static final int UP_MAGIC_NUM = 4;
+	private static final int MAGIC_NUM = 1;
+	private static final int UP_MAGIC_NUM = 1;
 
 	public Restitution() {
 		super(ID, info);
-
 		setMagic(MAGIC_NUM, UP_MAGIC_NUM);
 	}
 

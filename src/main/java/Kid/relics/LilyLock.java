@@ -59,7 +59,7 @@ public class LilyLock extends BaseRelic {
 			// 把一张随机宝石牌加入手牌
 			int random_idx = AbstractDungeon.cardRandomRng.random(cards.length - 1);
 			GemCard card = (GemCard) cards[random_idx].makeCopy();
-			card.addPower();
+			card.hasPower = true;
 
 			this.addToBot(new MakeTempCardInHandAction(card));
 		}

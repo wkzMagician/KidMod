@@ -32,7 +32,7 @@ public class BlueBirthday extends GemCard {
 	private static final int ENERGY_NUM = 1;
 
 	private static final int PLAY_NUM = 4;
-	private static final int UP_PLAY_NUM = 1;
+	private static final int UP_PLAY_NUM = 2;
 
 	private int cardPlayed = 0;
 

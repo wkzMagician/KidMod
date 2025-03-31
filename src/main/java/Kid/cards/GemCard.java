@@ -17,7 +17,7 @@ public abstract class GemCard extends KidCard {
 	// 宝石牌：一般无法打出
 	// 需要重写其onDiscard以及onDraw方法,onExhaust方法
 
-	protected boolean hasPower = false;
+	public boolean hasPower = false;
 
 	// 构造方法
 	public GemCard(String id, CardStats stats) {

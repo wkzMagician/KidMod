@@ -1,6 +1,7 @@
 package Kid.powers;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.DamageInfo.DamageType;
@@ -21,6 +22,7 @@ public class RestitutionPower extends BasePower {
 
 		public void onDiscardGem() {
 			this.flash();
-			addToBot(new DamageRandomEnemyAction(new DamageInfo(this.owner, this.amount, DamageType.NORMAL), AttackEffect.FIRE));
+//			addToBot(new DamageRandomEnemyAction(new DamageInfo(this.owner, this.amount, DamageType.NORMAL), AttackEffect.FIRE));
+			addToBot(new DrawCardAction(this.amount));
 		}
 }

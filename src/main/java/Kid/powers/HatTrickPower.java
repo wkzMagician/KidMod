@@ -13,20 +13,22 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 public class HatTrickPower extends BasePower {
 		public static final String POWER_ID = "Kid:HatTrickPower";
 
-		private int damage;
+		private int count;
 
 		private AbstractCard firstCard;
 
 		public HatTrickPower(AbstractCreature owner, int magicNumber) {
-				super(POWER_ID, PowerType.BUFF, false, owner, 0);
-				this.amount = 0;
-				this.damage = magicNumber;
+				super(POWER_ID, PowerType.BUFF, false, owner, magicNumber);
+				this.amount = magicNumber;
 				this.updateDescription();
 		}
 
 		@Override
 		public void updateDescription() {
-			this.description = DESCRIPTIONS[0] + this.damage + DESCRIPTIONS[1];
+			this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+			if(this.count > 0) {
+				this.description += DESCRIPTIONS[2] + this.count + DESCRIPTIONS[3] + this.firstCard.originalName;
+			}
 		}
 
 		@Override
@@ -37,16 +39,16 @@ public class HatTrickPower extends BasePower {
 
 			if (this.firstCard == null) {
 				this.firstCard = card;
-				this.amount = 1;
+				this.count = 1;
 			} else if (this.firstCard.cardID.equals(card.cardID)) {
-				this.amount++;
-				if (this.amount == 3) {
-					this.amount = 0;
-					addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, this.damage, DamageType.HP_LOSS, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+				this.count++;
+				if (this.count == 3) {
+					this.count = 0;
+					addToBot(new DamageAllEnemiesAction(AbstractDungeon.player, this.amount, DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 				}
 			} else {
 				this.firstCard = card;
-				this.amount = 1;
+				this.count = 1;
 			}
 		}
 
